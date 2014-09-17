@@ -1,0 +1,4576 @@
+{
+  "statuses": [
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:20:48 +0000 2014",
+      "id": 510900930192351200,
+      "id_str": "510900930192351232",
+      "text": "@AMV_Contest ID&lt;Platz 5: Kategorie \"Kranker Scheiß\"&gt; Wertung: 10!!!",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 771240836,
+        "id_str": "771240836",
+        "name": "Anuschka",
+        "screen_name": "afh24",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 2,
+        "friends_count": 12,
+        "listed_count": 0,
+        "created_at": "Tue Aug 21 10:18:33 +0000 2012",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 18,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:13:55 +0000 2014",
+      "id": 510899199173738500,
+      "id_str": "510899199173738497",
+      "text": "@AMV_Contest ID12  Wertung:10",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 90016702,
+        "id_str": "90016702",
+        "name": "Zitronentee",
+        "screen_name": "Eeenton",
+        "location": "Berlin",
+        "description": "I want to be a Pokémon Master!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 10,
+        "friends_count": 33,
+        "listed_count": 0,
+        "created_at": "Sat Nov 14 20:42:09 +0000 2009",
+        "favourites_count": 6,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 288,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "0D0D0B",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/380287399/1297966020798.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/380287399/1297966020798.jpg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1455051705/gengar_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1455051705/gengar_normal.jpg",
+        "profile_link_color": "632B70",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "BC9CE0",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:13:38 +0000 2014",
+      "id": 510899128092885000,
+      "id_str": "510899128092884992",
+      "text": "@AMV_Contest ID16 Wertung: 8",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 37931088,
+        "id_str": "37931088",
+        "name": "Victor",
+        "screen_name": "vm10000",
+        "location": "Germany",
+        "description": "Anime, Mangas und Games Fan",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 29,
+        "friends_count": 141,
+        "listed_count": 1,
+        "created_at": "Tue May 05 14:13:27 +0000 2009",
+        "favourites_count": 1376,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 150,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1133564093/Teufel_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1133564093/Teufel_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:13:04 +0000 2014",
+      "id": 510898983490027500,
+      "id_str": "510898983490027522",
+      "text": "@AMV_Contest ID47  Wertung:7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 90016702,
+        "id_str": "90016702",
+        "name": "Zitronentee",
+        "screen_name": "Eeenton",
+        "location": "Berlin",
+        "description": "I want to be a Pokémon Master!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 10,
+        "friends_count": 33,
+        "listed_count": 0,
+        "created_at": "Sat Nov 14 20:42:09 +0000 2009",
+        "favourites_count": 6,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 288,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "0D0D0B",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/380287399/1297966020798.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/380287399/1297966020798.jpg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1455051705/gengar_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1455051705/gengar_normal.jpg",
+        "profile_link_color": "632B70",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "BC9CE0",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:36 +0000 2014",
+      "id": 510898867941158900,
+      "id_str": "510898867941158912",
+      "text": "@AMV_Contest ID23\nWertung:7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 253734966,
+        "id_str": "253734966",
+        "name": "Syjana",
+        "screen_name": "syjana",
+        "location": "Germany",
+        "description": "Cosplayer",
+        "url": "http://t.co/52rcV9NSdj",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/52rcV9NSdj",
+                "expanded_url": "http://sy-tutorial.tumblr.com/",
+                "display_url": "sy-tutorial.tumblr.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 57,
+        "friends_count": 111,
+        "listed_count": 1,
+        "created_at": "Thu Feb 17 21:27:21 +0000 2011",
+        "favourites_count": 945,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 2286,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "B2DFDA",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/493104535477288961/uLjLI7lG.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/493104535477288961/uLjLI7lG.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1368133257/image_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1368133257/image_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/253734966/1398426200",
+        "profile_link_color": "93A644",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "0042A6",
+        "profile_text_color": "56A9D6",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:29 +0000 2014",
+      "id": 510898835523395600,
+      "id_str": "510898835523395584",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2421091274,
+        "id_str": "2421091274",
+        "name": "Reinibo",
+        "screen_name": "reinibo",
+        "location": "Deutschland",
+        "description": "Mathemangaka",
+        "url": "http://t.co/AfBV4a4eIY",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/AfBV4a4eIY",
+                "expanded_url": "http://www.reinibo.de",
+                "display_url": "reinibo.de",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 6,
+        "friends_count": 20,
+        "listed_count": 0,
+        "created_at": "Mon Mar 31 21:32:19 +0000 2014",
+        "favourites_count": 19,
+        "utc_offset": 10800,
+        "time_zone": "Athens",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 38,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F5F4F2",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/450754902889738240/_DvMfzXT.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/450754902889738240/_DvMfzXT.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/450752382146580480/aXTJW7UN_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/450752382146580480/aXTJW7UN_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:28 +0000 2014",
+      "id": 510898832885157900,
+      "id_str": "510898832885157888",
+      "text": "@AMV_Contest ID16 Wertung:7",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 746438233,
+        "id_str": "746438233",
+        "name": "Daniela Lönnendonker",
+        "screen_name": "abyssinier",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 22,
+        "friends_count": 57,
+        "listed_count": 0,
+        "created_at": "Thu Aug 09 03:12:19 +0000 2012",
+        "favourites_count": 64,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 111,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2484146403/image_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2484146403/image_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:23 +0000 2014",
+      "id": 510898814136643600,
+      "id_str": "510898814136643584",
+      "text": "@AMV_Contest ID16 Wertung:7",
+      "source": "<a href=\"http://getfalcon.pro\" rel=\"nofollow\">Falcon Pro</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 18331512,
+        "id_str": "18331512",
+        "name": "Frank",
+        "screen_name": "Tak0r",
+        "location": "Aachen, Germany",
+        "description": "Nerd/Student/Pirat und so wie man mich kennt :O",
+        "url": "http://t.co/rKhBtm4u5m",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/rKhBtm4u5m",
+                "expanded_url": "http://www.randomlol.de",
+                "display_url": "randomlol.de",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 54,
+        "friends_count": 64,
+        "listed_count": 1,
+        "created_at": "Tue Dec 23 11:36:10 +0000 2008",
+        "favourites_count": 2,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 1920,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/143127644/nvdefianceofscience.br.jpg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/143127644/nvdefianceofscience.br.jpg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1115383650/Tak0r_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1115383650/Tak0r_normal.jpg",
+        "profile_link_color": "424242",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "4B88B3",
+        "profile_text_color": "000000",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:21 +0000 2014",
+      "id": 510898804229697540,
+      "id_str": "510898804229697536",
+      "text": "@AMV_Contest ID16 Wertung:10",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 87536985,
+        "id_str": "87536985",
+        "name": "Mondlied Farindel",
+        "screen_name": "Mondlied",
+        "location": "Eifel\n",
+        "description": "Sozialautist",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 24,
+        "friends_count": 47,
+        "listed_count": 1,
+        "created_at": "Wed Nov 04 21:26:03 +0000 2009",
+        "favourites_count": 8,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 356,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2399482749/image_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2399482749/image_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:20 +0000 2014",
+      "id": 510898797711736800,
+      "id_str": "510898797711736832",
+      "text": "@AMV_Contest ID16 Wertung:7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 326812772,
+        "id_str": "326812772",
+        "name": "ktrask",
+        "screen_name": "ktrask23",
+        "location": "Braunschweig",
+        "description": "Entität im @stratum0, Piratin AG Technik Niedersachsen, irgendwas mit 2V",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 332,
+        "friends_count": 328,
+        "listed_count": 23,
+        "created_at": "Thu Jun 30 14:45:56 +0000 2011",
+        "favourites_count": 113,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 1175,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2511415976/c5vwthppdmmxsbkcloyx_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2511415976/c5vwthppdmmxsbkcloyx_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:18 +0000 2014",
+      "id": 510898792175267840,
+      "id_str": "510898792175267840",
+      "text": "@AMV_Contest ID16 Wertung 8",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2695339118,
+        "id_str": "2695339118",
+        "name": "Thyella",
+        "screen_name": "o0thyella0o",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 7,
+        "friends_count": 110,
+        "listed_count": 0,
+        "created_at": "Thu Jul 31 10:07:03 +0000 2014",
+        "favourites_count": 1,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 14,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/497101933417492480/Lky51qQb_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/497101933417492480/Lky51qQb_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2695339118/1407353348",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:18 +0000 2014",
+      "id": 510898790535278600,
+      "id_str": "510898790535278592",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://tapbots.com/tweetbot\" rel=\"nofollow\">Tweetbot for iΟS</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 51533087,
+        "id_str": "51533087",
+        "name": "Alan",
+        "screen_name": "Alanceil",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 21,
+        "friends_count": 68,
+        "listed_count": 0,
+        "created_at": "Sat Jun 27 19:36:17 +0000 2009",
+        "favourites_count": 1,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 268,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "352726",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme5/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme5/bg.gif",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/285861378/klarth-reading_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/285861378/klarth-reading_normal.png",
+        "profile_link_color": "D02B55",
+        "profile_sidebar_border_color": "829D5E",
+        "profile_sidebar_fill_color": "99CC33",
+        "profile_text_color": "3E4415",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:18 +0000 2014",
+      "id": 510898789029543940,
+      "id_str": "510898789029543936",
+      "text": "@AMV_Contest ID16 Wertung: 8",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 574983095,
+        "id_str": "574983095",
+        "name": "Simon Brutus",
+        "screen_name": "SimonBrutus",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 24,
+        "listed_count": 0,
+        "created_at": "Wed May 09 02:38:51 +0000 2012",
+        "favourites_count": 23,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 14,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_1_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_1_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:17 +0000 2014",
+      "id": 510898788404584450,
+      "id_str": "510898788404584448",
+      "text": "@AMV_Contest ID16 Wertung: 5",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 315185586,
+        "id_str": "315185586",
+        "name": "Thorus_144",
+        "screen_name": "Thorus_144",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 2,
+        "friends_count": 21,
+        "listed_count": 0,
+        "created_at": "Sat Jun 11 12:59:28 +0000 2011",
+        "favourites_count": 19,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 42,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:17 +0000 2014",
+      "id": 510898788089987100,
+      "id_str": "510898788089987072",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 366036263,
+        "id_str": "366036263",
+        "name": "Caius Hermanns",
+        "screen_name": "jedicorran",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 3,
+        "listed_count": 0,
+        "created_at": "Thu Sep 01 13:19:57 +0000 2011",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 13,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_5_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_5_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:15 +0000 2014",
+      "id": 510898780389269500,
+      "id_str": "510898780389269504",
+      "text": "@AMV_Contest ID16 Wertung: 6",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1648299554,
+        "id_str": "1648299554",
+        "name": "Nachigo",
+        "screen_name": "NachigoOnTour",
+        "location": "",
+        "description": "Nacaco & Keichigo ✿\nCosplayer since 2005! \n✿ always together",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 18,
+        "friends_count": 33,
+        "listed_count": 0,
+        "created_at": "Mon Aug 05 17:36:58 +0000 2013",
+        "favourites_count": 44,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 121,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000045129986/de7a7ed92e17360fa2ff5d2ebd3f602e.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000045129986/de7a7ed92e17360fa2ff5d2ebd3f602e.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/504605598022135808/UOt3MXvW_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/504605598022135808/UOt3MXvW_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1648299554/1409142718",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:15 +0000 2014",
+      "id": 510898778296307700,
+      "id_str": "510898778296307712",
+      "text": "@amv_contest id16 wertung: 10",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 188767493,
+        "id_str": "188767493",
+        "name": "JimmPantsu",
+        "screen_name": "JimmPantsu",
+        "location": "",
+        "description": "Pantsu.jp - Otakuism | Cons | Cosplay | Podcasts | Reviews",
+        "url": "http://t.co/XKSxwD3dOl",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/XKSxwD3dOl",
+                "expanded_url": "http://www.pantsu.jp",
+                "display_url": "pantsu.jp",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 628,
+        "friends_count": 297,
+        "listed_count": 10,
+        "created_at": "Thu Sep 09 15:04:10 +0000 2010",
+        "favourites_count": 841,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 9434,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "4B4C4E",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/471792085113131008/rqvAJXpt.png",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/471792085113131008/rqvAJXpt.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/471794216788451330/eHh-5VXU_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/471794216788451330/eHh-5VXU_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/188767493/1401319313",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:14 +0000 2014",
+      "id": 510898775691644900,
+      "id_str": "510898775691644928",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2232087216,
+        "id_str": "2232087216",
+        "name": "piv0t",
+        "screen_name": "piv0t_",
+        "location": "",
+        "description": "18 / männlich / Misaka ♥ / Gibt momentan viel zu viel Geld für (W/S) Karten aus / Anime / Manga / LoL",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 12,
+        "friends_count": 64,
+        "listed_count": 0,
+        "created_at": "Thu Dec 05 22:15:55 +0000 2013",
+        "favourites_count": 20,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 51,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/464435505073889282/_Iv5-WWn_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/464435505073889282/_Iv5-WWn_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2232087216/1398812980",
+        "profile_link_color": "53C408",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:14 +0000 2014",
+      "id": 510898775192522750,
+      "id_str": "510898775192522752",
+      "text": "@AMV_Contest ID 24 Wertung 10",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 58177321,
+        "id_str": "58177321",
+        "name": "Tenni",
+        "screen_name": "_Tenni_",
+        "location": "dreamland",
+        "description": "Wenn das Leben dich fickt - zeig ihm den Mittelfinger.",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 58,
+        "friends_count": 56,
+        "listed_count": 0,
+        "created_at": "Sun Jul 19 11:21:40 +0000 2009",
+        "favourites_count": 6384,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 17023,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "023069",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/451342434757132289/PETjfswk.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/451342434757132289/PETjfswk.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/491934502357200896/vppaqx80_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/491934502357200896/vppaqx80_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/58177321/1385368686",
+        "profile_link_color": "2131DE",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "99A2FF",
+        "profile_text_color": "000D96",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:11 +0000 2014",
+      "id": 510898763578478600,
+      "id_str": "510898763578478593",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1864898851,
+        "id_str": "1864898851",
+        "name": "waka42",
+        "screen_name": "waka4200",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 0,
+        "friends_count": 0,
+        "listed_count": 0,
+        "created_at": "Sat Sep 14 20:21:21 +0000 2013",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 27,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:10 +0000 2014",
+      "id": 510898759044444160,
+      "id_str": "510898759044444160",
+      "text": "@AMV_Contest ID16 Wertung: 9",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 189438384,
+        "id_str": "189438384",
+        "name": "Tobias Kellner",
+        "screen_name": "KemmlerFly",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 8,
+        "friends_count": 13,
+        "listed_count": 0,
+        "created_at": "Sat Sep 11 07:28:57 +0000 2010",
+        "favourites_count": 1,
+        "utc_offset": -7200,
+        "time_zone": "Greenland",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 28,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1150812541/piss-on-apple-black-xdock_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1150812541/piss-on-apple-black-xdock_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:10 +0000 2014",
+      "id": 510898757479964700,
+      "id_str": "510898757479964672",
+      "text": "@AMV_Contest ID 16 Wertung 6",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 58177321,
+        "id_str": "58177321",
+        "name": "Tenni",
+        "screen_name": "_Tenni_",
+        "location": "dreamland",
+        "description": "Wenn das Leben dich fickt - zeig ihm den Mittelfinger.",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 58,
+        "friends_count": 56,
+        "listed_count": 0,
+        "created_at": "Sun Jul 19 11:21:40 +0000 2009",
+        "favourites_count": 6384,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 17023,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "023069",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/451342434757132289/PETjfswk.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/451342434757132289/PETjfswk.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/491934502357200896/vppaqx80_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/491934502357200896/vppaqx80_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/58177321/1385368686",
+        "profile_link_color": "2131DE",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "99A2FF",
+        "profile_text_color": "000D96",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:09 +0000 2014",
+      "id": 510898754388779000,
+      "id_str": "510898754388779008",
+      "text": "@AMV_Contest ID16 Wertung: 9",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1595565451,
+        "id_str": "1595565451",
+        "name": "Christian Moerl",
+        "screen_name": "Mikophilie",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 4,
+        "friends_count": 17,
+        "listed_count": 0,
+        "created_at": "Mon Jul 15 10:36:15 +0000 2013",
+        "favourites_count": 14,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 50,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/378800000189656857/66439232b374a6683defca22fa921460_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000189656857/66439232b374a6683defca22fa921460_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:09 +0000 2014",
+      "id": 510898753696706560,
+      "id_str": "510898753696706561",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 771240836,
+        "id_str": "771240836",
+        "name": "Anuschka",
+        "screen_name": "afh24",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 2,
+        "friends_count": 12,
+        "listed_count": 0,
+        "created_at": "Tue Aug 21 10:18:33 +0000 2012",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 18,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:09 +0000 2014",
+      "id": 510898752803323900,
+      "id_str": "510898752803323904",
+      "text": "@AMV_Contest id16 wertung: 7",
+      "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 395388426,
+        "id_str": "395388426",
+        "name": "Kente",
+        "screen_name": "_Kente",
+        "location": "Deutschland, NRW, bei Bonn",
+        "description": "19 jähriger Otaku, der seine Zeit mit Anime, Manga, JPop, Pokémon und neuerdings Weiß/Schwarz verbringt. Yui is mai Waifu 3\r\n~Wafu~",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 255,
+        "friends_count": 209,
+        "listed_count": 5,
+        "created_at": "Fri Oct 21 15:50:19 +0000 2011",
+        "favourites_count": 325,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 5411,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "1A1B1F",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000075718247/cdfbdce25b88442ab40ad0d36e3ca67d.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000075718247/cdfbdce25b88442ab40ad0d36e3ca67d.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/2717693059/3f98afd994682f131df9555283594169_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/2717693059/3f98afd994682f131df9555283594169_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/395388426/1385579656",
+        "profile_link_color": "2FC2EF",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "252429",
+        "profile_text_color": "666666",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:09 +0000 2014",
+      "id": 510898752786534400,
+      "id_str": "510898752786534400",
+      "text": "@AMV_Contest ID16 Wertung: 9",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 49673310,
+        "id_str": "49673310",
+        "name": "Benjamin Wilhelm",
+        "screen_name": "n_doroid",
+        "location": "Wo die wilden Kerle wohnen/HH",
+        "description": "Windiger Bursche. Sieht zu viele Filme, ist interessiert an japanischer Popkultur und mag Videospiele genug um sie zu hassen.",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 75,
+        "friends_count": 450,
+        "listed_count": 2,
+        "created_at": "Mon Jun 22 16:07:58 +0000 2009",
+        "favourites_count": 184,
+        "utc_offset": 7200,
+        "time_zone": "Amsterdam",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 1081,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FFFFFF",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/650828155/11mz71390xe0mcb9314l.gif",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/650828155/11mz71390xe0mcb9314l.gif",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1762833369/Foto-2_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1762833369/Foto-2_normal.png",
+        "profile_link_color": "DE3ED6",
+        "profile_sidebar_border_color": "AB1B1B",
+        "profile_sidebar_fill_color": "E0C4C3",
+        "profile_text_color": "731919",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:08 +0000 2014",
+      "id": 510898749397553150,
+      "id_str": "510898749397553152",
+      "text": "@AMV_Contest ID16 Wertung: 9",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 21028139,
+        "id_str": "21028139",
+        "name": "Stefan Einbrodt",
+        "screen_name": "leading0",
+        "location": "Hamburg",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 30,
+        "friends_count": 37,
+        "listed_count": 2,
+        "created_at": "Mon Feb 16 21:08:51 +0000 2009",
+        "favourites_count": 14,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 164,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/78966591/me_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/78966591/me_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:08 +0000 2014",
+      "id": 510898747564630000,
+      "id_str": "510898747564630016",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"https://twitter.com/download/android\" rel=\"nofollow\">Twitter for  Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2453282316,
+        "id_str": "2453282316",
+        "name": "Imke Grothenn",
+        "screen_name": "Murkelchen11",
+        "location": "",
+        "description": "Always Marvel-ed",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 27,
+        "listed_count": 0,
+        "created_at": "Sat Apr 19 14:55:15 +0000 2014",
+        "favourites_count": 34,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 12,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:08 +0000 2014",
+      "id": 510898747153612800,
+      "id_str": "510898747153612800",
+      "text": "@AMV_Contest ID16   Wertung: 7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1252431793,
+        "id_str": "1252431793",
+        "name": "Katharina",
+        "screen_name": "katzenfan666",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 2,
+        "friends_count": 7,
+        "listed_count": 0,
+        "created_at": "Fri Mar 08 18:26:56 +0000 2013",
+        "favourites_count": 1,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 212,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/3354295848/9f6a3962e04ea327c9c23fa12b811b2d_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/3354295848/9f6a3962e04ea327c9c23fa12b811b2d_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:07 +0000 2014",
+      "id": 510898746390245400,
+      "id_str": "510898746390245376",
+      "text": "@AMV_Contest ID16 Wertung:7,5",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2729307158,
+        "id_str": "2729307158",
+        "name": "Shuuya",
+        "screen_name": "Shuuyachi",
+        "location": "ドイツ",
+        "description": "Otaku ^o^",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 4,
+        "friends_count": 49,
+        "listed_count": 0,
+        "created_at": "Wed Aug 13 12:17:00 +0000 2014",
+        "favourites_count": 4,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 45,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/499535514936954881/ssyLyYSv_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/499535514936954881/ssyLyYSv_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2729307158/1407933868",
+        "profile_link_color": "001EB3",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:07 +0000 2014",
+      "id": 510898746180530200,
+      "id_str": "510898746180530178",
+      "text": "@AMV_Contest ID16  Wertung 9",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2267344427,
+        "id_str": "2267344427",
+        "name": "Cassie Turley",
+        "screen_name": "AyaSan666",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 7,
+        "listed_count": 0,
+        "created_at": "Tue Jan 07 18:11:02 +0000 2014",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 12,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/420623269461766145/9dC_mI4q_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/420623269461766145/9dC_mI4q_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2267344427/1389119344",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:07 +0000 2014",
+      "id": 510898743554883600,
+      "id_str": "510898743554883584",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2387381378,
+        "id_str": "2387381378",
+        "name": "aViophobia",
+        "screen_name": "aViiophobia",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 14,
+        "listed_count": 0,
+        "created_at": "Thu Mar 13 16:27:35 +0000 2014",
+        "favourites_count": 1,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 13,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/499161926996205568/5qk8A2FR_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/499161926996205568/5qk8A2FR_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/2387381378/1407844408",
+        "profile_link_color": "D67600",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:07 +0000 2014",
+      "id": 510898743433265150,
+      "id_str": "510898743433265153",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2442723785,
+        "id_str": "2442723785",
+        "name": "vio plu",
+        "screen_name": "vioplu",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 40,
+        "listed_count": 0,
+        "created_at": "Fri Mar 28 19:30:53 +0000 2014",
+        "favourites_count": 68,
+        "utc_offset": 7200,
+        "time_zone": "Amsterdam",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 11,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_5_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_5_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:06 +0000 2014",
+      "id": 510898742841843700,
+      "id_str": "510898742841843712",
+      "text": "@amv_contest id 16 wertung  6",
+      "source": "<a href=\"https://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android Tablets</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2363844951,
+        "id_str": "2363844951",
+        "name": "Edo",
+        "screen_name": "edo_niichan",
+        "location": "",
+        "description": "open for everbody . second account. feel free to add me ♥",
+        "url": "https://t.co/fjf86idfkZ",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "https://t.co/fjf86idfkZ",
+                "expanded_url": "https://www.facebook.com/Edolicious",
+                "display_url": "facebook.com/Edolicious",
+                "indices": [
+                  0,
+                  23
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 51,
+        "friends_count": 45,
+        "listed_count": 0,
+        "created_at": "Mon Feb 24 23:01:27 +0000 2014",
+        "favourites_count": 103,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 258,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/459316939949883393/u1QGq7Ss_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/459316939949883393/u1QGq7Ss_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:06 +0000 2014",
+      "id": 510898740937637900,
+      "id_str": "510898740937637888",
+      "text": "@AMV_Contest ID16 Wertung: 8",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 234514815,
+        "id_str": "234514815",
+        "name": "Kathi Klimmek",
+        "screen_name": "Shi_chan86",
+        "location": "Niedersachsen/Deutschland",
+        "description": "New Zealand-, Great Britain-, Series-, Cinema-, Hobbit-fan, Hiddlestoned, Ben-addict for life!",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 16,
+        "friends_count": 37,
+        "listed_count": 0,
+        "created_at": "Wed Jan 05 21:11:19 +0000 2011",
+        "favourites_count": 292,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 91,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "FFF04D",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/450575724051587073/O7UUWtJF_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/450575724051587073/O7UUWtJF_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/234514815/1399572409",
+        "profile_link_color": "0099CC",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "F6FFD1",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:06 +0000 2014",
+      "id": 510898740048441340,
+      "id_str": "510898740048441344",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 510118037,
+        "id_str": "510118037",
+        "name": "Tom A. Tensalat",
+        "screen_name": "kl0kkw0rk",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 11,
+        "listed_count": 0,
+        "created_at": "Thu Mar 01 11:51:11 +0000 2012",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 14,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/499162090569883648/NOC9_RDW_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/499162090569883648/NOC9_RDW_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/510118037/1407844656",
+        "profile_link_color": "00FFFF",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "000000",
+        "profile_text_color": "000000",
+        "profile_use_background_image": false,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:06 +0000 2014",
+      "id": 510898738693685250,
+      "id_str": "510898738693685248",
+      "text": "@amv_contest ID16 Wertung: 5",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 79536341,
+        "id_str": "79536341",
+        "name": "Dreven Seal",
+        "screen_name": "DrevenSeal",
+        "location": "",
+        "description": "Produkt Designer, Student Lehramt Doppelfach Kunst und alles zwischen Darkwing Duck und Cokes mit Namen",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 64,
+        "friends_count": 195,
+        "listed_count": 3,
+        "created_at": "Sat Oct 03 18:43:16 +0000 2009",
+        "favourites_count": 1152,
+        "utc_offset": 10800,
+        "time_zone": "Athens",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 4269,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/378800000054545648/93408d3300a292cb429205c81cb9206a_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000054545648/93408d3300a292cb429205c81cb9206a_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/79536341/1366636627",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:05 +0000 2014",
+      "id": 510898738328789000,
+      "id_str": "510898738328788992",
+      "text": "@AMV_Contest ID16 Wertung 7",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 66149822,
+        "id_str": "66149822",
+        "name": "Patrick Thorenz",
+        "screen_name": "Wolfapo",
+        "location": "Germany",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 41,
+        "friends_count": 99,
+        "listed_count": 0,
+        "created_at": "Sun Aug 16 17:12:32 +0000 2009",
+        "favourites_count": 11,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 3351,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "131516",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme14/bg.gif",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/365107909/wolf03_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/365107909/wolf03_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/66149822/1398272770",
+        "profile_link_color": "009999",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "EFEFEF",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "und",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:05 +0000 2014",
+      "id": 510898738181972000,
+      "id_str": "510898738181971970",
+      "text": "@AMV_Contest id16 7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 2521008823,
+        "id_str": "2521008823",
+        "name": "Steffen Schulz",
+        "screen_name": "TeffenS",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 13,
+        "listed_count": 0,
+        "created_at": "Sat May 24 17:49:04 +0000 2014",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 11,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png",
+        "profile_image_url_https": "https://abs.twimg.com/sticky/default_profile_images/default_profile_4_normal.png",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": true,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "und"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:05 +0000 2014",
+      "id": 510898738035195900,
+      "id_str": "510898738035195904",
+      "text": "@AMV_Contest ID16 Wertung: 3",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1661232073,
+        "id_str": "1661232073",
+        "name": "Howard Phillips",
+        "screen_name": "SpiresAwake",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 85,
+        "listed_count": 0,
+        "created_at": "Sat Aug 10 23:52:56 +0000 2013",
+        "favourites_count": 8,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 15,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "01002B",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000048883313/1ac43eed1ed9b89bcefa3685d378f835.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000048883313/1ac43eed1ed9b89bcefa3685d378f835.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/423795511296942080/-xTK0UPZ_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/423795511296942080/-xTK0UPZ_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1661232073/1398297098",
+        "profile_link_color": "F59449",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "und",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:05 +0000 2014",
+      "id": 510898735644430340,
+      "id_str": "510898735644430336",
+      "text": "@AMV_Contest id16 8",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": 510893225352384500,
+      "in_reply_to_status_id_str": "510893225352384512",
+      "in_reply_to_user_id": 580284221,
+      "in_reply_to_user_id_str": "580284221",
+      "in_reply_to_screen_name": "BenediktHeidric",
+      "user": {
+        "id": 580284221,
+        "id_str": "580284221",
+        "name": "Benedikt Heidrich",
+        "screen_name": "BenediktHeidric",
+        "location": "Kassel",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 1,
+        "friends_count": 48,
+        "listed_count": 0,
+        "created_at": "Mon May 14 22:11:23 +0000 2012",
+        "favourites_count": 1,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 46,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/378800000335211153/ba76eb4fb1173ffdf8a3094b046692ae_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000335211153/ba76eb4fb1173ffdf8a3094b046692ae_normal.jpeg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "und"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:04 +0000 2014",
+      "id": 510898733119471600,
+      "id_str": "510898733119471616",
+      "text": "@AMV_Contest ID16 Wertung: 7",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 60506384,
+        "id_str": "60506384",
+        "name": "emania.de",
+        "screen_name": "anime_news",
+        "location": "Germany",
+        "description": "Der offizielle Twitter Account von http://t.co/h2PbqC2uKg",
+        "url": "http://t.co/h2PbqC2uKg",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/h2PbqC2uKg",
+                "expanded_url": "http://www.emania.de",
+                "display_url": "emania.de",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": [
+              {
+                "url": "http://t.co/h2PbqC2uKg",
+                "expanded_url": "http://www.emania.de",
+                "display_url": "emania.de",
+                "indices": [
+                  35,
+                  57
+                ]
+              }
+            ]
+          }
+        },
+        "protected": false,
+        "followers_count": 149,
+        "friends_count": 0,
+        "listed_count": 4,
+        "created_at": "Mon Jul 27 06:02:14 +0000 2009",
+        "favourites_count": 8,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 1895,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/334798926/4149982_big_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/334798926/4149982_big_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:04 +0000 2014",
+      "id": 510898732058288100,
+      "id_str": "510898732058288128",
+      "text": "@AMV_Contest ID16 Wertung: 6",
+      "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Mobile Web (M5)</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 26605965,
+        "id_str": "26605965",
+        "name": "Royal with Cheese",
+        "screen_name": "BrauseBrocken",
+        "location": "",
+        "description": "Inhalt: 10 Brause-Brocken 80g zum Schlecken",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 6,
+        "friends_count": 13,
+        "listed_count": 0,
+        "created_at": "Wed Mar 25 22:08:50 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 25,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/109996509/product-1978100_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/109996509/product-1978100_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:04 +0000 2014",
+      "id": 510898730971967500,
+      "id_str": "510898730971967488",
+      "text": "@AMV_Contest ID16 Wertung: 4",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 573523395,
+        "id_str": "573523395",
+        "name": "Steff",
+        "screen_name": "aoiSamidare",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 5,
+        "friends_count": 26,
+        "listed_count": 0,
+        "created_at": "Mon May 07 08:48:25 +0000 2012",
+        "favourites_count": 62,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 106,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/434194885688557568/a0-cFY9K_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/434194885688557568/a0-cFY9K_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/573523395/1392355597",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "und",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:03 +0000 2014",
+      "id": 510898727478100000,
+      "id_str": "510898727478099968",
+      "text": "@AMV_Contest id16 8",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 110096050,
+        "id_str": "110096050",
+        "name": "Patrick Lutz",
+        "screen_name": "Striker1988",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 11,
+        "friends_count": 23,
+        "listed_count": 0,
+        "created_at": "Sun Jan 31 09:34:38 +0000 2010",
+        "favourites_count": 0,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 308,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/931966549/Clipboard01_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/931966549/Clipboard01_normal.jpg",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "und"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:02 +0000 2014",
+      "id": 510898723887779840,
+      "id_str": "510898723887779840",
+      "text": "@AMV_Contest ID16 Wertung 9",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 1370174803,
+        "id_str": "1370174803",
+        "name": "Hanna",
+        "screen_name": "Hanna_der_Wal",
+        "location": "",
+        "description": "Erzieherin. Vielbeschäftigt. Musik. Gitarre üben.  Lernen lernen lernen. Katzen lieben.",
+        "url": "http://t.co/KzRiqEqWyE",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/KzRiqEqWyE",
+                "expanded_url": "http://www.ton-tech.de",
+                "display_url": "ton-tech.de",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 47,
+        "friends_count": 89,
+        "listed_count": 0,
+        "created_at": "Sun Apr 21 17:50:39 +0000 2013",
+        "favourites_count": 921,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 2175,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "C0DEED",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/492611434040156160/Zx_ffk1c_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/492611434040156160/Zx_ffk1c_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/1370174803/1406282766",
+        "profile_link_color": "0084B4",
+        "profile_sidebar_border_color": "C0DEED",
+        "profile_sidebar_fill_color": "DDEEF6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": true,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:02 +0000 2014",
+      "id": 510898722872766460,
+      "id_str": "510898722872766464",
+      "text": "@amv_contest ID16 Wertung: 9",
+      "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 63717144,
+        "id_str": "63717144",
+        "name": "Zayola",
+        "screen_name": "ZayolaAng",
+        "location": "Germany",
+        "description": "23 | ♀ | Anime | Games | Comics | Tea | Sewing | Crafting | Everyday life | FFXIV addicted - Handel mit es | Background @wooperfuri",
+        "url": "http://t.co/RT8L5S9hWz",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/RT8L5S9hWz",
+                "expanded_url": "http://zayola.tumblr.com/",
+                "display_url": "zayola.tumblr.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 28,
+        "friends_count": 77,
+        "listed_count": 0,
+        "created_at": "Fri Aug 07 13:19:33 +0000 2009",
+        "favourites_count": 234,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 1879,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "022330",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/503797979442991104/0xLcDbax.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/503797979442991104/0xLcDbax.jpeg",
+        "profile_background_tile": true,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/499127823819210752/lCV0k0f4_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/499127823819210752/lCV0k0f4_normal.jpeg",
+        "profile_link_color": "95C11F",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "C0DFEC",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:01 +0000 2014",
+      "id": 510898720444256260,
+      "id_str": "510898720444256256",
+      "text": "@AMV_Contest ID16 Wertung:10",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 115368505,
+        "id_str": "115368505",
+        "name": "Ri-Sa",
+        "screen_name": "MiaSkyLou",
+        "location": "Germany",
+        "description": "",
+        "url": "http://t.co/z1QwMpBliz",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/z1QwMpBliz",
+                "expanded_url": "http://tumblr.com",
+                "display_url": "tumblr.com",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 28,
+        "friends_count": 51,
+        "listed_count": 0,
+        "created_at": "Thu Feb 18 12:46:22 +0000 2010",
+        "favourites_count": 42,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": false,
+        "statuses_count": 192,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "57DEF0",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/477058244397920256/gzUzRxQl_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/477058244397920256/gzUzRxQl_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/115368505/1402574465",
+        "profile_link_color": "18AEC2",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "F6F6F6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": true,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:12:00 +0000 2014",
+      "id": 510898715872464900,
+      "id_str": "510898715872464896",
+      "text": "@AMV_Contest ID16 Wertung: 3",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 53934147,
+        "id_str": "53934147",
+        "name": "Messi",
+        "screen_name": "sehrunkreativ",
+        "location": "",
+        "description": "",
+        "url": null,
+        "entities": {
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 16,
+        "friends_count": 15,
+        "listed_count": 0,
+        "created_at": "Sun Jul 05 15:41:37 +0000 2009",
+        "favourites_count": 8,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 659,
+        "lang": "en",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "000000",
+        "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/378800000060017711/86edf0d3746f355781168c9c4c6b36af.jpeg",
+        "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/378800000060017711/86edf0d3746f355781168c9c4c6b36af.jpeg",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/378800000365208285/72db9bf7ad77474ee4d17c2996804cde_normal.png",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/378800000365208285/72db9bf7ad77474ee4d17c2996804cde_normal.png",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/53934147/1377530392",
+        "profile_link_color": "4C8C24",
+        "profile_sidebar_border_color": "000000",
+        "profile_sidebar_fill_color": "E2FDD0",
+        "profile_text_color": "5A4E38",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    },
+    {
+      "metadata": {
+        "iso_language_code": "de",
+        "result_type": "recent"
+      },
+      "created_at": "Sat Sep 13 21:11:59 +0000 2014",
+      "id": 510898711845949440,
+      "id_str": "510898711845949440",
+      "text": "@AMV_Contest ID16 Wertung: 8",
+      "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+      "truncated": false,
+      "in_reply_to_status_id": null,
+      "in_reply_to_status_id_str": null,
+      "in_reply_to_user_id": 2648507958,
+      "in_reply_to_user_id_str": "2648507958",
+      "in_reply_to_screen_name": "AMV_Contest",
+      "user": {
+        "id": 77182301,
+        "id_str": "77182301",
+        "name": "Yumi",
+        "screen_name": "Schattenbinder",
+        "location": "Solingen, Germany",
+        "description": "Cosplayer, Gamer, Psycho. Take me or leave me.",
+        "url": "http://t.co/McCcI1aqyL",
+        "entities": {
+          "url": {
+            "urls": [
+              {
+                "url": "http://t.co/McCcI1aqyL",
+                "expanded_url": "http://watashitachi.peilosistas.org/",
+                "display_url": "watashitachi.peilosistas.org",
+                "indices": [
+                  0,
+                  22
+                ]
+              }
+            ]
+          },
+          "description": {
+            "urls": []
+          }
+        },
+        "protected": false,
+        "followers_count": 57,
+        "friends_count": 93,
+        "listed_count": 0,
+        "created_at": "Fri Sep 25 10:20:42 +0000 2009",
+        "favourites_count": 568,
+        "utc_offset": 7200,
+        "time_zone": "Berlin",
+        "geo_enabled": true,
+        "verified": false,
+        "statuses_count": 6013,
+        "lang": "de",
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "ACDED6",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme18/bg.gif",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/497709775829086208/VKoBZtjh_normal.jpeg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/497709775829086208/VKoBZtjh_normal.jpeg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/77182301/1404937072",
+        "profile_link_color": "D158B9",
+        "profile_sidebar_border_color": "EEEEEE",
+        "profile_sidebar_fill_color": "F6F6F6",
+        "profile_text_color": "333333",
+        "profile_use_background_image": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false
+      },
+      "geo": null,
+      "coordinates": null,
+      "place": null,
+      "contributors": null,
+      "retweet_count": 0,
+      "favorite_count": 0,
+      "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "urls": [],
+        "user_mentions": [
+          {
+            "screen_name": "AMV_Contest",
+            "name": "Connichi_AMV-Contest",
+            "id": 2648507958,
+            "id_str": "2648507958",
+            "indices": [
+              0,
+              12
+            ]
+          }
+        ]
+      },
+      "favorited": false,
+      "retweeted": false,
+      "lang": "de"
+    }
+  ],
+  "search_metadata": {
+    "completed_in": 0.04,
+    "max_id": 510900930192351200,
+    "max_id_str": "510900930192351232",
+    "next_results": "?max_id=510898711845949439&q=%40AMV_Contest%20until%3A2014-09-14&count=50&include_entities=1&result_type=recent",
+    "query": "%40AMV_Contest+until%3A2014-09-14",
+    "refresh_url": "?since_id=510900930192351232&q=%40AMV_Contest%20until%3A2014-09-14&result_type=recent&include_entities=1",
+    "count": 50,
+    "since_id": 0,
+    "since_id_str": "0"
+  }
+}
