@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
-	'AMVs'=>array('index'),
-	$model->id,
+	$model->contest->name => array('Contest/view', 'id' =>$model->contest_id),
+	'AMV ID ' . $model->contest_amv_id,
 );
 
 $this->menu=array(
@@ -13,13 +13,12 @@ array('label'=>'Manage Amv','url'=>array('admin')),
 );
 ?>
 
-<h1>View Amv "ID<?php echo $model->contest_amv_id; ?>" for Contest "<?php echo $model->contest->name; ?>"</h1>
+<h1><?php echo $model->contest->name; ?></h1>
+<h2>AMV ID<?php echo $model->contest_amv_id; ?></h2>
 
 <?php $this->widget('booster.widgets.TbDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-			'contest.name',
-			'contest_amv_id',
 			'avg_rating',
 			'min_rating',
 			'max_rating',
@@ -35,12 +34,15 @@ $dataProvider=new CActiveDataProvider('Tweet', array(
     'criteria'=>array(
         'condition' => 'amv_id = '.$model->id.' AND contest_id = '.$model->contest_id,
     ),
+    'pagination'=>array(
+		'pageSize'=> 25,
+	),
 ));
 
 $this->widget('booster.widgets.TbGridView', array(
 	'dataProvider' => $dataProvider,
 	'type' => 'striped bordered condensed',
-	'template' => '{items}',
+	'template' => '{items}{pager}',
 	'columns' => array(
 		'user.screen_name',
 		'text',		

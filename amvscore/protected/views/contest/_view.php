@@ -13,11 +13,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('active')); ?>:</b>
-	<?php echo CHtml::encode($data->active); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('last_parsed_tweet_id')); ?>:</b>
-	<?php echo CHtml::encode($data->last_parsed_tweet_id); ?>
+	<?php echo ($data->active == 1) ?  '<span class="glyphicon glyphicon-ok"></span>' : '<span class="glyphicon glyphicon-remove"></span>'; ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('parse_from')); ?>:</b>

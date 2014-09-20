@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'AMVScore',
+	'layout' => 'column1',
 
 	// preloading 'log' component
 	'preload'=>array(
@@ -45,6 +46,7 @@ return array(
 		'booster' => array(
 		    'class' => 'ext.booster.components.Booster',
 		    'bootstrapCss' => false,
+		    'yiiCss' => false,
 		),
 
 		'user'=>array(

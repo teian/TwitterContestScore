@@ -13,15 +13,14 @@ array('label'=>'Manage Contest','url'=>array('admin')),
 );
 ?>
 
-<h1>View Contest #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->name; ?> (<?php echo $model->year; ?>)</h1>
 
 <?php $this->widget('booster.widgets.TbDetailView',array(
 'data'=>$model,
 'attributes'=>array(
-		'name',
 		'trigger',
 		'year',
-		'active',
+		'active:boolean',	
 		'parse_from',
 		'parse_to',
 ),
@@ -29,4 +28,29 @@ array('label'=>'Manage Contest','url'=>array('admin')),
 
 <h2>AMVs</h2>
 
+<?php
+
+$dataProvider=new CActiveDataProvider('Amv', array(
+    'criteria'=>array(
+        'condition' => 'contest_id = '.$model->id,
+    ),
+));
+
+$this->widget('booster.widgets.TbGridView', array(
+	'dataProvider' => $dataProvider,
+	'type' => 'striped bordered condensed',
+	'template' => '{items}',
+	'columns' => array(
+		array(
+			'name' => 'contest_amv_id',
+			'type' => 'raw',
+			'value' => 'CHtml::link(CHtml::encode($data->contest_amv_id), array("Amv/view","id"=>$data->id))',
+		),
+		'avg_rating',
+		'min_rating',
+		'max_rating',
+		'votes',
+	),
+));
+?>
 

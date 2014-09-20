@@ -8,7 +8,7 @@
 
 $this->beginContent('//layouts/main');
 ?>
-<div class="span4">
+<div class="col-md-2">
     <div id="sidebar">
 		<?php
 			$this->beginWidget('zii.widgets.CPortlet', array(
@@ -22,7 +22,7 @@ $this->beginContent('//layouts/main');
 		?>
 	</div>
 </div>
-<div class="span8">
+<div class="col-md-10">
     <?php echo $content; ?>
 </div>
 <?php $this->endContent(); ?>

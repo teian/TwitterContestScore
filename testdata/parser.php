@@ -82,9 +82,11 @@ try {
 
 	$stmt = $db->query('SELECT * FROM amv WHERE contest_id = 1');
 
-	$amvs = array();
+	$amv_map = array();
+	$amvs_data = array();
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-      $amvs[$row["contest_amv_id"]] = $row["id"];
+      $amv_map[$row["contest_amv_id"]] = $row["id"];
+      $amvs_data[$row["id"]] = $row;
     }
 
 	$stmt = $db->query('SELECT * FROM tweet_user');
@@ -139,7 +141,7 @@ foreach($insert_tweets as $tweet)
 			':text'=>$tweet["text"],
 			':contest_id'=>$tweet["contest_id"],
 			':user_id'=>$tweet["user_id"],
-			':amv_id'=> isset($amvs[$tweet["amv_id"]]) ? $amvs[$tweet["amv_id"]]: -1,
+			':amv_id'=> isset($amv_map[$tweet["amv_id"]]) ? $amv_map[$tweet["amv_id"]]: -1,
 			':rating'=>$tweet["rating"],
 			':needs_validation'=>$tweet["needs_validation"]		
 		));

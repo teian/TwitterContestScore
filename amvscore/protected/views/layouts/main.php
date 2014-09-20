@@ -16,7 +16,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-darkly.min.css">    
+    <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/bootstrap-superhero.css">    
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
     <title><?= CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -24,44 +26,67 @@
 <body>
 <!-- NAVIGATION BEGIN -->
 <?php 
+
+$menu_items = array();
+
+$main_menu = array(
+    'class' => 'bootstrap.widgets.TbMenu',
+    'items' => array(
+        array(
+            'label' => 'Home', 
+            'url' => array('/site/index')
+        ),
+        array(
+            'label' => 'Contest', 
+            'url' => array('/Contest/index')
+        ),
+    ),
+);
+array_push($menu_items,$main_menu);
+
+if(isset($this->menu) && sizeof($this->menu) > 0)
+{
+    $action_menu = array(
+        'class' => 'bootstrap.widgets.TbMenu',
+        'items' => array(
+            array(
+                'label' => 'Operations',
+                'url' => array('#'),
+                'items' => $this->menu,
+            ), 
+        )
+    );
+
+    array_push($menu_items,$action_menu);
+}
+
+$login_menu = array(
+    'class' => 'bootstrap.widgets.TbMenu',
+    'htmlOptions'=>array('class'=>'pull-right'),
+    'items' => array(
+        array(
+            'label' => 'Login',
+            'url' => array('/site/login'),
+            'visible' => Yii::app()->user->isGuest
+        ),
+        array(
+            'label' => 'Logout (' . Yii::app()->user->name . ')',
+            'url' => array('/site/logout'),
+            'visible' => !Yii::app()->user->isGuest
+        ), 
+    )
+);
+
+array_push($menu_items,$login_menu);
+
 $this->widget(
     'bootstrap.widgets.TbNavbar',
     array(
         'brand' => 'AMVScore',
-        'brandUrl' => '/',
+        'brandUrl' => Yii::app()->request->baseUrl,
         'collapse' => true,
         'fixed' =>'top',
-        'items' => array(
-            array(
-                'class' => 'bootstrap.widgets.TbMenu',
-                //'type' => "navbar",
-                'items' => array(
-                    array(
-                        'label' => 'Home', 
-                        'url' => array('/site/index')
-                    ),
-                    array(
-                        'label' => 'Contest', 
-                        'url' => array('/Contest/index')
-                    ),
-                    array(
-                        'label' => 'Login',
-                        'url' => array('/site/login'),
-                        'visible' => Yii::app()->user->isGuest
-                    ),
-                    array(
-                        'label' => 'Logout (' . Yii::app()->user->name . ')',
-                        'url' => array('/site/logout'),
-                        'visible' => !Yii::app()->user->isGuest
-                    ),
-                    array(
-                        'label' => 'Users list',
-                        'url' => array('/user'),
-                        'visible' => !Yii::app()->user->isGuest
-                    )
-                ),
-            ),
-        ),
+        'items' => $menu_items,
     )
 );
 ?>
@@ -69,7 +94,7 @@ $this->widget(
 
 <!-- CONTENT WRAPPER BEGIN -->
 <div id="main">
-    <div class="container">
+    <div class="container-fluid">
         <?php if (isset($this->breadcrumbs)): ?>
             <?php $this->widget(
                 'bootstrap.widgets.TbBreadcrumbs',
@@ -88,16 +113,21 @@ $this->widget(
             <!-- CONTENT END -->
 
         </div>
-        <div class="row">
-            <hr/>
-    		<footer>
-    			Copyright &copy; <?php echo date('Y'); ?> by code-works.<br/>
-    		</footer>
-    	</div>
-
     </div>
 </div>
 <!-- CONTENT WRAPPER END -->
 
+<!-- FOOTER -->
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <hr/>
+                <p>Copyright &copy; <?php echo date('Y'); ?> by code-works.</p>
+            </div>
+        </div>
+    </div>    
+</footer>
+<!-- FOOTER END -->
 </body>
 </html>

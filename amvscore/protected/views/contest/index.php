@@ -11,9 +11,20 @@ array('label'=>'Manage Contest','url'=>array('admin')),
 
 <h1>Contests</h1>
 
-<div class="well">
-	<?php $this->widget('booster.widgets.TbListView',array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	)); ?>
-</div>
+<?php
+
+$this->widget('booster.widgets.TbGridView', array(
+	'dataProvider' => $dataProvider,
+	'type' => 'striped bordered condensed',
+	'template' => '{items}{pager}',
+	'columns' => array(
+		array(
+			'name' => 'name',
+			'type' => 'raw',
+			'value' => 'CHtml::link(CHtml::encode($data->name), array("Contest/view","id"=>$data->id))',
+		),
+		'year',
+		'active:boolean',
+	),
+));
+?>
