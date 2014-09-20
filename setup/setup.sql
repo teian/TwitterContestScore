@@ -10,11 +10,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Exportiere Datenbank Struktur für amvscore
-CREATE DATABASE IF NOT EXISTS `amvscore` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
-USE `amvscore`;
-
-
 -- Exportiere Struktur von Tabelle amvscore.amv
 CREATE TABLE IF NOT EXISTS `amv` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,

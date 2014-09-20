@@ -13,6 +13,9 @@ $json_data = json_decode($data, true);
 $insert_users = array();
 $insert_tweets = array();
 
+$min_rating = 0;
+$mac_rating = 10;
+
 echo "<pre>";
 
 foreach($json_data["statuses"] as $id => $tweet)
@@ -61,7 +64,13 @@ foreach($json_data["statuses"] as $id => $tweet)
 	$rating_matches = array();
 	if(preg_match("/Wertung:(\d+)|Wertung: (\d+)|Wertung :(\d+)|Wertung : (\d+)|Wertung (\d+)|ID\d+ (\d+)|ID \d+ (\d+)/mi", $tweet_data["text"], $rating_matches))
 	{
-		$tweet_data["rating"] = $rating_matches[sizeof($rating_matches)-1]; // return last match index since php is stupid ...
+		$tweet_data["rating"] = round($rating_matches[sizeof($rating_matches)-1], 2); // return last match index since php is stupid ...
+
+		// Rating value out of defined range?
+		if($tweet_data["rating"] < $min_rating || $tweet_data["rating"] > $max_rating)
+		{
+			$tweet_data["needs_validation"] = 1;
+		}
 	}
 	else
 	{
@@ -158,14 +167,14 @@ foreach($insert_tweets as $tweet)
 	}
 
 	// check if it's a new entry and and amv is present in the db and then edit the min/max value data
-	if($isNew && isset($amv_data[$tweet["amv_id"]]))
+	if($isNew && !$tweet["needs_validation"] && isset($amv_data[$tweet["amv_id"]]))
 	{
 		$amvid = $tweet["amv_id"];
 
 		// set the modified flag so whe know which amvs need a db update =)
 		$amv_data[$amvid]["modified"] = true;
-		$amv_data[$amvid]["max_rating"] = ($tweet["rating"] > $amv_data[$amvid]["max_rating"] && $tweet["rating"] >= 0 && $tweet["rating"] <= 10) ? $tweet["rating"] : $amv_data[$amvid]["max_rating"];
-		$amv_data[$amvid]["min_rating"] = (($tweet["rating"] < $amv_data[$amvid]["min_rating"] || $amv_data[$amvid]["min_rating"] == 0) && $tweet["rating"] >= 0 && $tweet["rating"] <= 10) ? $tweet["rating"] : $amv_data[$amvid]["min_rating"];
+		$amv_data[$amvid]["max_rating"] = ($tweet["rating"] > $amv_data[$amvid]["max_rating"] && $tweet["rating"] >= $min_rating && $tweet["rating"] <= $max_rating) ? round($tweet["rating"], 2) : $amv_data[$amvid]["max_rating"];
+		$amv_data[$amvid]["min_rating"] = (($tweet["rating"] < $amv_data[$amvid]["min_rating"] || $amv_data[$amvid]["min_rating"] == 0) && $tweet["rating"] >= $min_rating && $tweet["rating"] <= $max_rating) ? round($tweet["rating"]) : $amv_data[$amvid]["min_rating"];
 		$amv_data[$amvid]["sum_rating"] += $tweet["rating"];
 		$amv_data[$amvid]["votes"]++;
 	}
