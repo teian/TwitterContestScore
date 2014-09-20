@@ -1,4 +1,13 @@
 <?php
+/*
+* ----------------------------------------------------------------------------
+* "THE BEER-WARE LICENSE" (Revision 42):
+* <fg@code-works.de> wrote this file. As long as you retain this notice you
+* can do whatever you want with this stuff. If we meet some day, and you think
+* this stuff is worth it, you can buy me a beer in return. Frank Gehann
+* ----------------------------------------------------------------------------
+*/
+
 $this->breadcrumbs=array(
 	'Tweets'=>array('index'),
 	'Manage',
@@ -9,34 +18,9 @@ array('label'=>'List Tweet','url'=>array('index')),
 array('label'=>'Create Tweet','url'=>array('create')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-$('.search-form').toggle();
-return false;
-});
-$('.search-form form').submit(function(){
-$.fn.yiiGridView.update('tweet-grid', {
-data: $(this).serialize()
-});
-return false;
-});
-");
 ?>
 
 <h1>Manage Tweets</h1>
-
-<p>
-	You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
-		&lt;&gt;</b>
-	or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button btn')); ?>
-<div class="search-form" style="display:none">
-	<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('booster.widgets.TbGridView',array(
 'id'=>'tweet-grid',

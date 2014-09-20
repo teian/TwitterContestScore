@@ -85,8 +85,9 @@ try {
 	$amv_map = array();
 	$amvs_data = array();
 	while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-      $amv_map[$row["contest_amv_id"]] = $row["id"];
-      $amvs_data[$row["id"]] = $row;
+		// add a modified flag for later use :D
+		$row["modified"] = false;
+		$amv_data[$row["contest_amv_id"]] = $row;
     }
 
 	$stmt = $db->query('SELECT * FROM tweet_user');
@@ -133,6 +134,7 @@ $q_insert_tweet = $db->prepare($sql_insert_tweet);
 
 foreach($insert_tweets as $tweet)
 {
+	$isNew = true;
 	try
 	{
 		$q_insert_tweet->execute(array(
@@ -141,17 +143,65 @@ foreach($insert_tweets as $tweet)
 			':text'=>$tweet["text"],
 			':contest_id'=>$tweet["contest_id"],
 			':user_id'=>$tweet["user_id"],
-			':amv_id'=> isset($amv_map[$tweet["amv_id"]]) ? $amv_map[$tweet["amv_id"]]: -1,
+			':amv_id'=> isset($amv_data[$tweet["amv_id"]]) ? $amv_data[$tweet["amv_id"]]["id"]: -1,
 			':rating'=>$tweet["rating"],
 			':needs_validation'=>$tweet["needs_validation"]		
 		));
 	}
 	catch(PDOException $ex) {
 		if($ex->getCode() == 23000) {
+			$isNew = false;
 	    	echo "Tweet Bereits vorhanden!" . PHP_EOL; //user friendly message
 	    } else {
 	    	echo $ex->getMessage() . PHP_EOL;
 	    }	
+	}
+
+	// check if it's a new entry and and amv is present in the db and then edit the min/max value data
+	if($isNew && isset($amv_data[$tweet["amv_id"]]))
+	{
+		$amvid = $tweet["amv_id"];
+
+		// set the modified flag so whe know which amvs need a db update =)
+		$amv_data[$amvid]["modified"] = true;
+		$amv_data[$amvid]["max_rating"] = ($tweet["rating"] > $amv_data[$amvid]["max_rating"] && $tweet["rating"] >= 0 && $tweet["rating"] <= 10) ? $tweet["rating"] : $amv_data[$amvid]["max_rating"];
+		$amv_data[$amvid]["min_rating"] = (($tweet["rating"] < $amv_data[$amvid]["min_rating"] || $amv_data[$amvid]["min_rating"] == 0) && $tweet["rating"] >= 0 && $tweet["rating"] <= 10) ? $tweet["rating"] : $amv_data[$amvid]["min_rating"];
+		$amv_data[$amvid]["sum_rating"] += $tweet["rating"];
+		$amv_data[$amvid]["votes"]++;
+	}
+}
+
+// update amv data
+$sql_update_amv = "
+	UPDATE amv 
+	SET avg_rating=:avg_rating, max_rating=:max_rating, min_rating=:min_rating, sum_rating=:sum_rating, votes=:votes
+	WHERE id=:id
+";
+$q_update_amv = $db->prepare($sql_update_amv);
+
+foreach($amv_data as $amv)
+{
+	if($amv["modified"])
+	{
+		try
+		{
+			$q_update_amv->execute(array(
+				':avg_rating'=> round(($amv["sum_rating"] / $amv["votes"]), 2),
+				':max_rating'=>$amv["max_rating"],
+				':min_rating'=>$amv["min_rating"],
+				':sum_rating'=>$amv["sum_rating"],
+				':votes' => $amv["votes"],
+				':id' => $amv["id"],	
+			));
+		}
+		catch(PDOException $ex) {
+			if($ex->getCode() == 23000) {
+				$isNew = false;
+		    	echo "Tweet Bereits vorhanden!" . PHP_EOL; //user friendly message
+		    } else {
+		    	echo $ex->getMessage() . PHP_EOL;
+		    }	
+		}
 	}
 }
 
