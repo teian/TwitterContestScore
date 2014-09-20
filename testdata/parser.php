@@ -14,7 +14,7 @@ $insert_users = array();
 $insert_tweets = array();
 
 $min_rating = 0;
-$mac_rating = 10;
+$max_rating = 10;
 
 echo "<pre>";
 
@@ -62,7 +62,7 @@ foreach($json_data["statuses"] as $id => $tweet)
 	}	
 
 	$rating_matches = array();
-	if(preg_match("/Wertung:(\d+)|Wertung: (\d+)|Wertung :(\d+)|Wertung : (\d+)|Wertung (\d+)|ID\d+ (\d+)|ID \d+ (\d+)/mi", $tweet_data["text"], $rating_matches))
+	if(preg_match("/Wertung:(\d+(?:[\.,]\d+)?)|Wertung: (\d+(?:[\.,]\d+)?)|Wertung :(\d+(?:[\.,]\d+)?)|Wertung : (\d+(?:[\.,]\d+)?)|Wertung (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)/mi", $tweet_data["text"], $rating_matches))
 	{
 		$tweet_data["rating"] = round($rating_matches[sizeof($rating_matches)-1], 2); // return last match index since php is stupid ...
 

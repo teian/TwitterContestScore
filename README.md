@@ -12,7 +12,7 @@ MYSQL 5.4+
 Regex Examples
 ========
 http://regex101.com/r/tL0xJ5/2 - ID Match
-http://regex101.com/r/cB6oU6/6 - Wertung Match
+http://regex101.com/r/cB6oU6/7 - Wertung Match
 
 
 License
