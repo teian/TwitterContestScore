@@ -1,28 +1,104 @@
-CREATE TABLE tbl_user (
-    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(128) NOT NULL,
-    password VARCHAR(128) NOT NULL,
-    email VARCHAR(128) NOT NULL
-);
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server Version:               5.6.16 - MySQL Community Server (GPL)
+-- Server Betriebssystem:        Win32
+-- HeidiSQL Version:             8.3.0.4748
+-- --------------------------------------------------------
 
-INSERT INTO tbl_user (username, password, email) VALUES ('test1', 'pass1', 'test1@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test2', 'pass2', 'test2@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test3', 'pass3', 'test3@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test4', 'pass4', 'test4@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test5', 'pass5', 'test5@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test6', 'pass6', 'test6@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test7', 'pass7', 'test7@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test8', 'pass8', 'test8@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test9', 'pass9', 'test9@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test10', 'pass10', 'test10@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test11', 'pass11', 'test11@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test12', 'pass12', 'test12@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test13', 'pass13', 'test13@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test14', 'pass14', 'test14@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test15', 'pass15', 'test15@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test16', 'pass16', 'test16@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test17', 'pass17', 'test17@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'test18@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Exportiere Struktur von Tabelle amvscore.amv
+CREATE TABLE IF NOT EXISTS `amv` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `contest_id` bigint(20) NOT NULL,
+  `contest_amv_id` bigint(20) NOT NULL,
+  `avg_rating` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'average vote',
+  `min_rating` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'lowest vote',
+  `max_rating` decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'highest vote',
+  `sum_rating` decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT 'sum of all votes to easier calculate the avg later',
+  `votes` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `contest_id_contest_amv_id` (`contest_id`,`contest_amv_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- Daten Export vom Benutzer nicht ausgewählt
+
+
+-- Exportiere Struktur von Tabelle amvscore.contest
+CREATE TABLE IF NOT EXISTS `contest` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `trigger` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `year` varchar(4) COLLATE utf8_unicode_ci NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `last_parsed_tweet_id` bigint(20) DEFAULT NULL,
+  `parse_from` datetime DEFAULT NULL,
+  `parse_to` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_contest_last_parsed_tweet_id` (`last_parsed_tweet_id`),
+  CONSTRAINT `fk_contest_last_parsed_tweet_id` FOREIGN KEY (`last_parsed_tweet_id`) REFERENCES `tweet` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- Daten Export vom Benutzer nicht ausgewählt
+
+
+-- Exportiere Struktur von Tabelle amvscore.tweet
+CREATE TABLE IF NOT EXISTS `tweet` (
+  `id` bigint(20) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `text` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `contest_id` bigint(20) NOT NULL,
+  `amv_id` bigint(20) NOT NULL,
+  `rating` tinyint(2) unsigned NOT NULL,
+  `needs_validation` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  KEY `fk_tweet_amv_id` (`amv_id`),
+  KEY `fk_tweet_contest_id` (`contest_id`),
+  CONSTRAINT `fk_tweet_contest_id` FOREIGN KEY (`contest_id`) REFERENCES `contest` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `fk_tweet_user_id` FOREIGN KEY (`user_id`) REFERENCES `tweet_user` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='crawled tweets';
+
+-- Daten Export vom Benutzer nicht ausgewählt
+
+
+-- Exportiere Struktur von Tabelle amvscore.tweet_user
+CREATE TABLE IF NOT EXISTS `tweet_user` (
+  `id` bigint(20) NOT NULL,
+  `screen_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Twitter Users';
+
+-- Daten Export vom Benutzer nicht ausgewählt
+
+
+-- Exportiere Struktur von Tabelle amvscore.user
+CREATE TABLE `user` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NULL DEFAULT NULL,
+  `password` VARCHAR(255) NULL DEFAULT NULL,
+  `salt` VARCHAR(255) NULL DEFAULT NULL,
+  `password_strategy` VARCHAR(50) NULL DEFAULT NULL,
+  `requires_new_password` TINYINT(1) NULL DEFAULT NULL,
+  `email` VARCHAR(255) NULL DEFAULT NULL,
+  `validation_key` VARCHAR(255) NULL DEFAULT NULL,
+  `login_attempts` INT(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `username` (`username`),
+  UNIQUE INDEX `email` (`email`)
+)
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+-- Daten Export vom Benutzer nicht ausgewählt
+
+
+-- Daten Export vom Benutzer nicht ausgewählt
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

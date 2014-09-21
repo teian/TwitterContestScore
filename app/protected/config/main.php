@@ -24,6 +24,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'ext.YiiPassword.*',
 	),
 
 	'modules'=>array(
@@ -64,7 +65,10 @@ return array(
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
 		),
-		
+
+		'cache'=>array(
+            'class'=>'system.caching.CFileCache',
+        ),		
 
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),

@@ -1,15 +1,15 @@
 <?php
 /*
-* ----------------------------------------------------------------------------
-* "THE BEER-WARE LICENSE" (Revision 42):
-* <fg@code-works.de> wrote this file. As long as you retain this notice you
-* can do whatever you want with this stuff. If we meet some day, and you think
-* this stuff is worth it, you can buy me a beer in return. Frank Gehann
-* ----------------------------------------------------------------------------
-*/
-
-/**
  * This is the model class for table "tweet".
+ * @author Frank Gehann <fg@code-works.de>
+ * @copyright Copyright (c) Code Works 2014
+ *
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <fg@code-works.de> wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return. Frank Gehann
+ * ----------------------------------------------------------------------------
  *
  * The followings are the available columns in table 'tweet':
  * @property string $id

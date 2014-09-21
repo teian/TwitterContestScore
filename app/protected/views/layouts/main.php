@@ -61,6 +61,7 @@ if(isset($this->menu) && sizeof($this->menu) > 0)
             array(
                 'label' => 'Operations',
                 'url' => array('#'),
+                'visible' => !Yii::app()->user->isGuest,
                 'items' => $this->menu,
             ), 
         )

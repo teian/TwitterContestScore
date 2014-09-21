@@ -35,6 +35,7 @@
 
 <?php echo $form->datepickerGroup($model, 'parse_from', array(
 	'hint'=>Yii::t('info', 'Click inside to choose date.'),
+	'prepend' => '<i class="glyphicon glyphicon-calendar"></i>',
 	'widgetOptions' => array(
 		'options'=>array(
 			'format'=> 'yyyy-mm-dd',
@@ -46,6 +47,7 @@
 
 <?php echo $form->datepickerGroup($model, 'parse_to', array(
 	'hint'=>Yii::t('info', 'Click inside to choose date.'),
+	'prepend' => '<i class="glyphicon glyphicon-calendar"></i>',
 	'widgetOptions' => array(
 		'options' => array(
 			'format' => 'yyyy-mm-dd',

@@ -41,10 +41,7 @@ array('label'=>'Manage Amv','url'=>array('admin')),
 
 <?php
 
-$dataProvider=new CActiveDataProvider('Tweet', array(
-    'criteria'=>array(
-        'condition' => 'amv_id = '.$model->id.' AND contest_id = '.$model->contest_id,
-    ),
+$dataProvider=new CArrayDataProvider($tweets, array(
     'pagination'=>array(
 		'pageSize'=> 25,
 	),
@@ -55,7 +52,12 @@ $this->widget('booster.widgets.TbGridView', array(
 	'type' => 'striped bordered condensed',
 	'template' => '{items}{pager}',
 	'columns' => array(
-		'user.screen_name',
+		array(
+			'name' => 'user.screen_name',
+			'htmlOptions'=>array(
+				'style' => 'width: 200px;',
+			)
+		),		
 		'text',		
 	),
 ));
