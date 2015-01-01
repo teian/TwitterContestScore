@@ -1,67 +1,138 @@
 <?php
 /*
-* ----------------------------------------------------------------------------
-* "THE BEER-WARE LICENSE" (Revision 42):
-* <fg@code-works.de> wrote this file. As long as you retain this notice you
-* can do whatever you want with this stuff. If we meet some day, and you think
-* this stuff is worth it, you can buy me a beer in return. Frank Gehann
-* ----------------------------------------------------------------------------
-*/
+ * This is the view file to display contest details.
+ * @author Frank Gehann <fg@code-works.de>
+ * @copyright Copyright (c) Code Works 2014
+ *
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * <fg@code-works.de> wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return. Frank Gehann
+ * ----------------------------------------------------------------------------
+ */
 ?>
 
 <?php
-$this->breadcrumbs=array(
-	'Contests'=>array('index'),
+$this->breadcrumbs = [
+	'Contests' => ['index'],
 	$model->name,
-);
+];
 
-$this->menu=array(
-array('label'=>'List Contest','url'=>array('index')),
-array('label'=>'Create Contest','url'=>array('create')),
-array('label'=>'Update Contest','url'=>array('update','id'=>$model->id)),
-array('label'=>'Delete Contest','url'=>'#','linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-array('label'=>'Manage Contest','url'=>array('admin')),
-);
+$this->menu = [
+	[
+		'label'=>'Create Contest',
+		'url'=>['create']
+	], [
+		'label'=>'Update Contest',
+		'url'=>[
+			'update', 
+			'id'=>$model->id
+		]
+	], [
+		'label' => 'Delete Contest',
+		'url' => '#',
+		'linkOptions' => [
+			'submit'=> [
+				'delete',
+				'id' => $model->id
+			],
+			'confirm' => 'Are you sure you want to delete this item?'
+		],
+	], [
+		'label'=>'Manage Contest',
+		'url'=>['admin']
+	]
+];
 ?>
 
-<h1><?php echo $model->name; ?> (<?php echo $model->year; ?>)</h1>
+<?php 
 
-<?php $this->widget('booster.widgets.TbDetailView',array(
-'data'=>$model,
-'attributes'=>array(
-		'trigger',
-		'year',
-		'active:boolean',	
-		'parse_from',
-		'parse_to',
-),
-)); ?>
+$panel_menue = [];
 
-<h2>AMVs</h2>
+$create = [
+    'class' => 'booster.widgets.TbButton',
+    'context' => 'primary',
+    'buttonType' => 'link',
+    'label' => Yii::t("contest", "Create Contest"),
+    'icon'=>'plus',
+    'size' => 'mini',       
+    'url'=>CHtml::normalizeUrl(['Contest/create']),
+];
 
-<?php
+$update = [
+    'class' => 'booster.widgets.TbButton',
+    'context' => 'primary',
+    'buttonType' => 'link',
+    'label' => Yii::t("contest", "Update Contest"),
+    'icon'=>'update',
+    'size' => 'mini',       
+    'url'=>CHtml::normalizeUrl(['Contest/update', 'id'=>$model->id]),
+];
 
-$dataProvider=new CActiveDataProvider('Amv', array(
-    'criteria'=>array(
+$admin = [
+    'class' => 'booster.widgets.TbButton',
+    'context' => 'primary',
+    'buttonType' => 'link',
+    'label' => Yii::t("contest", "Manage Contest"),
+    'icon'=>'list',
+    'size' => 'mini',       
+    'url'=>CHtml::normalizeUrl(['Contest/admin']),
+];
+
+// @Todo: implement user role based access
+array_push($panel_menue, $create);
+array_push($panel_menue, $admin);
+
+$dataProvider=new CActiveDataProvider('Amv', [
+    'criteria' => [
         'condition' => 'contest_id = '.$model->id,
-    ),
-));
+    ],
+]);
 
-$this->widget('booster.widgets.TbGridView', array(
+$content .= "<h1>{$model->name} ({$model->year})</h1>";
+
+$content .= $this->widget('booster.widgets.TbDetailView', [
+	'data'=>$model,
+	'attributes' => [
+			'trigger',
+			'year',
+			'active:boolean',	
+			'parse_from',
+			'parse_to',
+	),
+), true);
+
+$content .= "<h2>AMV's</h2>";
+
+$content .= $this->widget('booster.widgets.TbGridView', [
 	'dataProvider' => $dataProvider,
 	'type' => 'striped bordered condensed',
 	'template' => '{items}',
-	'columns' => array(
-		array(
+	'columns' => [
+		[
 			'name' => 'contest_amv_id',
 			'type' => 'raw',
 			'value' => 'CHtml::link(CHtml::encode($data->contest_amv_id), array("Amv/view","id"=>$data->id))',
-		),
+		],
 		'avg_rating',
 		'min_rating',
 		'max_rating',
 		'votes',
-	),
-));
+	],
+], true);
+
+$this->widget('booster.widgets.TbPanel', [
+    'title' => "{$model->name} ({$model->year})",
+    'headerIcon' => 'list',
+    'headerButtons' => [
+        [
+            'class' => 'booster.widgets.TbButtonGroup',
+            'size' => 'extra_small',
+            'buttons' => $panel_menue,
+        ],
+    ],                  
+    'content' => $content,
+]);
 ?>
 

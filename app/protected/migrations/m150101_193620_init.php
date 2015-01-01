@@ -2,11 +2,11 @@
 
 class m150101_193620_init extends CDbMigration
 {
-	// Use safeUp/safeDown to do migration with transaction
-	public function safeUp()
-	{
-		// create amv table
-		$this->createTable('amv', array(
+    // Use safeUp/safeDown to do migration with transaction
+    public function safeUp()
+    {
+        // create amv table
+        $this->createTable('amv', array(
             'id' => "bigint(20) NOT NULL",
             'contest_id' => "bigint(20) NOT NULL",
             'contest_amv_id' => "bigint(20) NOT NULL",
@@ -58,14 +58,14 @@ class m150101_193620_init extends CDbMigration
 
         // Insert default crawler profile
         $this->insert('crawler_profile', [
-        	'id' => 1,
-        	'name' => 'Default',
-        	'regex_id' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
-        	'regex_rating' => 'Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
-        	'is_default' => 1,
-    	]);
+            'id' => 1,
+            'name' => 'Default',
+            'regex_id' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
+            'regex_rating' => 'Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
+            'is_default' => 1,
+        ]);
 
-    	// create tweet table
+        // create tweet table
         $this->createTable('tweet', array(
             'id' => "bigint(20) NOT NULL",
             'created_at' => "datetime NOT NULL",
@@ -103,84 +103,80 @@ class m150101_193620_init extends CDbMigration
         $this->createIndex('unique_user_username', 'user', 'username', true);
         $this->createIndex('unique_user_email', 'user', 'email', true);
 
-        // Insert superuser
-        $this->insert('user', [
-        	'id' => 1,
-        	'username' => "admin",
-            'password' => "$2a$14$l0VXOiSNrgeNHwFA2kJuoe4QceZt6RNJ6WPxPuWqqXU0zmtxDwreS",
-            'salt' => "$2a$14$l0VXOiSNrgeNHwFA2kJuog",
-            'password_strategy' => "bcrypt",
-            'requires_new_password' => 0,
-            'email' => "admin@amvscore.net",
-            'validation_key' => NULL,
-            'login_attempts' => 0,
-            'super_admin' => 1,
-    	]);
-
         // add foreign key constraints for table amv
         $this->addForeignKey(
-        	'fk_amv_contest_id', 
-        	'amv', 
-        	'contest_id', 
-        	'contest', 
-        	'id'
+            'fk_amv_contest_id', 
+            'amv', 
+            'contest_id', 
+            'contest', 
+            'id'
         );
 
         // add foreign key constraints for table contest
         $this->addForeignKey(
-        	'fk_contest_crawler_profile_id', 
-        	'contest', 
-        	'crawler_profile_id', 
-        	'crawler_profile', 
-        	'id'
+            'fk_contest_crawler_profile_id', 
+            'contest', 
+            'crawler_profile_id', 
+            'crawler_profile', 
+            'id'
         );
 
         $this->addForeignKey(
-        	'fk_contest_last_parsed_tweet_id', 
-        	'contest', 
-        	'last_parsed_tweet_id', 
-        	'tweet', 
-        	'id'
+            'fk_contest_last_parsed_tweet_id', 
+            'contest', 
+            'last_parsed_tweet_id', 
+            'tweet', 
+            'id'
         );
 
         // add foreign key constraints for table crawler_data
         $this->addForeignKey(
-        	'fk_crawler_data_contest_id', 
-        	'crawler_data', 
-        	'contest_id', 
-        	'contest', 
-        	'id'
+            'fk_crawler_data_contest_id', 
+            'crawler_data', 
+            'contest_id', 
+            'contest', 
+            'id'
         );
 
         // add foreign key constraints for table tweet
         $this->addForeignKey(
-        	'fk_tweet_contest_id', 
-        	'tweet', 
-        	'contest_id', 
-        	'contest', 
-        	'id',
-        	NULL, 
-        	'CASCADE'
+            'fk_tweet_contest_id', 
+            'tweet', 
+            'contest_id', 
+            'contest', 
+            'id',
+            NULL, 
+            'CASCADE'
         );
 
         $this->addForeignKey(
-        	'fk_tweet_user_id', 
-        	'tweet', 
-        	'user_id', 
-        	'tweet_user', 
-        	'id',
-        	NULL, 
-        	'CASCADE'
+            'fk_tweet_user_id', 
+            'tweet', 
+            'user_id', 
+            'tweet_user', 
+            'id',
+            NULL, 
+            'CASCADE'
         );
+
+        // Insert superuser
+        $user = new User();
+        $user->id = 1;
+        $user->username = "admin";
+        $user->password = "admin123";
+        $user->email = "admin@amvscore.net";
+        $user->super_admin = 1;
+        $user->login_attempts = 0;
+        $user->save();
 
         echo "A Superuser has been created with the following credentials:\n";
         echo "Username: admin\n";
-        echo "Password: admin\n";
-	}
+        echo "Password: admin123\n";
+    }
 
-	public function safeDown()
-	{
-		echo "No downgrade avaiable from the init migration!";
-		return false;
-	}
+    public function safeDown()
+    {
+        echo "No downgrade avaiable from the init migration!";
+        return false;
+    }
 }
