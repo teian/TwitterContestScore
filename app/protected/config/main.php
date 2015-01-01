@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'AMVScore',
+	'name'=>'Twitter Contest Score',
 	'layout' => 'column1',
 
 	// preloading 'log' component

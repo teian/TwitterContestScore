@@ -1,4 +1,4 @@
-amvscore
+TwitterContestScore
 ========
 
 Almost realtime scoring aggregation via twitter for the Connichi Exclusive AMV contest but can most possibly used for other contest related stuff 
