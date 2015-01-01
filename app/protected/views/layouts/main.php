@@ -92,7 +92,7 @@ array_push($menu_items,$login_menu);
 $this->widget(
     'bootstrap.widgets.TbNavbar',
     array(
-        'brand' => 'AMVScore',
+        'brand' => Yii::app()->name,
         'brandUrl' => Yii::app()->request->baseUrl,
         'collapse' => true,
         'fixed' =>'top',
