@@ -1,7 +1,7 @@
 amvscore
 ========
 
-Almost realtime scoring aggregation via twitter for the Connichi Exclusive AMV contest
+Almost realtime scoring aggregation via twitter for the Connichi Exclusive AMV contest but can most possibly used for other contest related stuff 
 
 
 Minimal requirements
@@ -9,16 +9,25 @@ Minimal requirements
 PHP 5.4+ with curl and PDO (mysql) extension
 MYSQL 5.4+
 
+The application might work with a lower version of php/mysql, but I will never test against those legacy versions.
+
+Install
+========
+-Change the database configuration in app/protected/config/database.php
+-Run the database migration to create the tables for the application by running "php ./app/protected/yiic migrate"
+
+You might need to grant execution rights
+
 Regex Examples
 ========
-http://regex101.com/r/tL0xJ5/2 - ID Match
-http://regex101.com/r/cB6oU6/7 - Wertung Match
+http://regex101.com/r/tL0xJ5/2 - ID matching
+http://regex101.com/r/cB6oU6/7 - Rating matching
 
 
 License
 ========
 
-Aside from the Framework and Plugins all the Code is released under the following license
+Aside from the Framework and Plugins all the code is released under the following license
 
 /*
 * ----------------------------------------------------------------------------
