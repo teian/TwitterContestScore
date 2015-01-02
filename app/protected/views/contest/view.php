@@ -19,70 +19,31 @@ $this->breadcrumbs = [
 	$model->name,
 ];
 
-$this->menu = [
-	[
-		'label'=>'Create Contest',
-		'url'=>['create']
-	], [
-		'label'=>'Update Contest',
-		'url'=>[
-			'update', 
-			'id'=>$model->id
-		]
-	], [
-		'label' => 'Delete Contest',
-		'url' => '#',
-		'linkOptions' => [
-			'submit'=> [
-				'delete',
-				'id' => $model->id
-			],
-			'confirm' => 'Are you sure you want to delete this item?'
-		],
-	], [
-		'label'=>'Manage Contest',
-		'url'=>['admin']
-	]
-];
-?>
-
-<?php 
-
 $panel_menue = [];
 
-$create = [
-    'class' => 'booster.widgets.TbButton',
-    'context' => 'primary',
-    'buttonType' => 'link',
-    'label' => Yii::t("contest", "Create Contest"),
-    'icon'=>'plus',
-    'size' => 'mini',       
-    'url'=>CHtml::normalizeUrl(['Contest/create']),
-];
-
-$update = [
+$edit = [
     'class' => 'booster.widgets.TbButton',
     'context' => 'primary',
     'buttonType' => 'link',
     'label' => Yii::t("contest", "Update Contest"),
-    'icon'=>'update',
+    'icon'=>'edit',
     'size' => 'mini',       
-    'url'=>CHtml::normalizeUrl(['Contest/update', 'id'=>$model->id]),
+    'url'=>CHtml::normalizeUrl(['Contest/update', 'id' => $model->id]),
 ];
 
-$admin = [
+$delete = [
     'class' => 'booster.widgets.TbButton',
     'context' => 'primary',
     'buttonType' => 'link',
-    'label' => Yii::t("contest", "Manage Contest"),
-    'icon'=>'list',
+    'label' => Yii::t("contest", "Delete Contest"),
+    'icon'=>'trash',
     'size' => 'mini',       
-    'url'=>CHtml::normalizeUrl(['Contest/admin']),
+    'url'=>CHtml::normalizeUrl(['Contest/delete', 'id' => $model->id]),
 ];
 
 // @Todo: implement user role based access
-array_push($panel_menue, $create);
-array_push($panel_menue, $admin);
+array_push($panel_menue, $edit);
+array_push($panel_menue, $delete);
 
 $dataProvider=new CActiveDataProvider('Amv', [
     'criteria' => [
@@ -90,9 +51,7 @@ $dataProvider=new CActiveDataProvider('Amv', [
     ],
 ]);
 
-$content .= "<h1>{$model->name} ({$model->year})</h1>";
-
-$content .= $this->widget('booster.widgets.TbDetailView', [
+$content = $this->widget('booster.widgets.TbDetailView', [
 	'data'=>$model,
 	'attributes' => [
 			'trigger',
@@ -100,8 +59,8 @@ $content .= $this->widget('booster.widgets.TbDetailView', [
 			'active:boolean',	
 			'parse_from',
 			'parse_to',
-	),
-), true);
+	],
+], true);
 
 $content .= "<h2>AMV's</h2>";
 

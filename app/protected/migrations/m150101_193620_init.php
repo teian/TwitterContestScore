@@ -6,55 +6,51 @@ class m150101_193620_init extends CDbMigration
     public function safeUp()
     {
         // create amv table
-        $this->createTable('amv', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('amv', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'contest_id' => "bigint(20) NOT NULL",
             'contest_amv_id' => "bigint(20) NOT NULL",
             'avg_rating' => "decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'average vote'",
             'min_rating' => "decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'lowest vote'",
             'max_rating' => "decimal(4,2) NOT NULL DEFAULT '0.00' COMMENT 'highest vote'",
             'max_rating' => "decimal(10,2) NOT NULL DEFAULT '0.00' COMMENT 'sum of all votes to easier calculate the avg later'",
-            'votes' => "bigint(20) NOT NULL DEFAULT '0'",
-        ));
-        $this->addPrimaryKey('pk_amv', 'amv', 'id');
+            'votes' => "bigint(20) NOT NULL DEFAULT '0'"
+        ]);
+
         $this->createIndex('unique_contest_amv', 'amv', ['contest_id', 'contest_amv_id'], true);
 
         // create contest table
-        $this->createTable('contest', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('contest', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'name' => "varchar(255) NOT NULL",
             'trigger' => "varchar(255) NOT NULL",
             'year' => "varchar(4) NOT NULL",
             'active' => "tinyint(1) NOT NULL DEFAULT '0'",
-            'last_parsed_tweet_id' => "bigint(20) NOT NULL",
+            'last_parsed_tweet_id' => "bigint(20) DEFAULT NULL",
             'last_parse' => "datetime NOT NULL",
             'parse_from' => "date NOT NULL",
             'parse_to' => "date NOT NULL",
             'crawler_profile_id' => "bigint(20) DEFAULT '1'",
             'custom_regex_id' => "text",
             'custom_regex_rating' => "text",
-        ));
-        $this->addPrimaryKey('pk_contest', 'contest', 'id');
+        ]);
 
         // create crawler_data table
-        $this->createTable('crawler_data', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('crawler_data', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'contest_id' => "bigint(20) NOT NULL",
             'data' => "text",
-            'pulled_at' => "datetime NOT NULL",
-            'parsed_at' => "datetime NOT NULL",
-        ));
-        $this->addPrimaryKey('pk_crawler_data', 'crawler_data', 'id');
+            'parsed_at' => "datetime DEFAULT NULL",
+        ]);
 
         // create crawler profile table
-        $this->createTable('crawler_profile', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('crawler_profile', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'name' => "varchar(255) NOT NULL",
             'regex_id' => "text",
             'regex_rating' => "text",
             'is_default' => "tinyint(1) NOT NULL DEFAULT '0'",
-        ));
-        $this->addPrimaryKey('pk_crawler_profile', 'crawler_profile', 'id');
+        ]);
 
         // Insert default crawler profile
         $this->insert('crawler_profile', [
@@ -66,8 +62,8 @@ class m150101_193620_init extends CDbMigration
         ]);
 
         // create tweet table
-        $this->createTable('tweet', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('tweet', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'created_at' => "datetime NOT NULL",
             'text' => "varchar(140) NOT NULL",
             'user_id' => "bigint(20) NOT NULL",
@@ -75,20 +71,18 @@ class m150101_193620_init extends CDbMigration
             'amv_id' => "bigint(20) NOT NULL",
             'rating' => "decimal(4,2) NOT NULL DEFAULT '0.00'",
             'needs_validation' => "tinyint(1) NOT NULL DEFAULT '0'",
-        ));
-        $this->addPrimaryKey('pk_tweet', 'tweet', 'id');
+        ]);
 
         // create tweet_user table
-        $this->createTable('tweet_user', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('tweet_user', [
+            'id' => "bigint(20) NOT NULL PRIMARY KEY",
             'screen_name' => "varchar(255) NOT NULL",
             'created_at' => "datetime NOT NULL",
-        ));
-        $this->addPrimaryKey('pk_tweet_user', 'tweet_user', 'id');
+        ]);
 
         // create tweet_user table
-        $this->createTable('user', array(
-            'id' => "bigint(20) NOT NULL",
+        $this->createTable('user', [
+            'id' => "bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY",
             'username' => "varchar(45) NOT NULL",
             'password' => "varchar(255) NOT NULL",
             'salt' => "varchar(255) NOT NULL",
@@ -98,8 +92,8 @@ class m150101_193620_init extends CDbMigration
             'validation_key' => "varchar(255) DEFAULT NULL",
             'login_attempts' => "int(11) DEFAULT '0'",
             'super_admin' => "int(1) NOT NULL DEFAULT '0'",
-        ));
-        $this->addPrimaryKey('pk_user', 'user', 'id');
+        ]);
+
         $this->createIndex('unique_user_username', 'user', 'username', true);
         $this->createIndex('unique_user_email', 'user', 'email', true);
 

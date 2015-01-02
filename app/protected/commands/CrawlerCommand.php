@@ -12,7 +12,7 @@
  * ----------------------------------------------------------------------------
  */
 
-class TwitterCommand extends CConsoleCommand
+class CrawlerCommand extends CConsoleCommand
 {
 	public function actionFetch() 
     {
@@ -21,13 +21,14 @@ class TwitterCommand extends CConsoleCommand
 
     public function actionParse() 
     {
+    	$CrawlerData = new CrawlerData();
 
-    	$data = file_get_contents("test.json");
+    	$data = file_get_contents("../testdata/test.json");
 
 		$json_data = json_decode($data, true);
 
-    	$insert_users = array();
-		$insert_tweets = array();
+    	$insert_users = [];
+		$insert_tweets = [];
 
 		$min_rating = 0;
 		$max_rating = 10;
@@ -35,12 +36,23 @@ class TwitterCommand extends CConsoleCommand
 		foreach($json_data["statuses"] as $id => $tweet)
 		{
 			// Get User Data
-			$user = array();
+			$user = [];
 			$user["id"] = $tweet["user"]["id_str"];
 			$user["screen_name"] = $tweet["user"]["screen_name"];
 			
-			$date_array = date_parse($tweet["user"]["created_at"]);
-			$date_string = date('Y-m-d H:i:s', mktime($date_array['hour'], $date_array['minute'], $date_array['second'], $date_array['month'], $date_array['day'], $date_array['year']));
+			$tweet_user_date = date_parse($tweet["user"]["created_at"]);
+
+			$date_string = date(
+				'Y-m-d H:i:s', 
+				mktime(
+					$tweet_user_date['hour'], 
+					$tweet_user_date['minute'], 
+					$tweet_user_date['second'], 
+					$tweet_user_date['month'], 
+					$tweet_user_date['day'], 
+					$tweet_user_date['year']
+				)
+			);
 
 			$user["created_at"] = $date_string;
 
@@ -48,22 +60,30 @@ class TwitterCommand extends CConsoleCommand
 
 			// Get Tweet Data
 
-			$tweet_data = array();
+			$tweet_data = [];
 
 			$tweet_data["id"] = $tweet["id_str"];
-
 			$tweet_data["needs_validation"] = 0;
 
-			$date_array = date_parse($tweet["created_at"]);
-			$date_string = date('Y-m-d H:i:s', mktime($date_array['hour'], $date_array['minute'], $date_array['second'], $date_array['month'], $date_array['day'], $date_array['year']));
+			$tweet_date = date_parse($tweet["created_at"]);
+			$date_string = date(
+				'Y-m-d H:i:s', 
+				mktime(
+					$tweet_date['hour'], 
+					$tweet_date['minute'], 
+					$tweet_date['second'], 
+					$tweet_date['month'], 
+					$tweet_date['day'], 
+					$tweet_date['year']
+				)
+			);
 
 			$tweet_data["text"] = trim($tweet["text"]);
-
 			$tweet_data["created_at"] = $date_string;
 
 			$tweet_data["contest_id"] = 1;
 
-			$id_matches = array();
+			$id_matches = [];
 
 			if(preg_match("/ID(\d+)|ID (\d+)/mi", $tweet_data["text"], $id_matches))
 			{
@@ -75,7 +95,7 @@ class TwitterCommand extends CConsoleCommand
 				$tweet_data["needs_validation"] = 1;
 			}	
 
-			$rating_matches = array();
+			$rating_matches = [];
 			if(preg_match("/Wertung:(\d+(?:[\.,]\d+)?)|Wertung: (\d+(?:[\.,]\d+)?)|Wertung :(\d+(?:[\.,]\d+)?)|Wertung : (\d+(?:[\.,]\d+)?)|Wertung (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)/mi", $tweet_data["text"], $rating_matches))
 			{
 				$tweet_data["rating"] = round($rating_matches[sizeof($rating_matches)-1], 2); // return last match index since php is stupid ...
@@ -105,8 +125,8 @@ class TwitterCommand extends CConsoleCommand
 
 			$stmt = $db->query('SELECT * FROM amv WHERE contest_id = 1');
 
-			$amv_map = array();
-			$amvs_data = array();
+			$amv_map = [];
+			$amvs_data = [];
 			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 				// add a modified flag for later use :D
 				$row["modified"] = false;
