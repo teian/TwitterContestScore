@@ -13,8 +13,18 @@ The application might work with a lower version of php/mysql, but I will never t
 
 Install
 ========
+Change the database configuration in ./config/db.php
+
+Run:
+
+```
+composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+composer install
+yiic migrate
+```
+
 -Change the database configuration in app/protected/config/database.php
--Run the database migration to create the tables for the application by running "php ./app/protected/yiic migrate"
+-Run the database migration to create the tables for the application by running "yiic migrate"
 
 You might need to grant execution rights
 

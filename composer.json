@@ -6,7 +6,7 @@
     "type": "project",
     "license": "Beer-Ware License",
     "support": {
-        "issues": "https://github.com/Tak0r/TwitterContestScore/issues?state=open",
+        "issues": "https://github.com/Tak0r/TwitterContestScore/issues?state=open"
     },
     "minimum-stability": "stable",
     "require": {
