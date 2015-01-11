@@ -23,11 +23,6 @@ composer install
 yiic migrate
 ```
 
--Change the database configuration in app/protected/config/database.php
--Run the database migration to create the tables for the application by running "yiic migrate"
-
-You might need to grant execution rights
-
 Regex Examples
 ========
 http://regex101.com/r/tL0xJ5/2 - ID matching

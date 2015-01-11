@@ -17,6 +17,9 @@ Thumbs.db
 # cubrid install dir
 /cubrid
 
+# don't commit published assets
+/web/assets
+
 # composer itself is not needed
 composer.phar
 
