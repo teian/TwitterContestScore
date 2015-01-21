@@ -14,10 +14,10 @@ class m150102_174907_init extends Migration
         }
 
     	// create amv table
-        $this->createTable('{{%amv}}', [
+        $this->createTable('{{%entry}}', [
             'id' => Schema::TYPE_BIGPK,
             'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
-            'contest_amv_id' => Schema::TYPE_BIGINT ." NOT NULL",
+            'contest_entry_id' => Schema::TYPE_BIGINT ." NOT NULL",
             'avg_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
             'min_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
             'max_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
@@ -26,7 +26,7 @@ class m150102_174907_init extends Migration
             'create_time' => Schema::TYPE_DATETIME,
             'update_time' => Schema::TYPE_DATETIME,
         ], $tableOptions);
-        $this->createIndex('unique_contest_amv', '{{%amv}}', ['contest_id', 'contest_amv_id'], true);
+        $this->createIndex('unique_contest_entry', '{{%entry}}', ['contest_id', 'contest_entry_id'], true);
 
         // create contest table
         $this->createTable('{{%contest}}', [
@@ -83,7 +83,7 @@ class m150102_174907_init extends Migration
             'text' => Schema::TYPE_STRING . " NOT NULL",
             'user_id' => Schema::TYPE_BIGINT ." NOT NULL",
             'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
-            'amv_id' => Schema::TYPE_BIGINT ." NOT NULL",
+            'entry_id' => Schema::TYPE_BIGINT ." NOT NULL",
             'rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT '0.00'",
             'needs_validation' => Schema::TYPE_BOOLEAN . " NOT NULL DEFAULT 0",
             'create_time' => Schema::TYPE_DATETIME,
@@ -113,10 +113,10 @@ class m150102_174907_init extends Migration
         $this->createIndex('unique_user_username', '{{%user}}', 'username', true);
         $this->createIndex('unique_user_email', '{{%user}}', 'email', true);
 
-        // add foreign key constraints for table amv
+        // add foreign key constraints for table entry
         $this->addForeignKey(
-            'fk_amv_contest_id', 
-            '{{%amv}}', 
+            'fk_entry_contest_id', 
+            '{{%entry}}', 
             'contest_id', 
             '{{%contest}}', 
             'id'
@@ -184,7 +184,7 @@ class m150102_174907_init extends Migration
 
     public function down()
     {
-        $this->dropTable('{{%amv}}');
+        $this->dropTable('{{%entry}}');
         $this->dropTable('{{%contest}}');
         $this->dropTable('{{%crawler_data}}');
         $this->dropTable('{{%crawler_profile}}');

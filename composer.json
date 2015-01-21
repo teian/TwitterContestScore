@@ -1,10 +1,10 @@
 {
     "name": "tak0r/twitter-contest-score",
-    "description": "Contest vorting aggregation for Twitter",
+    "description": "Contest voting aggregation for Twitter",
     "keywords": ["twitter", "contest", "score", "voting"],
     "homepage": "https://github.com/Tak0r/TwitterContestScore",
     "type": "project",
-    "license": "Beer-Ware License",
+    "license": "Beerware",
     "support": {
         "issues": "https://github.com/Tak0r/TwitterContestScore/issues?state=open"
     },
@@ -14,6 +14,7 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-authclient": "*",
         "nordsoftware/yii2-password": "*"
     },
     "require-dev": {

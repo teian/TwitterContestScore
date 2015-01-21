@@ -10,7 +10,7 @@ use yii\web\IdentityInterface;
 use yii\db\Expression;
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "{{%user}}".
  *
  * @property integer $id
  * @property string $username
@@ -27,24 +27,27 @@ class User extends ActiveRecord implements IdentityInterface
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
 
-    public function behaviors()
-    {
-        return [
-            [
-               'class' => TimestampBehavior::className(),
-               'createdAtAttribute' => 'create_time',
-               'updatedAtAttribute' => 'update_time',
-               'value' => new Expression('NOW()'),
-            ],
-        ];
-    }
-
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
         return '{{%user}}';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return [
+            [
+               'class' => \yii\behaviors\TimestampBehavior::className(),
+               'createdAtAttribute' => 'create_time',
+               'updatedAtAttribute' => 'update_time',
+               'value' => new \yii\db\Expression('NOW()'),
+            ],
+        ];
     }
 
     /**
