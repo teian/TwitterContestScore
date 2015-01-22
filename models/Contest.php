@@ -17,7 +17,7 @@ use Yii;
  * @property string $parse_from
  * @property string $parse_to
  * @property string $crawler_profile_id
- * @property string $custom_regex_id
+ * @property string $custom_regex_entry
  * @property string $custom_regex_rating
  * @property string $create_time
  * @property string $update_time
@@ -62,7 +62,7 @@ class Contest extends \yii\db\ActiveRecord
             [['name', 'trigger', 'year', 'last_parse', 'parse_from', 'parse_to'], 'required'],
             [['active', 'last_parsed_tweet_id', 'crawler_profile_id'], 'integer'],
             [['last_parse', 'parse_from', 'parse_to', 'create_time', 'update_time'], 'safe'],
-            [['custom_regex_id', 'custom_regex_rating'], 'string'],
+            [['custom_regex_entry', 'custom_regex_rating'], 'string'],
             [['name', 'trigger'], 'string', 'max' => 255],
             [['year'], 'string', 'max' => 4]
         ];
@@ -84,7 +84,7 @@ class Contest extends \yii\db\ActiveRecord
             'parse_from' => Yii::t('app', 'Parse From'),
             'parse_to' => Yii::t('app', 'Parse To'),
             'crawler_profile_id' => Yii::t('app', 'Crawler Profile ID'),
-            'custom_regex_id' => Yii::t('app', 'Custom Regex ID'),
+            'custom_regex_entry' => Yii::t('app', 'Custom Regex Entry'),
             'custom_regex_rating' => Yii::t('app', 'Custom Regex Rating'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),

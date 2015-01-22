@@ -9,7 +9,7 @@ use Yii;
  *
  * @property string $id
  * @property string $name
- * @property string $regex_id
+ * @property string $regex_entry
  * @property string $regex_rating
  * @property integer $is_default
  * @property string $create_time
@@ -49,7 +49,7 @@ class CrawlerProfile extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['regex_id', 'regex_rating'], 'string'],
+            [['regex_entry', 'regex_rating'], 'string'],
             [['is_default'], 'integer'],
             [['create_time', 'update_time'], 'safe'],
             [['name'], 'string', 'max' => 255]
@@ -64,7 +64,7 @@ class CrawlerProfile extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Name'),
-            'regex_id' => Yii::t('app', 'Regex ID'),
+            'regex_entry' => Yii::t('app', 'Regex Entry'),
             'regex_rating' => Yii::t('app', 'Regex Rating'),
             'is_default' => Yii::t('app', 'Is Default'),
             'create_time' => Yii::t('app', 'Create Time'),

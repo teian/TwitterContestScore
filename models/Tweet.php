@@ -12,7 +12,7 @@ use Yii;
  * @property string $text
  * @property string $user_id
  * @property string $contest_id
- * @property string $amv_id
+ * @property string $entry_id
  * @property string $rating
  * @property integer $needs_validation
  * @property string $create_time
@@ -53,9 +53,10 @@ class Tweet extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'text', 'user_id', 'contest_id', 'amv_id'], 'required'],
+            [['created_at', 'text', 'user_id', 'contest_id', 'entry_id'], 'required'],
             [['created_at', 'create_time', 'update_time'], 'safe'],
-            [['user_id', 'contest_id', 'amv_id', 'needs_validation'], 'integer'],
+            [['user_id', 'contest_id', 'entry_id'], 'integer'],
+            [['needs_validation'], 'boolean'],
             [['rating'], 'number'],
             [['text'], 'string', 'max' => 255]
         ];
@@ -72,7 +73,7 @@ class Tweet extends \yii\db\ActiveRecord
             'text' => Yii::t('app', 'Text'),
             'user_id' => Yii::t('app', 'User ID'),
             'contest_id' => Yii::t('app', 'Contest ID'),
-            'amv_id' => Yii::t('app', 'Amv ID'),
+            'entry_id' => Yii::t('app', 'Entry ID'),
             'rating' => Yii::t('app', 'Rating'),
             'needs_validation' => Yii::t('app', 'Needs Validation'),
             'create_time' => Yii::t('app', 'Create Time'),

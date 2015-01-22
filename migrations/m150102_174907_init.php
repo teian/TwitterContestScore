@@ -40,7 +40,7 @@ class m150102_174907_init extends Migration
             'parse_from' => Schema::TYPE_DATE ." NOT NULL",
             'parse_to' => Schema::TYPE_DATE ." NOT NULL",
             'crawler_profile_id' => Schema::TYPE_BIGINT ." DEFAULT 1",
-            'custom_regex_id' => Schema::TYPE_TEXT,
+            'custom_regex_entry' => Schema::TYPE_TEXT,
             'custom_regex_rating' => Schema::TYPE_TEXT,
             'create_time' => Schema::TYPE_DATETIME,
             'update_time' => Schema::TYPE_DATETIME,
@@ -50,7 +50,7 @@ class m150102_174907_init extends Migration
         $this->createTable('{{%crawler_data}}', [
             'id' => Schema::TYPE_BIGPK,
             'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
-            'data' => Schema::TYPE_TEXT,
+            'data' => 'longtext',
             'parsed_at' => Schema::TYPE_DATETIME . " DEFAULT NULL",
             'create_time' => Schema::TYPE_DATETIME,
             'update_time' => Schema::TYPE_DATETIME,
@@ -60,7 +60,7 @@ class m150102_174907_init extends Migration
         $this->createTable('{{%crawler_profile}}', [
             'id' => Schema::TYPE_BIGPK,
             'name' => Schema::TYPE_STRING . " NOT NULL",
-            'regex_id' => Schema::TYPE_TEXT,
+            'regex_entry' => Schema::TYPE_TEXT,
             'regex_rating' => Schema::TYPE_TEXT,
             'is_default' => Schema::TYPE_BOOLEAN . " NOT NULL DEFAULT 0",
             'create_time' => Schema::TYPE_DATETIME,
@@ -70,15 +70,23 @@ class m150102_174907_init extends Migration
         // Insert default crawler profile
         $this->insert('{{%crawler_profile}}', [
             'id' => 1,
-            'name' => 'Default',
-            'regex_id' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
-            'regex_rating' => 'Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
+            'name' => 'Default German',
+            'regex_entry' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
+            'regex_rating' => 'Wertung:(\d+(?:[\.,]\d+)?)|Wertung: (\d+(?:[\.,]\d+)?)|Wertung :(\d+(?:[\.,]\d+)?)|Wertung : (\d+(?:[\.,]\d+)?)|Wertung (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
             'is_default' => 1,
+        ], $tableOptions);
+
+        $this->insert('{{%crawler_profile}}', [
+            'id' => 2,
+            'name' => 'Default English',
+            'regex_entry' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
+            'regex_rating' => 'Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
+            'is_default' => 0,
         ], $tableOptions);
 
         // create tweet table
         $this->createTable('{{%tweet}}', [
-            'id' => Schema::TYPE_BIGPK,
+            'id' => Schema::TYPE_BIGINT,
             'created_at' => Schema::TYPE_DATETIME . " NOT NULL",
             'text' => Schema::TYPE_STRING . " NOT NULL",
             'user_id' => Schema::TYPE_BIGINT ." NOT NULL",
@@ -90,13 +98,25 @@ class m150102_174907_init extends Migration
             'update_time' => Schema::TYPE_DATETIME,
         ], $tableOptions);
 
+        $this->addPrimaryKey(
+            'pk_tweet', 
+            '{{%tweet}}', 
+            'id'
+        );
+
         // create tweet_user table
         $this->createTable('{{%tweet_user}}', [
-            'id' => Schema::TYPE_BIGPK,
+            'id' => Schema::TYPE_BIGINT,
             'screen_name' => Schema::TYPE_STRING . " NOT NULL",
             'create_time' => Schema::TYPE_DATETIME,
             'update_time' => Schema::TYPE_DATETIME,
         ], $tableOptions);
+
+        $this->addPrimaryKey(
+            'pk_tweet_user', 
+            '{{%tweet_user}}', 
+            'id'
+        );
 
         // create tweet_user table
         $this->createTable('{{%user}}', [

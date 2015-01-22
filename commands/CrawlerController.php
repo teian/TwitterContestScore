@@ -9,6 +9,7 @@
 namespace app\commands;
 
 use yii\console\Controller;
+use yii\helpers\Console;
 
 /**
  * Pulls Tweets for Contests and parses them
@@ -48,42 +49,82 @@ class CrawlerController extends Controller
      */
     public function actionProcess()
     {
-        $contestData = \app\models\CrawlerData::findAll([
-            'parsed_at' => null,
-        ]);
-
-        print_r($contestData);
-
-        /*
+        $defaultRegex = \app\models\CrawlerProfile::findOne(['is_default' => 1]);
+        $crawlerDataCollection = \app\models\CrawlerData::findAll(['parsed_at' => null]);
 
         $min_rating = 0;
         $max_rating = 10;
 
-        foreach($json_data["statuses"] as $id => $tweet)
+        $json_data = [];        
+        $regex = [];
+
+        foreach($crawlerDataCollection as $crawlerData) 
         {
-            $CreateDate = DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
+            $contest = \app\models\Contest::findOne($crawlerData->contest_id);
 
-            // check if we have user in our db if not create one
-            $TweetUser = $this->GetOrAddUser($tweet["user"]);
-        
-            // Create new Tweet object
-            $Tweet = new \app\models\Tweet;
-            
-            $Tweet->id = $tweet["id_str"]; 
-            $Tweet->created_at = $CreateDate->format('Y-m-d H:i:s');
-            $Tweet->text = trim($tweet["text"]);
-            $Tweet->user_id = $TweetUser->id;
-            $Tweet->contest_id = 1;
-            $Tweet->entry_id = $this->ParseEntryId("REGEX", $Tweet->text);
-            $Tweet->rating = $this->ParseEntryId("REGEX", $Tweet->text);
-            $Tweet->needs_validation = false;
-
-            if($Tweet->rating < 0 || $Tweet->rating < $min_rating || $Tweet->rating > $max_rating)
+            if($contest->custom_regex_entry == null)
             {
-                $Tweet->needs_validation = true;
+                $regex["entry"] = $defaultRegex->regex_entry;
+            }
+            else
+            {
+                $regex["entry"] = $contest->custom_regex_entry;
+            }
+
+            if($contest->custom_regex_rating == null)
+            {
+                $regex["rating"] = $defaultRegex->regex_rating;
+            }    
+            else
+            {
+                $regex["rating"] = $contest->custom_regex_rating;
+            }        
+
+            $jsonData = \yii\helpers\Json::decode($crawlerData->data, true);
+
+            foreach($jsonData["statuses"] as $id => $tweet)
+            {
+                $TweetUser = $this->GetOrAddUser($tweet["user"]);
+                $CreateDate = \DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
+            
+                // Create new Tweet object
+                $Tweet = new \app\models\Tweet;                
+                $Tweet->id = $tweet["id_str"]; 
+                $Tweet->created_at = $CreateDate->format('Y-m-d H:i:s');
+                $Tweet->text = trim($tweet["text"]);
+                $Tweet->user_id = $TweetUser->id;
+                $Tweet->contest_id = $crawlerData->contest_id;
+                $Tweet->entry_id = $this->ParseEntryId($regex["entry"], $Tweet->text);
+                $Tweet->rating = $this->ParseRating($regex["rating"], $Tweet->text);
+                $Tweet->needs_validation = false;
+
+                if($Tweet->entry_id < 0)
+                {
+                    $Tweet->needs_validation = true;
+                }
+
+                if($Tweet->rating < 0 || $Tweet->rating < $min_rating || $Tweet->rating > $max_rating)
+                {
+                    $Tweet->needs_validation = true;
+                }  
+                
+                if($Tweet->save())
+                {
+                    $this->stdout("Tweet ID ".$Tweet->id." for Contest ".$contest->name." saved!\n");
+                    $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");
+                    $contest->last_parsed_tweet_id = $Tweet->id;
+                }
+                else
+                {
+                    $this->stdout("Error Saving Tweet", Console::BOLD);
+                }
+            }
+
+            if($contest->save())
+            {
+                $this->stdout("Last Tweet ID for Contest ".$contest->name." saved!\n", Console::BOLD);
             }
         }
-        */
     }
 
     /**
@@ -95,11 +136,10 @@ class CrawlerController extends Controller
      */
     private function ParseEntryId($regex, $tweet)
     {
-        $Matches = [];
-
-        if(preg_match($regex, tweet, $Matches))
+        $matches = [];
+        if(preg_match("/".$regex."/mi", $tweet, $matches))
         {
-            return $Matches[sizeof($Matches)-1]; // return last match index since php is stupid ...
+            return $matches[sizeof($matches)-1]; // return last match index since php is stupid ...
         }
         else
         {
@@ -116,11 +156,10 @@ class CrawlerController extends Controller
      */
     private function ParseRating($regex, $tweet)
     {
-        $Matches = [];   
-
-        if(preg_match($regex, $tweet, $Matches))
+        $matches = [];
+        if(preg_match("/".$regex."/mi", $tweet, $matches))
         {
-            return round($rating_matches[sizeof($rating_matches)-1], 2); // return last match index since php is stupid ...
+            return round($matches[sizeof($matches)-1], 2); // return last match index since php is stupid ...
         }
         else
         {
