@@ -90,8 +90,8 @@ class m150102_174907_init extends Migration
             'created_at' => Schema::TYPE_DATETIME . " NOT NULL",
             'text' => Schema::TYPE_STRING . " NOT NULL",
             'user_id' => Schema::TYPE_BIGINT ." NOT NULL",
-            'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
-            'entry_id' => Schema::TYPE_BIGINT ." NOT NULL",
+            'contest_id' => Schema::TYPE_BIGINT . " NOT NULL",
+            'entry_id' => Schema::TYPE_BIGINT . " DEFAULT NULL",
             'rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT '0.00'",
             'needs_validation' => Schema::TYPE_BOOLEAN . " NOT NULL DEFAULT 0",
             'create_time' => Schema::TYPE_DATETIME,
@@ -179,11 +179,23 @@ class m150102_174907_init extends Migration
             'CASCADE'
         );
 
+        // add foreign key constraints for table tweet
         $this->addForeignKey(
             'fk_tweet_user_id', 
             '{{%tweet}}', 
             'user_id', 
             '{{%tweet_user}}', 
+            'id',
+            NULL, 
+            'CASCADE'
+        );
+
+        // add foreign key constraints for table tweet
+        $this->addForeignKey(
+            'fk_tweet_entry_id', 
+            '{{%tweet}}', 
+            'entry_id', 
+            '{{%entry}}', 
             'id',
             NULL, 
             'CASCADE'

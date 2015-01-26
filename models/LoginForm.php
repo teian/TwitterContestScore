@@ -1,13 +1,12 @@
 <?php
-namespace common\models;
+namespace app\models;
 
 use Yii;
-use yii\base\Model;
 
 /**
  * Login form
  */
-class LoginForm extends Model
+class LoginForm extends \yii\base\Model
 {
     public $username;
     public $password;

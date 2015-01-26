@@ -60,10 +60,11 @@ class Contest extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'trigger', 'year', 'last_parse', 'parse_from', 'parse_to'], 'required'],
-            [['active', 'last_parsed_tweet_id', 'crawler_profile_id'], 'integer'],
+            [['last_parsed_tweet_id', 'crawler_profile_id'], 'integer'],
             [['last_parse', 'parse_from', 'parse_to', 'create_time', 'update_time'], 'safe'],
             [['custom_regex_entry', 'custom_regex_rating'], 'string'],
             [['name', 'trigger'], 'string', 'max' => 255],
+            [['active'], 'boolean'],
             [['year'], 'string', 'max' => 4]
         ];
     }

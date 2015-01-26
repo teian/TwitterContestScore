@@ -53,11 +53,16 @@ class Tweet extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['created_at', 'text', 'user_id', 'contest_id', 'entry_id'], 'required'],
+            [['id'], 'unique'],
+            [['created_at', 'text', 'user_id', 'contest_id'], 'required'],
             [['created_at', 'create_time', 'update_time'], 'safe'],
+            [['entry_id'], 'exist', 'targetAttribute' => 'id', 'targetClass' => 'app\models\Entry'],
+            [['contest_id'], 'exist', 'targetAttribute' => 'id', 'targetClass' => 'app\models\Contest'],
+            [['user_id'], 'exist', 'targetAttribute' => 'id', 'targetClass' => 'app\models\TweetUser'],
             [['user_id', 'contest_id', 'entry_id'], 'integer'],
             [['needs_validation'], 'boolean'],
             [['rating'], 'number'],
+            [['rating'], 'default', 'value' => '0.00'],
             [['text'], 'string', 'max' => 255]
         ];
     }
