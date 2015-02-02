@@ -111,6 +111,9 @@ class CrawlerController extends Controller
      */
     private function CreateTweetEntry($tweet, $contest_id, $regex)
     {
+        $min_rating = 0;
+        $max_rating = 10;
+
         $TweetUser = $this->GetOrAddUser($tweet["user"]);
         $CreateDate = \DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
     
@@ -132,7 +135,16 @@ class CrawlerController extends Controller
         }
         else
         {
-            $Tweet->entry_id = $entryNr;
+            $Entry = \app\models\Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
+            
+            if($Entry != null && $Entry->id > 0)
+            {
+                $Tweet->entry_id = $Entry->id;
+            }
+            else
+            {
+                $Tweet->needs_validation = true;
+            }
         }
 
         if($rating == null || $rating < $min_rating || $rating > $max_rating)
@@ -142,12 +154,6 @@ class CrawlerController extends Controller
         else
         {
             $Tweet->rating = $rating;
-        }
-
-        if($entryNr != null)
-        {
-            $Entry = \app\models\Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
-            $Tweet->entry_id = $Entry->id;
         }
         
         if($Tweet->validate() && $Tweet->save())

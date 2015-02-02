@@ -63,6 +63,7 @@ class Tweet extends \yii\db\ActiveRecord
             [['needs_validation'], 'boolean'],
             [['rating'], 'number'],
             [['rating'], 'default', 'value' => '0.00'],
+            [['entry_id'], 'default', 'value' => null],
             [['text'], 'string', 'max' => 255]
         ];
     }

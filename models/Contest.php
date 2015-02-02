@@ -59,7 +59,7 @@ class Contest extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'trigger', 'year', 'last_parse', 'parse_from', 'parse_to'], 'required'],
+            [['name', 'trigger', 'year', 'parse_from', 'parse_to'], 'required'],
             [['last_parsed_tweet_id', 'crawler_profile_id'], 'integer'],
             [['last_parse', 'parse_from', 'parse_to', 'create_time', 'update_time'], 'safe'],
             [['custom_regex_entry', 'custom_regex_rating'], 'string'],

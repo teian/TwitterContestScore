@@ -36,7 +36,7 @@ class m150102_174907_init extends Migration
             'year' => Schema::TYPE_STRING ."(4) NOT NULL",
             'active' => Schema::TYPE_BOOLEAN . " NOT NULL DEFAULT 0",
             'last_parsed_tweet_id' => Schema::TYPE_BIGINT ." DEFAULT NULL",
-            'last_parse' => Schema::TYPE_DATETIME ." NOT NULL",
+            'last_parse' => Schema::TYPE_DATETIME ." DEFAULT NULL",
             'parse_from' => Schema::TYPE_DATE ." NOT NULL",
             'parse_to' => Schema::TYPE_DATE ." NOT NULL",
             'crawler_profile_id' => Schema::TYPE_BIGINT ." DEFAULT 1",
