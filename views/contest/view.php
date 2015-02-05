@@ -32,15 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     'trigger',
                     'year',
                     'active:boolean',
-                    'last_parsed_tweet_id',
                     'last_parse',
                     'parse_from',
                     'parse_to',
-                    'crawler_profile_id',
-                    'custom_regex_entry:ntext',
-                    'custom_regex_rating:ntext',
-                    'create_time',
-                    'update_time',
                 ],
             ]) ?>
         </div>

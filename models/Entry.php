@@ -13,6 +13,7 @@ use Yii;
  * @property string $avg_rating
  * @property string $min_rating
  * @property string $max_rating
+ * @property string $sum_rating 
  * @property string $votes
  * @property string $create_time
  * @property string $update_time
@@ -52,7 +53,8 @@ class Entry extends \yii\db\ActiveRecord
         return [
             [['contest_id', 'contest_entry_id'], 'required'],
             [['contest_id', 'contest_entry_id', 'votes'], 'integer'],
-            [['avg_rating', 'min_rating', 'max_rating'], 'number'],
+            [['avg_rating', 'min_rating', 'max_rating'], 'match', 'pattern'=>'/^[0-9]{1,2}(\.[0-9]{0,2})?$/'],
+            [['sum_rating'], 'match', 'pattern'=>'/^[0-9]{1,8}(\.[0-9]{0,2})?$/'],
             [['create_time', 'update_time'], 'safe'],
             [['contest_id', 'contest_entry_id'], 'unique', 'targetAttribute' => ['contest_id', 'contest_entry_id'], 'message' => 'The combination of Contest ID and Contest Entry ID has already been taken.']
         ];
@@ -70,6 +72,7 @@ class Entry extends \yii\db\ActiveRecord
             'avg_rating' => Yii::t('app', 'Avg Rating'),
             'min_rating' => Yii::t('app', 'Min Rating'),
             'max_rating' => Yii::t('app', 'Max Rating'),
+            'sum_rating' => Yii::t('app', 'Sum Rating'),            
             'votes' => Yii::t('app', 'Votes'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),

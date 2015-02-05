@@ -30,7 +30,7 @@ class CrawlerController extends Controller
      */
     public function actionPullTweets()
     {
-        $CurrentDate = new DateTime('NOW');
+        $CurrentDate = new \DateTime('NOW');
 
         $Contests = Contest::findAll([
             'active' => 1,
@@ -81,13 +81,17 @@ class CrawlerController extends Controller
 
             foreach($jsonData["statuses"] as $id => $tweet)
             {
-                $tweetId = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
+                $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
 
-                if($tweetId != null)
+                if($Tweet != null)
                 {
-                    $Contest->last_parsed_tweet_id = $tweetId;
+                    $Contest->last_parsed_tweet_id = $Tweet->id;
+                    
                 }
             }
+
+            $last_parse_date = new \DateTime('NOW');
+            $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
 
             if($Contest->save())
             {
@@ -95,9 +99,8 @@ class CrawlerController extends Controller
             }
             else
             {
-                $errors = $Contest->errors;
                 $this->stdout("Error Saving Tweet!\n", Console::BOLD);  
-                $this->stdout($errors . "\n", Console::BOLD);
+                $this->stdout(print_r($Contest->errors) . "\n", Console::BOLD);
             }
         }
     }
@@ -127,25 +130,7 @@ class CrawlerController extends Controller
         $Tweet->needs_validation = false;
 
         $rating = $this->ParseRating($regex["rating"], $Tweet->text);
-        $entryNr = $entryNr = $this->ParseEntryId($regex["entry"], $Tweet->text);
-
-        if($entryNr == null)
-        {
-            $Tweet->needs_validation = true;
-        }
-        else
-        {
-            $Entry = \app\models\Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
-            
-            if($Entry != null && $Entry->id > 0)
-            {
-                $Tweet->entry_id = $Entry->id;
-            }
-            else
-            {
-                $Tweet->needs_validation = true;
-            }
-        }
+        $entryNr = $this->ParseEntryId($regex["entry"], $Tweet->text);
 
         if($rating == null || $rating < $min_rating || $rating > $max_rating)
         {
@@ -155,12 +140,47 @@ class CrawlerController extends Controller
         {
             $Tweet->rating = $rating;
         }
+
+        if($entryNr == null)
+        {
+            $Tweet->needs_validation = true;
+        }
+        else
+        {
+            $Entry = \app\models\Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
+            
+            if($Entry != null)
+            {
+                $Tweet->entry_id = $Entry->id;
+
+                $Entry->votes++;
+                $Entry->sum_rating += $Tweet->rating;
+                $Entry->avg_rating = round(($Entry->sum_rating / $Entry->votes), 2);
+
+                // Save new Entry stats if inside constraints
+                if($Tweet->rating > $Entry->max_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
+                {
+                    $Entry->max_rating = round($Tweet->rating, 2);
+                }
+
+                if($Tweet->rating > $Entry->min_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
+                {
+                    $Entry->min_rating = round($Tweet->rating, 2);
+                }
+
+                $Entry->save();
+            }
+            else
+            {
+                $Tweet->needs_validation = true;
+            }
+        }        
         
         if($Tweet->validate() && $Tweet->save())
         {
             $this->stdout("Tweet ID ".$Tweet->id." for Contest ID ".$contest_id." saved!\n");
             $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");
-            return $Tweet->id;
+            return $Tweet;
         }
         else
         {
