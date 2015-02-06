@@ -70,18 +70,10 @@ class m150102_174907_init extends Migration
         // Insert default crawler profile
         $this->insert('{{%crawler_profile}}', [
             'id' => 1,
-            'name' => 'Default German',
+            'name' => 'Default',
             'regex_entry' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
-            'regex_rating' => 'Wertung:(\d+(?:[\.,]\d+)?)|Wertung: (\d+(?:[\.,]\d+)?)|Wertung :(\d+(?:[\.,]\d+)?)|Wertung : (\d+(?:[\.,]\d+)?)|Wertung (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
+            'regex_rating' => 'Wertung:(\d+(?:[\.,]\d+)?)|Wertung: (\d+(?:[\.,]\d+)?)|Wertung :(\d+(?:[\.,]\d+)?)|Wertung : (\d+(?:[\.,]\d+)?)|Wertung (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)|Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
             'is_default' => 1,
-        ], $tableOptions);
-
-        $this->insert('{{%crawler_profile}}', [
-            'id' => 2,
-            'name' => 'Default English',
-            'regex_entry' => 'ID(\d+)|ID (\d+)|ID:(\d+)|ID (\d+)',
-            'regex_rating' => 'Rating:(\d+(?:[\.,]\d+)?)|Rating: (\d+(?:[\.,]\d+)?)|Rating :(\d+(?:[\.,]\d+)?)|Rating : (\d+(?:[\.,]\d+)?)|Rating (\d+(?:[\.,]\d+)?)|ID\d+ (\d+(?:[\.,]\d+)?)|ID \d+ (\d+(?:[\.,]\d+)?)',
-            'is_default' => 0,
         ], $tableOptions);
 
         // create tweet table

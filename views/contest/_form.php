@@ -1,7 +1,12 @@
 <?php
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
+use kartik\widgets\ActiveForm;
+use kartik\date\DatePicker;
+use kartik\widgets\Select2;
+use app\models\CrawlerProfile;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Contest */
@@ -20,23 +25,34 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'active')->textInput() ?>
 
-    <?= $form->field($model, 'last_parsed_tweet_id')->textInput(['maxlength' => 20]) ?>
+    <?= $form->field($model, 'parse_from')->widget(DatePicker::classname(), [
+        'options' => ['placeholder' => 'Enter Date where to start parsing ...'],
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'yyyy-mm-dd'
+        ]
+    ]); ?>
 
-    <?= $form->field($model, 'last_parse')->textInput() ?>
+    <?= $form->field($model, 'parse_to')->widget(DatePicker::classname(), [
+        'options' => ['placeholder' => 'Enter Date where to end parsing ...'],
+        'pluginOptions' => [
+            'autoclose'=>true,
+            'format' => 'yyyy-mm-dd'
+        ]
+    ]); ?>
 
-    <?= $form->field($model, 'parse_from')->textInput() ?>
 
-    <?= $form->field($model, 'parse_to')->textInput() ?>
-
-    <?= $form->field($model, 'crawler_profile_id')->textInput(['maxlength' => 20]) ?>
+    <?= $form->field($model, 'crawler_profile_id')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(CrawlerProfile::find()->all(), 'id', 'name'),
+        'options' => ['placeholder' => 'Select a Crawler Profile ...'],
+        'pluginOptions' => [
+            'allowClear' => true
+        ],
+    ]); ?>
 
     <?= $form->field($model, 'custom_regex_entry')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'custom_regex_rating')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'create_time')->textInput() ?>
-
-    <?= $form->field($model, 'update_time')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
