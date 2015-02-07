@@ -22,14 +22,20 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="contest-view">
             <h1><?= Html::encode($this->title) ?></h1>
             <p>
-                <?= Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-                <?= Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
-                    'class' => 'btn btn-danger',
-                    'data' => [
-                        'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
-                        'method' => 'post',
-                    ],
-                ]) ?>
+            <?php
+                if(!Yii::$app->user->isGuest) 
+                {
+                    echo Html::a(Yii::t('app', 'Update'), ['update', 'id' => $model->id], ['class' => 'btn btn-primary']);
+                    echo "&nbsp;";
+                    echo Html::a(Yii::t('app', 'Delete'), ['delete', 'id' => $model->id], [
+                        'class' => 'btn btn-danger',
+                        'data' => [
+                            'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                            'method' => 'post',
+                        ],
+                    ]);
+                }
+            ?>
             </p>
 
             <?= DetailView::widget([
@@ -49,6 +55,17 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="row">
     <div class="col-lg-12">
         <h2><?= Yii::t('app', 'Entries') ?></h2>
+
+        <?php
+            if(!Yii::$app->user->isGuest) 
+            {
+                echo Html::a(
+                    Yii::t('app', 'Create {modelClass}', ['modelClass' => 'Entry']), 
+                    ['entry/create', 'id' => $model->id], 
+                    ['class' => 'btn btn-success']
+                );
+            }
+        ?>
 
         <? Pjax::begin(); ?>
         <?= GridView::widget([

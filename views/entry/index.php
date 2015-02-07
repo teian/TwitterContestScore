@@ -20,9 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a(Yii::t('app', 'Create {modelClass}', [
-    'modelClass' => 'Entry',
-]), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(
+            Yii::t('app', 'Create {modelClass}', ['modelClass' => 'Entry']), 
+            ['create'], 
+            ['class' => 'btn btn-success']
+        ) ?>
     </p>
 
     <?= GridView::widget([
@@ -35,11 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'contest_entry_id',
             'avg_rating',
             'min_rating',
-            // 'max_rating',
-            // 'sum_rating',
-            // 'votes',
-            // 'create_time',
-            // 'update_time',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

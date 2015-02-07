@@ -22,12 +22,12 @@ class m150102_174907_init extends Migration
     	// create amv table
         $this->createTable('{{%entry}}', [
             'id' => Schema::TYPE_BIGPK,
+            'name' => Schema::TYPE_STRING ." NOT NULL",
             'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
             'contest_entry_id' => Schema::TYPE_BIGINT ." NOT NULL",
             'avg_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
             'min_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
             'max_rating' => Schema::TYPE_DECIMAL ."(4,2) NOT NULL DEFAULT 0.00",
-            'sum_rating' => Schema::TYPE_DECIMAL ."(10,2) NOT NULL DEFAULT 0.00",
             'votes' => Schema::TYPE_BIGINT ." NOT NULL DEFAULT 0",
             'create_time' => Schema::TYPE_DATETIME,
             'update_time' => Schema::TYPE_DATETIME,

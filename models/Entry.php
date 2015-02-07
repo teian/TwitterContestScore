@@ -14,12 +14,12 @@ use Yii;
  * This is the model class for table "{{%entry}}".
  *
  * @property string $id
+ * @property string $name
  * @property string $contest_id
  * @property string $contest_entry_id
  * @property string $avg_rating
  * @property string $min_rating
  * @property string $max_rating
- * @property string $sum_rating 
  * @property string $votes
  * @property string $create_time
  * @property string $update_time
@@ -73,12 +73,12 @@ class Entry extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
+            'name' => Yii::t('app', 'Name'),
             'contest_id' => Yii::t('app', 'Contest ID'),
-            'contest_entry_id' => Yii::t('app', 'Contest Entry ID'),
+            'contest_entry_id' => Yii::t('app', 'Entry Number'),
             'avg_rating' => Yii::t('app', 'Avg Rating'),
             'min_rating' => Yii::t('app', 'Min Rating'),
-            'max_rating' => Yii::t('app', 'Max Rating'),
-            'sum_rating' => Yii::t('app', 'Sum Rating'),            
+            'max_rating' => Yii::t('app', 'Max Rating'),         
             'votes' => Yii::t('app', 'Votes'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
