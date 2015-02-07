@@ -61,8 +61,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-lg-12">
         <h2><?= Yii::t('app', 'Tweets') ?></h2>
 
-        <?= $model->id ?>
-
         <? Pjax::begin(); ?>
         <?= GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
