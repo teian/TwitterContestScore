@@ -61,10 +61,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-lg-12">
         <h2><?= Yii::t('app', 'Tweets') ?></h2>
 
+        <?= $model->id ?>
+
         <? Pjax::begin(); ?>
         <?= GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
-                    'query' => Tweet::find(['entry_id' => $model->id]),
+                    'query' => Tweet::find()->where([
+                        'entry_id' => $model->id,
+
+                    ]),
                 ]),
                 'columns' => [
                     [

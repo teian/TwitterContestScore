@@ -10,6 +10,8 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\data\ActiveDataProvider;
+use app\models\Entry;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Contest */
@@ -70,8 +72,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <? Pjax::begin(); ?>
         <?= GridView::widget([
-                'dataProvider' => new \yii\data\ActiveDataProvider([
-                    'query' => app\models\Entry::find(['contest_id' => $model->id]),
+                'dataProvider' => new ActiveDataProvider([
+                    'query' => Entry::find()->where(['contest_id' => $model->id]),
                 ]),
                 'columns' => [
                     [
