@@ -11,6 +11,7 @@ use yii\widgets\DetailView;
 use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
 use app\models\Tweet;
+use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Entry */
