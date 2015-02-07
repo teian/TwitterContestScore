@@ -9,7 +9,6 @@
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
 use yii\data\ActiveDataProvider;
 use app\models\Entry;
 
@@ -70,7 +69,6 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         ?>
 
-        <? Pjax::begin(); ?>
         <?= GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
                     'query' => Entry::find()->where(['contest_id' => $model->id]),
@@ -89,6 +87,5 @@ $this->params['breadcrumbs'][] = $this->title;
                     'votes',
                     ],
         ]); ?>
-        <? Pjax::end(); ?>
     </div>
 </div>

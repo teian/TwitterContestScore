@@ -11,7 +11,6 @@ use yii\widgets\DetailView;
 use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
 use app\models\Tweet;
-use yii\widgets\Pjax;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Entry */
@@ -61,7 +60,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="col-lg-12">
         <h2><?= Yii::t('app', 'Tweets') ?></h2>
 
-        <? Pjax::begin(); ?>
         <?= GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
                     'query' => Tweet::find()->where([
@@ -80,6 +78,5 @@ $this->params['breadcrumbs'][] = $this->title;
                     'text'
                 ]
         ]); ?>
-        <? Pjax::end(); ?>
     </div>
 </div>
