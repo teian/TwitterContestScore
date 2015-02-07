@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author Frank Gehann <fg@randomlol.de>
+ * @link https://github.com/Tak0r/TwitterContestScore
+ * @license Beerware
+ * @package Views
+ */
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;

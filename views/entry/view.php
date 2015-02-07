@@ -10,13 +10,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Tweet */
+/* @var $model app\models\Entry */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Tweets'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Entries'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="tweet-view">
+<div class="entry-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -35,13 +35,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'created_at',
-            'text',
-            'user_id',
             'contest_id',
-            'entry_id',
-            'rating',
-            'needs_validation',
+            'contest_entry_id',
+            'avg_rating',
+            'min_rating',
+            'max_rating',
+            'sum_rating',
+            'votes',
             'create_time',
             'update_time',
         ],

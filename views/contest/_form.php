@@ -1,10 +1,17 @@
 <?php
+/**
+ * @author Frank Gehann <fg@randomlol.de>
+ * @link https://github.com/Tak0r/TwitterContestScore
+ * @license Beerware
+ * @package Views
+ */
 
 use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 use kartik\widgets\ActiveForm;
-use kartik\date\DatePicker;
 use kartik\widgets\Select2;
+use kartik\widgets\SwitchInput;
+use kartik\date\DatePicker;
 use app\models\CrawlerProfile;
 
 
@@ -23,7 +30,7 @@ use app\models\CrawlerProfile;
 
     <?= $form->field($model, 'year')->textInput(['maxlength' => 4]) ?>
 
-    <?= $form->field($model, 'active')->textInput() ?>
+    <?= $form->field($model, 'active')->widget(SwitchInput::classname(), []); ?>
 
     <?= $form->field($model, 'parse_from')->widget(DatePicker::classname(), [
         'options' => ['placeholder' => 'Enter Date where to start parsing ...'],

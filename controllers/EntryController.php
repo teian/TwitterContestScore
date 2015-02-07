@@ -9,16 +9,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Tweet;
+use app\models\Entry;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * TweetController implements the CRUD actions for Tweet model.
+ * EntryController implements the CRUD actions for Entry model.
  */
-class TweetController extends Controller
+class EntryController extends Controller
 {
     public function behaviors()
     {
@@ -33,13 +33,13 @@ class TweetController extends Controller
     }
 
     /**
-     * Lists all Tweet models.
+     * Lists all Entry models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Tweet::find(),
+            'query' => Entry::find(),
         ]);
 
         return $this->render('index', [
@@ -48,7 +48,7 @@ class TweetController extends Controller
     }
 
     /**
-     * Displays a single Tweet model.
+     * Displays a single Entry model.
      * @param string $id
      * @return mixed
      */
@@ -60,13 +60,13 @@ class TweetController extends Controller
     }
 
     /**
-     * Creates a new Tweet model.
+     * Creates a new Entry model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Tweet();
+        $model = new Entry();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -78,7 +78,7 @@ class TweetController extends Controller
     }
 
     /**
-     * Updates an existing Tweet model.
+     * Updates an existing Entry model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
      * @return mixed
@@ -97,7 +97,7 @@ class TweetController extends Controller
     }
 
     /**
-     * Deletes an existing Tweet model.
+     * Deletes an existing Entry model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param string $id
      * @return mixed
@@ -110,15 +110,15 @@ class TweetController extends Controller
     }
 
     /**
-     * Finds the Tweet model based on its primary key value.
+     * Finds the Entry model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param string $id
-     * @return Tweet the loaded model
+     * @return Entry the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Tweet::findOne($id)) !== null) {
+        if (($model = Entry::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

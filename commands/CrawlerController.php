@@ -2,7 +2,7 @@
 /**
  * @author Frank Gehann <fg@randomlol.de>
  * @link https://github.com/Tak0r/TwitterContestScore
- * @license Beerware License
+ * @license Beerware
  * @package Commands
  */
 
@@ -10,6 +10,15 @@ namespace app\commands;
 
 use yii\console\Controller;
 use yii\helpers\Console;
+use yii\helpers\Json;
+use yii\db\Query;
+use app\models\CrawlerProfile;
+use app\models\CrawlerData;
+use app\models\Contest;
+use app\models\Tweet;
+use app\models\TweetUser;
+use app\models\Entry;
+use \Datetime;
 
 /**
  * Pulls Tweets for Contests and parses them
@@ -28,19 +37,19 @@ class CrawlerController extends Controller
     /**
      * This command pulls new messages from twitter
      */
-    public function actionPullTweets()
+    public function actionPulltweets()
     {
         $CurrentDate = new \DateTime('NOW');
 
         $Contests = Contest::findAll([
             'active' => 1,
-            'parse_from' => '<=' . $CurrentDate->format('Y-m-d'),
-            'parse_to' => '>=' . $CurrentDate->format('Y-m-d'),
+            //'parse_from' => '<=' . $CurrentDate->format('Y-m-d'),
+            //'parse_to' => '>=' . $CurrentDate->format('Y-m-d'),
         ]);
 
         foreach($Contests as $Contest) 
         {
-            print_r($Contest);
+            $this->UpdateContestEntries($Contest);
         }        
     }
 
@@ -49,19 +58,19 @@ class CrawlerController extends Controller
      */
     public function actionProcess()
     {
-        $defaultRegex = \app\models\CrawlerProfile::findOne(['is_default' => 1]);
-        $crawlerDataCollection = \app\models\CrawlerData::findAll(['parsed_at' => null]);
+        $crawlerDataCollection = CrawlerData::findAll(['parsed_at' => null]);
 
         $json_data = [];        
         $regex = [];
 
         foreach($crawlerDataCollection as $crawlerData) 
         {
-            $Contest = \app\models\Contest::findOne($crawlerData->contest_id);
+            $Contest = Contest::findOne($crawlerData->contest_id);
+            $contestRegex = CrawlerProfile::findOne(['id' => $crawlerData->crawler_profile_id]);
 
             if($Contest->custom_regex_entry == null)
             {
-                $regex["entry"] = $defaultRegex->regex_entry;
+                $regex["entry"] = $contestRegex->regex_entry;
             }
             else
             {
@@ -70,14 +79,14 @@ class CrawlerController extends Controller
 
             if($Contest->custom_regex_rating == null)
             {
-                $regex["rating"] = $defaultRegex->regex_rating;
+                $regex["rating"] = $contestRegex->regex_rating;
             }    
             else
             {
                 $regex["rating"] = $Contest->custom_regex_rating;
             }        
 
-            $jsonData = \yii\helpers\Json::decode($crawlerData->data, true);
+            $jsonData = Json::decode($crawlerData->data, true);
 
             foreach($jsonData["statuses"] as $id => $tweet)
             {
@@ -85,12 +94,11 @@ class CrawlerController extends Controller
 
                 if($Tweet != null)
                 {
-                    $Contest->last_parsed_tweet_id = $Tweet->id;
-                    
+                    $Contest->last_parsed_tweet_id = $Tweet->id;                    
                 }
             }
 
-            $last_parse_date = new \DateTime('NOW');
+            $last_parse_date = new DateTime('NOW');
             $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
 
             if($Contest->save())
@@ -118,10 +126,10 @@ class CrawlerController extends Controller
         $max_rating = 10;
 
         $TweetUser = $this->GetOrAddUser($tweet["user"]);
-        $CreateDate = \DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
+        $CreateDate = DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
     
         // Create new Tweet object
-        $Tweet = new \app\models\Tweet;                
+        $Tweet = new Tweet;                
         $Tweet->id = $tweet["id_str"]; 
         $Tweet->created_at = $CreateDate->format('Y-m-d H:i:s');
         $Tweet->text = trim($tweet["text"]);
@@ -147,15 +155,11 @@ class CrawlerController extends Controller
         }
         else
         {
-            $Entry = \app\models\Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
+            $Entry = Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
             
             if($Entry != null)
             {
                 $Tweet->entry_id = $Entry->id;
-
-                $Entry->votes++;
-                $Entry->sum_rating += $Tweet->rating;
-                $Entry->avg_rating = round(($Entry->sum_rating / $Entry->votes), 2);
 
                 // Save new Entry stats if inside constraints
                 if($Tweet->rating > $Entry->max_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
@@ -180,13 +184,13 @@ class CrawlerController extends Controller
         {
             $this->stdout("Tweet ID ".$Tweet->id." for Contest ID ".$contest_id." saved!\n");
             $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");
+            
             return $Tweet;
         }
         else
         {
-            $errors = print_r($Tweet->errors, true);
             $this->stdout("Error Saving Tweet!\n", Console::FG_RED);
-            $this->stdout($errors . "\n", Console::FG_RED);
+            $this->stdout(print_r($Tweet->errors) . "\n", Console::FG_RED);
 
             return null;
         }   
@@ -240,7 +244,7 @@ class CrawlerController extends Controller
      */
     private function GetOrAddUser($user)
     {
-        $TweetUser = \app\models\TweetUser::findOne($user["id_str"]);
+        $TweetUser = TweetUser::findOne($user["id_str"]);
 
         if($TweetUser != null)
         {
@@ -248,12 +252,38 @@ class CrawlerController extends Controller
         }
         else
         {
-            $TweetUser = new \app\models\TweetUser;
+            $TweetUser = new TweetUser;
             $TweetUser->id = $user["id_str"];
             $TweetUser->screen_name = $user["screen_name"];
             $TweetUser->save();
         }
 
         return $TweetUser;
+    }
+
+    /**
+     * Updates all Entries of a Contest with votecount and avg rating
+     * 
+     * @param \app\models\Contest $Contest Contest Object
+     */
+    private function UpdateContestEntries($Contest)
+    {
+        $Entries = Entry::findAll(['contest_id' => $Contest->id]);
+            
+        foreach($Entries as $Entry) 
+        {
+            $avgQuery = new Query;
+            $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id]);
+            $avgRating = $avgQuery->average('rating');
+
+            $votestQuery = new Query;
+            $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id]);
+            $votes = $votestQuery->count();
+
+            $Entry->votes = $votes;
+            $Entry->avg_rating = round($avgRating, 2);
+
+            $Entry->save();
+        }
     }
 }

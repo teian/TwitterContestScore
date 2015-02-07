@@ -12,32 +12,37 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Tweets');
+$this->title = Yii::t('app', 'Entries');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="tweet-index">
+<div class="entry-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
         <?= Html::a(Yii::t('app', 'Create {modelClass}', [
-    'modelClass' => 'Tweet',
+    'modelClass' => 'Entry',
 ]), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    
-    <? Pjax::begin(); ?>
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'created_at',
-            'text',
-            'user_id',
+
+            'id',
             'contest_id',
-            'rating',
+            'contest_entry_id',
+            'avg_rating',
+            'min_rating',
+            // 'max_rating',
+            // 'sum_rating',
+            // 'votes',
+            // 'create_time',
+            // 'update_time',
+
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    <? Pjax::end(); ?>
 
 </div>

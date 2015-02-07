@@ -1,4 +1,11 @@
 <?php
+/**
+ * @author Frank Gehann <fg@randomlol.de>
+ * @link https://github.com/Tak0r/TwitterContestScore
+ * @license Beerware
+ * @package Models
+ */
+ 
 namespace app\models;
 
 use Yii;

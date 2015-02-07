@@ -10,15 +10,15 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Contest */
+/* @var $model app\models\Entry */
 
 $this->title = Yii::t('app', 'Create {modelClass}', [
-    'modelClass' => 'Contest',
+    'modelClass' => 'Entry',
 ]);
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Contests'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Entries'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="contest-create">
+<div class="entry-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

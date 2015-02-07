@@ -1,4 +1,10 @@
 <?php
+/**
+ * @author Frank Gehann <fg@randomlol.de>
+ * @link https://github.com/Tak0r/TwitterContestScore
+ * @license Beerware
+ * @package Migrations
+ */
 
 use yii\db\Schema;
 use yii\db\Migration;

@@ -10,29 +10,27 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Tweet */
+/* @var $model app\models\Entry */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="tweet-form">
+<div class="entry-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput(['maxlength' => 20]) ?>
-
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'text')->textInput(['maxlength' => 255]) ?>
-
-    <?= $form->field($model, 'user_id')->textInput(['maxlength' => 20]) ?>
-
     <?= $form->field($model, 'contest_id')->textInput(['maxlength' => 20]) ?>
 
-    <?= $form->field($model, 'entry_id')->textInput(['maxlength' => 20]) ?>
+    <?= $form->field($model, 'contest_entry_id')->textInput(['maxlength' => 20]) ?>
 
-    <?= $form->field($model, 'rating')->textInput(['maxlength' => 4]) ?>
+    <?= $form->field($model, 'avg_rating')->textInput(['maxlength' => 4]) ?>
 
-    <?= $form->field($model, 'needs_validation')->textInput() ?>
+    <?= $form->field($model, 'min_rating')->textInput(['maxlength' => 4]) ?>
+
+    <?= $form->field($model, 'max_rating')->textInput(['maxlength' => 4]) ?>
+
+    <?= $form->field($model, 'sum_rating')->textInput(['maxlength' => 10]) ?>
+
+    <?= $form->field($model, 'votes')->textInput(['maxlength' => 20]) ?>
 
     <?= $form->field($model, 'create_time')->textInput() ?>
 
