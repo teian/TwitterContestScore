@@ -167,7 +167,7 @@ class CrawlerController extends Controller
                     $Entry->max_rating = round($Tweet->rating, 2);
                 }
 
-                if( ($Tweet->rating > 0 || $Tweet->rating < $Entry->min_rating) 
+                if( ($Tweet->rating < $Entry->min_rating || $Entry->min_rating == 0) 
                     && $Tweet->rating >= $min_rating 
                     && $Tweet->rating <= $max_rating
                 )
