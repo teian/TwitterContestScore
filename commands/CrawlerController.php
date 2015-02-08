@@ -66,7 +66,7 @@ class CrawlerController extends Controller
         foreach($crawlerDataCollection as $crawlerData) 
         {
             $Contest = Contest::findOne($crawlerData->contest_id);
-            $contestRegex = CrawlerProfile::findOne(['id' => $crawlerData->crawler_profile_id]);
+            $contestRegex = CrawlerProfile::findOne(['id' => $Contest->crawler_profile_id]);
 
             if($Contest->custom_regex_entry == null)
             {
@@ -167,7 +167,10 @@ class CrawlerController extends Controller
                     $Entry->max_rating = round($Tweet->rating, 2);
                 }
 
-                if($Tweet->rating > $Entry->min_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
+                if( ($Tweet->rating > 0 || $Tweet->rating < $Entry->min_rating) 
+                    && $Tweet->rating >= $min_rating 
+                    && $Tweet->rating <= $max_rating
+                )
                 {
                     $Entry->min_rating = round($Tweet->rating, 2);
                 }

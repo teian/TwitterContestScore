@@ -75,6 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         },
                     ],     
                     'created_at:datetime',
+                    'rating',
                     'text'
                 ]
         ]); ?>
