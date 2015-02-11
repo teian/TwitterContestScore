@@ -11,12 +11,12 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Tweet */
 
-$this->title = Yii::t('app', 'Update {modelClass}: ', [
-    'modelClass' => 'Tweet',
-]) . ' ' . $model->id;
+$this->title = Yii::t('app', 'Update {modelClass}', ['modelClass' => 'Tweet',]);
+
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Tweets'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+
 ?>
 <div class="tweet-update">
 

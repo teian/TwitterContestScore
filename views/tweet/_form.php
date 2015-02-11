@@ -7,7 +7,8 @@
  */
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use kartik\widgets\ActiveForm;
+use kartik\widgets\Select2;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Tweet */
@@ -18,13 +19,9 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'id')->textInput(['maxlength' => 20]) ?>
+    <p><?= Html::encode($model->text) ?></p>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
-    <?= $form->field($model, 'text')->textInput(['maxlength' => 255]) ?>
-
-    <?= $form->field($model, 'user_id')->textInput(['maxlength' => 20]) ?>
+    <p><?= Html::encode($model->user->screen_name) ?></p>
 
     <?= $form->field($model, 'contest_id')->textInput(['maxlength' => 20]) ?>
 

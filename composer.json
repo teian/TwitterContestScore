@@ -16,7 +16,8 @@
         "yiisoft/yii2-swiftmailer": "*",
         "yiisoft/yii2-authclient": "*",
         "nordsoftware/yii2-password": "*",
-        "kartik-v/yii2-widgets": "*"
+        "kartik-v/yii2-widgets": "*",
+        "components/font-awesome": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
