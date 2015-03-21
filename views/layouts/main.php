@@ -31,70 +31,83 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    <div id="wrapper">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?= Yii::$app->homeUrl ?>">Twitter Contest Score</a>
+    <section id="container" >
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <!--
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
             </div>
+            <!--logo start-->
+            <a href="<?= Yii::$app->homeUrl ?>" class="logo"><b><?= Yii::$app->params['siteName'] ?></b></a>
+            <!--logo end-->
 
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="top-menu">
+                <?php                       
+                    echo Nav::widget([
+                        'options' => ['class' => 'nav pull-right top-menu'],
+                        'items' => [Yii::$app->user->isGuest ?
+                            [
+                                'label' => 'Login', 
+                                'url' => ['/site/login'],
+                                'linkOptions' => [
+                                    'class' => 'logout',
+                                ]
+                            ] : [
+                                'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                                'url' => ['/site/logout'],
+                                'linkOptions' => [
+                                    'data-method' => 'post',
+                                    'class' => 'logout',
+                                ],
+                            ],
+                        ],
+                    ]);                    
+                ?>
+            </div>
+        </header>
+      <!--header end-->
+
+      <aside>
+            <div id="sidebar"  class="nav-collapse">
+                <!-- sidebar menu start-->
                 <?php                            
                     echo Nav::widget([
-                        'options' => ['class' => 'nav navbar-nav side-nav'],
+                        'options' => ['class' => 'sidebar-menu', 'id' => 'nav-accordion'],
                         'items' => [
                             ['label' => 'Home', 'url' => ['/site/index']],
                             ['label' => 'Contest', 'url' => ['/contest/index']],
                         ],
                     ]);                    
                 ?>
-
-                <?php                       
-                    echo Nav::widget([
-                        'options' => ['class' => 'nav navbar-nav navbar-right navbar-user'],
-                        'items' => [Yii::$app->user->isGuest ?
-                            ['label' => 'Login', 'url' => ['/site/login']] :
-                            [
-                                'label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                                'url' => ['/site/logout'],
-                                'linkOptions' => ['data-method' => 'post']
-                            ],
-                        ],
-                    ]);                    
-                ?>
+                <!-- sidebar menu end-->
             </div>
-        </nav>
+        </aside>
+        <!--sidebar end-->
 
-        <div id="page-wrapper">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <?= Breadcrumbs::widget([
-                        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                    ]) ?>
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <?= $content ?>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+        </section>
 
-            <div class="row">
-                <?= $content ?>
+        <!--main content end-->
+        <!--footer start-->
+        <footer class="site-footer">
+            <div class="text-center">&copy; Twitter Contest Score <?= date('Y') ?>
             </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">&copy; Twitter Contest Score <?= date('Y') ?></p>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
+        <!--footer end-->
+    </section>
 
 <?php $this->endBody() ?>
 </body>

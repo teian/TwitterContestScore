@@ -1,6 +1,7 @@
 <?php
 
 return [
+	'siteName' => 'Twitter Contest Score',
     'adminEmail' => 'admin@twcscore.com',
     'passwordResetTokenExpire' => 3600,
     'twitterApiKey' => 'YOUR CONSUMER KEY',

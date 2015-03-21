@@ -9,14 +9,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-$this->title = 'Twitter Contest Score';
+$this->title = Yii::t('app', 'Twitter Contest Score');
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1>Welcome to <i><?= Html::encode($this->title); ?></i>!</h1>
+        <h1><?= Yii::t('app', 'Welcome to the') ?> <i><?= Html::encode($this->title); ?></i>!</h1>
 
-        <p class="lead">Automated scoring for our beloved contest.</p>
+        <p class="lead"><?= Yii::t('app', 'Automated scoring for our beloved contest.') ?></p>
     </div>
 
     <div class="body-content">
