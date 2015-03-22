@@ -7,23 +7,29 @@
  */
 
 use yii\helpers\Html;
-use yii\widgets\DetailView;
 use yii\grid\GridView;
 use yii\data\ActiveDataProvider;
+use yii\widgets\DetailView;
+use yii\widgets\Pjax;
 use app\models\Tweet;
+use dosamigos\chartjs\ChartJs;
+
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Entry */
 
-$this->title = Yii::t('app', 'Entry') . " - " . $model->id;
+$this->title = Yii::t('app', 'Entry') . " - " . $model->contest_entry_id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Entries'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
 <div class="row">
     <div class="col-lg-12">
-        <div class="entry-view">
-            <h1><?= Html::encode($this->title) ?></h1>
+        <h1><?= Html::encode($this->title) ?></h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="entry-view">            
             <p>
             <?php
                 if(!Yii::$app->user->isGuest) 
@@ -58,14 +64,59 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 <div class="row">
     <div class="col-lg-12">
+        <div id="chart">
+            <?php                
+                $ratings = Tweet::find()
+                    ->select(['COUNT(*) AS rating_count', 'rating'])
+                    ->where(['entry_id' => $model->id])
+                    ->groupBy(['rating'])
+                    ->asArray()
+                    ->all();
+
+                $chart_labels = [];
+                $chart_values = [];
+
+                foreach($ratings as $elem)
+                {
+                    $chart_labels[] = $elem['rating'];
+                    $chart_values[] = $elem['rating_count'];
+                }
+            ?>
+            <?= ChartJs::widget([
+                'type' => 'Bar',
+                'options' => [
+                    'height' => 250,
+                ],
+                'clientOptions' => [
+                    'responsive' => true,
+                    'maintainAspectRatio' => false,
+                ],
+                'data' => [
+                    'labels' => $chart_labels,
+                    'datasets' => [
+                        [
+                            'label' => "My Second dataset",
+                            'fillColor' => "rgba(151,187,205,0.5)",
+                            'strokeColor' => "rgba(151,187,205,1)",
+                            'pointColor' => "rgba(151,187,205,1)",
+                            'pointStrokeColor' => "#fff",
+                            'data' => $chart_values
+                        ]
+                    ]
+                ]
+            ]);
+            ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
         <h2><?= Yii::t('app', 'Tweets') ?></h2>
-
-        <?= GridView::widget([
+        <?php 
+            Pjax::begin(['id' => 'tweet-grid']);
+            echo GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
-                    'query' => Tweet::find()->where([
-                        'entry_id' => $model->id,
-
-                    ]),
+                    'query' => Tweet::find()->where(['entry_id' => $model->id]),
                 ]),
                 'columns' => [
                     [
@@ -74,10 +125,12 @@ $this->params['breadcrumbs'][] = $this->title;
                             return $data->user->screen_name; 
                         },
                     ],     
-                    'created_at:datetime',
                     'rating',
-                    'text'
+                    'text',
+                    'created_at:datetime',
                 ]
-        ]); ?>
+            ]); 
+            Pjax::end();
+        ?>
     </div>
 </div>

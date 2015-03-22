@@ -67,7 +67,7 @@ class CrawlerData extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'contest_id' => Yii::t('app', 'Contest ID'),
+            'contest_id' => Yii::t('app', 'Contest'),
             'data' => Yii::t('app', 'Data'),
             'parsed_at' => Yii::t('app', 'Parsed At'),
             'create_time' => Yii::t('app', 'Create Time'),

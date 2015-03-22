@@ -64,7 +64,7 @@ class TweetUser extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'screen_name' => Yii::t('app', 'Screen Name'),
+            'screen_name' => Yii::t('app', 'User'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];

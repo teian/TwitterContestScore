@@ -17,7 +17,8 @@
         "yiisoft/yii2-authclient": "*",
         "nordsoftware/yii2-password": "*",
         "kartik-v/yii2-widgets": "*",
-        "components/font-awesome": "*"
+        "components/font-awesome": "*",
+        "2amigos/yii2-chartjs-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

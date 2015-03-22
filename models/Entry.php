@@ -74,8 +74,8 @@ class Entry extends \yii\db\ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'name' => Yii::t('app', 'Name'),
-            'contest_id' => Yii::t('app', 'Contest ID'),
-            'contest_entry_id' => Yii::t('app', 'Entry Number'),
+            'contest_id' => Yii::t('app', 'Contest'),
+            'contest_entry_id' => Yii::t('app', 'Entry'),
             'avg_rating' => Yii::t('app', 'Avg Rating'),
             'min_rating' => Yii::t('app', 'Min Rating'),
             'max_rating' => Yii::t('app', 'Max Rating'),         
