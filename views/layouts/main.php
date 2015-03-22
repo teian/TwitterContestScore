@@ -31,12 +31,12 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 
-    <section id="container" >
+    <section id="container">
         <!-- **********************************************************************************************************************************************************
         TOP BAR CONTENT & NOTIFICATIONS
         *********************************************************************************************************************************************************** -->
         <!--header start-->
-        <header class="header black-bg">
+        <header  id="header" class="header black-bg">
             <!--
             <div class="sidebar-toggle-box">
                 <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
@@ -71,40 +71,35 @@ AppAsset::register($this);
         </header>
       <!--header end-->
 
-      <aside>
-            <div id="sidebar"  class="nav-collapse">
-                <!-- sidebar menu start-->
-                <?php                            
-                    echo Nav::widget([
-                        'options' => ['class' => 'sidebar-menu', 'id' => 'nav-accordion'],
-                        'items' => [
-                            ['label' => 'Home', 'url' => ['/site/index']],
-                            ['label' => 'Contest', 'url' => ['/contest/index']],
-                        ],
-                    ]);                    
-                ?>
-                <!-- sidebar menu end-->
-            </div>
+        <aside id="sidebar"  class="nav-collapse">
+            <!-- sidebar menu start-->
+            <?php                            
+                echo Nav::widget([
+                    'options' => ['class' => 'sidebar-menu', 'id' => 'nav-accordion'],
+                    'items' => [
+                        ['label' => 'Home', 'url' => ['/site/index']],
+                        ['label' => 'Contest', 'url' => ['/contest/index']],
+                    ],
+                ]);                    
+            ?>
+            <!-- sidebar menu end-->
         </aside>
         <!--sidebar end-->
 
-        <section id="main-content">
-            <section class="wrapper">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <?= $content ?>
-                        </div>
+        <section id="content" class="wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <?= $content ?>
                     </div>
                 </div>
-            </section>
+            </div>
         </section>
 
         <!--main content end-->
         <!--footer start-->
-        <footer class="site-footer">
-            <div class="text-center">&copy; Twitter Contest Score <?= date('Y') ?>
-            </div>
+        <footer id="footer">
+            <div class="text-center">&copy; Twitter Contest Score <?= date('Y') ?></div>
         </footer>
         <!--footer end-->
     </section>
