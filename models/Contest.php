@@ -25,6 +25,7 @@ use Yii;
  * @property string $crawler_profile_id
  * @property string $custom_regex_entry
  * @property string $custom_regex_rating
+ * @property string $next_result_query
  * @property string $create_time
  * @property string $update_time
  *
@@ -71,7 +72,7 @@ class Contest extends \yii\db\ActiveRecord
             [['last_parse'], 'date', 'format' => 'php:Y-m-d H:i:s'],
             [['create_time', 'update_time'], 'safe'],
             [['custom_regex_entry', 'custom_regex_rating'], 'string'],
-            [['name', 'trigger'], 'string', 'max' => 255],
+            [['name', 'trigger', 'next_result_query'], 'string', 'max' => 255],
             [['active'], 'boolean'],
             [['year'], 'string', 'max' => 4]
         ];
@@ -95,6 +96,7 @@ class Contest extends \yii\db\ActiveRecord
             'crawler_profile_id' => Yii::t('app', 'Crawler Profile'),
             'custom_regex_entry' => Yii::t('app', 'Custom Regex Entry'),
             'custom_regex_rating' => Yii::t('app', 'Custom Regex Rating'),
+            'next_result_query' => Yii::t('app', 'Next Query Result'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];

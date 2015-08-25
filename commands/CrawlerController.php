@@ -8,7 +8,11 @@
 
 namespace app\commands;
 
+use yii;
 use yii\console\Controller;
+use yii\authclient\clients\Twitter;
+use yii\authclient\OAuth1;
+use yii\authclient\OAuthToken;
 use yii\helpers\Console;
 use yii\helpers\Json;
 use yii\db\Query;
@@ -19,19 +23,23 @@ use app\models\Tweet;
 use app\models\TweetUser;
 use app\models\Entry;
 use \Datetime;
+use TwitterAPIExchange;
 
 /**
  * Pulls Tweets for Contests and parses them
  */
 class CrawlerController extends Controller
 {
+    private $TwitterUrl = 'https://api.twitter.com/1.1/search/tweets.json';
+
     /**
      * This command first pulls all new tweets and then parses them.
      * @param string $message the message to be echoed.
      */
     public function actionIndex()
-    {
-        
+    {     
+        $this->actionPulltweets();
+        $this->actionProcess();
     }
 
     /**
@@ -40,6 +48,13 @@ class CrawlerController extends Controller
     public function actionPulltweets()
     {
         $CurrentDate = new \DateTime('NOW');
+        $TwitterSettings = array(
+            'oauth_access_token' => Yii::$app->params["oauth_access_token"],
+            'oauth_access_token_secret' => Yii::$app->params["oauth_access_token_secret"],
+            'consumer_key' => Yii::$app->params["consumer_key"],
+            'consumer_secret' => Yii::$app->params["consumer_secret"]
+        );        
+        $TwitterApi = new TwitterAPIExchange($TwitterSettings);
 
         $Contests = Contest::findAll([
             'active' => 1,
@@ -49,7 +64,34 @@ class CrawlerController extends Controller
 
         foreach($Contests as $Contest) 
         {
-            $this->UpdateContestEntries($Contest);
+            $GetData = ''; 
+            if($Contest->next_result_query != null) 
+            {
+                $GetData = $Contest->next_result_query;
+            } 
+            else 
+            {
+                $GetData = '?q=' . $Contest->trigger . '&count=100';
+            }
+
+            $TwitterData = $TwitterApi
+                ->setGetfield($GetData)
+                ->buildOauth($this->TwitterUrl, 'GET')
+                ->performRequest();
+
+            $CrawlerData = new CrawlerData;
+            $CrawlerData->contest_id = $Contest->id;
+            $CrawlerData->data = $TwitterData;
+
+            if($CrawlerData->save())
+            {
+                $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
+            }
+            else
+            {
+                $this->stdout("Error Saving Crawler Data!\n", Console::BOLD);  
+                $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
+            }
         }        
     }
 
@@ -100,10 +142,14 @@ class CrawlerController extends Controller
 
             $last_parse_date = new DateTime('NOW');
             $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
+            $Contest->next_result_query = $jsonData["search_metadata"]["next_results"];
 
             if($Contest->save())
             {
                 $this->stdout("Last Tweet ID for Contest ".$Contest->name." saved!\n", Console::FG_GREEN);
+
+                // Update Entries with new Data
+                $this->UpdateContestEntries($Contest);
             }
             else
             {
@@ -129,7 +175,7 @@ class CrawlerController extends Controller
         $CreateDate = DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
     
         // Create new Tweet object
-        $Tweet = new Tweet;                
+        $Tweet = new Tweet;
         $Tweet->id = $tweet["id_str"]; 
         $Tweet->created_at = $CreateDate->format('Y-m-d H:i:s');
         $Tweet->text = trim($tweet["text"]);

@@ -14,11 +14,12 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-authclient": "*",
+        "yiisoft/yii2-authclient": "~2.0",
         "nordsoftware/yii2-password": "*",
         "kartik-v/yii2-widgets": "*",
         "components/font-awesome": "*",
-        "2amigos/yii2-chartjs-widget": "*"
+        "2amigos/yii2-chartjs-widget": "*",
+        "j7mbo/twitter-api-php": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
