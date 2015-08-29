@@ -73,13 +73,20 @@ AppAsset::register($this);
 
         <aside id="sidebar"  class="nav-collapse">
             <!-- sidebar menu start-->
-            <?php                            
+            <?php
+
+                $items = [
+                    ['label' => 'Home', 'url' => ['/site/index']],
+                    ['label' => 'Contest', 'url' => ['/contest/index']]
+                ];
+
+                if(!Yii::$app->user->isGuest) {
+                    array_push($items, ['label' => 'Validate Tweets', 'url' => ['/tweet/validate']]);
+                }
+
                 echo Nav::widget([
                     'options' => ['class' => 'sidebar-menu', 'id' => 'nav-accordion'],
-                    'items' => [
-                        ['label' => 'Home', 'url' => ['/site/index']],
-                        ['label' => 'Contest', 'url' => ['/contest/index']],
-                    ],
+                    'items' => $items,
                 ]);                    
             ?>
             <!-- sidebar menu end-->

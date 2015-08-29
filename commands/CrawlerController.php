@@ -10,9 +10,6 @@ namespace app\commands;
 
 use yii;
 use yii\console\Controller;
-use yii\authclient\clients\Twitter;
-use yii\authclient\OAuth1;
-use yii\authclient\OAuthToken;
 use yii\helpers\Console;
 use yii\helpers\Json;
 use yii\db\Query;
@@ -34,12 +31,11 @@ class CrawlerController extends Controller
 
     /**
      * This command first pulls all new tweets and then parses them.
-     * @param string $message the message to be echoed.
      */
     public function actionIndex()
     {     
         $this->actionPulltweets();
-        $this->actionProcess();
+        $this->actionProcessData();
     }
 
     /**
@@ -58,8 +54,8 @@ class CrawlerController extends Controller
 
         $Contests = Contest::findAll([
             'active' => 1,
-            //'parse_from' => '<=' . $CurrentDate->format('Y-m-d'),
-            //'parse_to' => '>=' . $CurrentDate->format('Y-m-d'),
+            'parse_from' => '<=' . $CurrentDate->format('Y-m-d'),
+            'parse_to' => '>=' . $CurrentDate->format('Y-m-d'),
         ]);
 
         foreach($Contests as $Contest) 
@@ -98,7 +94,7 @@ class CrawlerController extends Controller
     /**
      * This command processes the Data pulled from twitter
      */
-    public function actionProcess()
+    public function actionProcessData()
     {
         $crawlerDataCollection = CrawlerData::findAll(['parsed_at' => null]);
 
@@ -156,6 +152,11 @@ class CrawlerController extends Controller
                 $this->stdout("Error Saving Tweet!\n", Console::BOLD);  
                 $this->stdout(print_r($Contest->errors) . "\n", Console::BOLD);
             }
+
+            $parsed_at = new DateTime('NOW');
+            $crawlerData->parsed_at = $parsed_at->format('Y-m-d H:i:s');
+            //save parsed_at time
+            $crawlerData->save();
         }
     }
 
@@ -322,11 +323,11 @@ class CrawlerController extends Controller
         foreach($Entries as $Entry) 
         {
             $avgQuery = new Query;
-            $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id]);
+            $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
             $avgRating = $avgQuery->average('rating');
 
             $votestQuery = new Query;
-            $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id]);
+            $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
             $votes = $votestQuery->count();
 
             $Entry->votes = $votes;

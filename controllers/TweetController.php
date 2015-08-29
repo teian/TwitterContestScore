@@ -9,12 +9,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Tweet;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\db\Query;
+use app\models\Tweet;
+use app\models\Entry;
 
 /**
  * TweetController implements the CRUD actions for Tweet model.
@@ -105,6 +107,9 @@ class TweetController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            $this->UpdateEntry($model);
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -127,6 +132,23 @@ class TweetController extends Controller
     }
 
     /**
+     * Deletes an existing Tweet model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param string $id
+     * @return mixed
+     */
+    public function actionValidate()
+    {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Tweet::find()->where(['needs_validation' => 1]),
+        ]);
+
+        return $this->render('validate', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
      * Finds the Tweet model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param string $id
@@ -140,5 +162,31 @@ class TweetController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    /**
+     * Updates all Entry of the Tweet with votecount and avg rating
+     * 
+     * @param \app\models\Tweet $Tweet Tweet Object
+     */
+    private function UpdateEntry($Tweet)
+    {
+        $Tweet->needs_validation = 0;
+        $Tweet->save();
+
+        $Entry = Entry::findOne($Tweet->entry_id);
+
+        $avgQuery = new Query;
+        $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+        $avgRating = $avgQuery->average('rating');
+
+        $votestQuery = new Query;
+        $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+        $votes = $votestQuery->count();
+
+        $Entry->votes = $votes;
+        $Entry->avg_rating = round($avgRating, 2);
+
+        $Entry->save();
     }
 }

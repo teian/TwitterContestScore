@@ -9,11 +9,12 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Entry;
-use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Json;
+use yii\data\ActiveDataProvider;
+use app\models\Entry;
 
 /**
  * EntryController implements the CRUD actions for Entry model.
@@ -107,6 +108,39 @@ class EntryController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    /**
+     * Returns a list of possible 
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     * @param string $id
+     * @return mixed
+     */
+    public function actionContestEntries() 
+    {
+        $out = [];
+        if (isset($_POST['depdrop_parents'])) 
+        {
+            $id = end($_POST['depdrop_parents']);
+            $list = Entry::find()->where(['contest_id' => $id])->asArray()->all();
+            
+            $selected  = null;
+            if ($id != null && count($list) > 0) 
+            {
+                $selected = '';
+                foreach ($list as $i => $entry) 
+                {
+                    $out[] = ['id' => $entry['id'], 'name' => $entry['name']];
+                    if ($i == 0) {
+                        $selected = $entry['id'];
+                    }
+                }
+                // Shows how you can preselect a value
+                echo Json::encode(['output' => $out, 'selected'=>$selected]);
+                return;
+            }
+        }
+        echo Json::encode(['output' => '', 'selected'=>'']);
     }
 
     /**

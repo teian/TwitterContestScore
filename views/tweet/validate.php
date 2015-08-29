@@ -15,24 +15,31 @@ use yii\grid\GridView;
 $this->title = Yii::t('app', 'Tweets');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="tweet-index">
+<div class="tweet-validate">
 
     <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a(Yii::t('app', 'Create {modelClass}', [
-    'modelClass' => 'Tweet',
-]), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
     
     <? Pjax::begin(); ?>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'created_at',
+            [
+                'attribute' => 'user_id',
+                'value'=> function ($data) { 
+                    return $data->user->screen_name; 
+                },
+            ],
             'text',
+            'contest_id',
+            [
+                'attribute' => 'contest_id',
+                'value'=> function ($data) { 
+                    return $data->contest->name; 
+                },
+            ],
             'rating',
+            'created_at',
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

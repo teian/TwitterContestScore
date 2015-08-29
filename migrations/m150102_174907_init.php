@@ -11,7 +11,7 @@ use yii\db\Migration;
 
 class m150102_174907_init extends Migration
 {
-    public function up()
+    public function safeUp()
     {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
@@ -199,20 +199,22 @@ class m150102_174907_init extends Migration
             'CASCADE'
         );
 
+        $userpassword = Yii::$app->security->generateRandomString(8);
+
         // Insert superuser
         $user = new \app\models\User; 
         $user->username = "admin";
-        $user->setPassword("admin123");
+        $user->setPassword($userpassword);
         $user->email = "admin@amvscore.net";
         $user->generateAuthKey();
         $user->save();
 
         echo "A Superuser has been created with the following credentials:\n";
         echo "Username: admin\n";
-        echo "Password: admin123\n";
+        echo "Password: " . $userpassword . "\n";
     }
 
-    public function down()
+    public function safeDown()
     {
         $this->dropTable('{{%entry}}');
         $this->dropTable('{{%contest}}');

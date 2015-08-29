@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php                
                 $ratings = Tweet::find()
                     ->select(['COUNT(*) AS rating_count', 'rating'])
-                    ->where(['entry_id' => $model->id])
+                    ->where(['entry_id' => $model->id, 'needs_validation' => 0])
                     ->groupBy(['rating'])
                     ->asArray()
                     ->all();
@@ -116,7 +116,7 @@ $this->params['breadcrumbs'][] = $this->title;
             Pjax::begin(['id' => 'tweet-grid']);
             echo GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
-                    'query' => Tweet::find()->where(['entry_id' => $model->id]),
+                    'query' => Tweet::find()->where(['entry_id' => $model->id, 'needs_validation' => 0]),
                 ]),
                 'columns' => [
                     [
