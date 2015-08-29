@@ -138,7 +138,11 @@ class CrawlerController extends Controller
 
             $last_parse_date = new DateTime('NOW');
             $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
-            $Contest->next_result_query = $jsonData["search_metadata"]["next_results"];
+            
+            if($jsonData["search_metadata"]["next_results"] != null)
+            {
+                $Contest->next_result_query = $jsonData["search_metadata"]["next_results"];
+            }
 
             if($Contest->save())
             {
@@ -149,7 +153,7 @@ class CrawlerController extends Controller
             }
             else
             {
-                $this->stdout("Error Saving Tweet!\n", Console::BOLD);  
+                $this->stdout("Error Saving Tweet !\n", Console::BOLD);  
                 $this->stdout(print_r($Contest->errors) . "\n", Console::BOLD);
             }
 
@@ -233,15 +237,12 @@ class CrawlerController extends Controller
         if($Tweet->validate() && $Tweet->save())
         {
             $this->stdout("Tweet ID ".$Tweet->id." for Contest ID ".$contest_id." saved!\n");
-            $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");
-            
+            $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");            
             return $Tweet;
         }
         else
         {
-            $this->stdout("Error Saving Tweet!\n", Console::FG_RED);
-            $this->stdout(print_r($Tweet->errors) . "\n", Console::FG_RED);
-
+            $this->stdout("Tweet already in Database! Tweet ID ".$Tweet->id."\n", Console::FG_RED);
             return null;
         }   
     }
