@@ -139,7 +139,7 @@ class CrawlerController extends Controller
             $last_parse_date = new DateTime('NOW');
             $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
             
-            if($jsonData["search_metadata"]["next_results"] != null)
+            if(array_key_exists("next_results", $jsonData["search_metadata"]))
             {
                 $Contest->next_result_query = $jsonData["search_metadata"]["next_results"];
             }
