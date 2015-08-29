@@ -18,10 +18,20 @@ Change the database configuration in ./config/db.php
 Run:
 
 ```
-composer global require "fxp/composer-asset-plugin:1.0.0-beta4"
+composer global require "fxp/composer-asset-plugin:~1.0.0"
 composer install
 yiic migrate
 ```
+
+Cron:
+
+```
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+*/1 * * * * root /usr/bin/nice -n 5 /usr/bin/php5 -q /TwitterContestScore/yii crawler 1> /dev/null
+```
+
+This executes the pulling and parsing of tweets every minute
 
 Regex Examples
 ========
