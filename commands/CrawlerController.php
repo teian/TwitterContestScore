@@ -35,7 +35,6 @@ class CrawlerController extends Controller
     public function actionIndex()
     {     
         $this->actionPulltweets();
-        $this->actionProcessData();
     }
 
     /**
@@ -43,6 +42,8 @@ class CrawlerController extends Controller
      */
     public function actionPulltweets()
     {
+        $this->stdout("Starting Pulltweets!\n", Console::FG_CYAN);
+
         $CurrentDate = new \DateTime('NOW');
         $TwitterSettings = array(
             'oauth_access_token' => Yii::$app->params["oauth_access_token"],
@@ -53,44 +54,46 @@ class CrawlerController extends Controller
         $TwitterApi = new TwitterAPIExchange($TwitterSettings);
 
         $Contests = Contest::findAll([
-            'active' => 1,
-            'parse_from' => '<=' . $CurrentDate->format('Y-m-d'),
-            'parse_to' => '>=' . $CurrentDate->format('Y-m-d'),
+            'active' => 1
         ]);
 
         foreach($Contests as $Contest) 
         {
-            $this->stdout("Get Next Data for ".$Contest->name."!\n", Console::FG_YELLOW);
+            if($CurrentDate->format('Y-m-d') >= $Contest->parse_from && $CurrentDate->format('Y-m-d') <= $Contest->parse_to) {
+                $this->stdout("Get Next Data for ".$Contest->name."!\n", Console::FG_YELLOW);
 
-            $GetData = ''; 
-            if($Contest->next_result_query != null) 
-            {
-                $GetData = $Contest->next_result_query;
-                $this->stdout("Query: ".$GetData."!\n", Console::FG_YELLOW);
-            } 
-            else 
-            {
-                $GetData = '?q=' . $Contest->trigger . '&count=100';
-                $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
-            }
+                $GetData = ''; 
+                if($Contest->next_result_query != null) 
+                {
+                    $GetData = $Contest->next_result_query;
+                    $this->stdout("Query: ".$GetData."!\n", Console::FG_YELLOW);
+                } 
+                else 
+                {
+                    $GetData = '?q=' . $Contest->trigger . '&count=100';
+                    $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
+                }
 
-            $TwitterData = $TwitterApi
-                ->setGetfield($GetData)
-                ->buildOauth($this->TwitterUrl, 'GET')
-                ->performRequest();
+                $TwitterData = $TwitterApi
+                    ->setGetfield($GetData)
+                    ->buildOauth($this->TwitterUrl, 'GET')
+                    ->performRequest();
 
-            $CrawlerData = new CrawlerData;
-            $CrawlerData->contest_id = $Contest->id;
-            $CrawlerData->data = $TwitterData;
+                $CrawlerData = new CrawlerData;
+                $CrawlerData->contest_id = $Contest->id;
+                $CrawlerData->data = $TwitterData;
 
-            if($CrawlerData->save())
-            {
-                $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
-            }
-            else
-            {
-                $this->stdout("Error Saving Crawler Data!\n", Console::BOLD);  
-                $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
+                if($CrawlerData->save())
+                {
+                    $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
+                }
+                else
+                {
+                    $this->stdout("Error Saving Crawler Data!\n", Console::BOLD);  
+                    $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
+                }
+            } else {
+                $this->stdout("Skipping ".$Contest->name."!\n", Console::FG_YELLOW);
             }
         }        
     }
