@@ -60,14 +60,18 @@ class CrawlerController extends Controller
 
         foreach($Contests as $Contest) 
         {
+            $this->stdout("Get Next Data for ".$Contest->name."!\n", Console::FG_YELLOW);
+
             $GetData = ''; 
             if($Contest->next_result_query != null) 
             {
                 $GetData = $Contest->next_result_query;
+                $this->stdout("Query: ".$GetData."!\n", Console::FG_YELLOW);
             } 
             else 
             {
                 $GetData = '?q=' . $Contest->trigger . '&count=100';
+                $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
             }
 
             $TwitterData = $TwitterApi
