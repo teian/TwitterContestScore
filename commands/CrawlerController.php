@@ -35,6 +35,7 @@ class CrawlerController extends Controller
     public function actionIndex()
     {     
         $this->actionPulltweets();
+        $this->actionProcessData();
     }
 
     /**
