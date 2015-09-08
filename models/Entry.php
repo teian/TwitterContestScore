@@ -62,6 +62,7 @@ class Entry extends \yii\db\ActiveRecord
             [['avg_rating', 'min_rating', 'max_rating'], 'match', 'pattern'=>'/^[0-9]{1,2}(\.[0-9]{0,2})?$/'],
             [['sum_rating'], 'match', 'pattern'=>'/^[0-9]{1,8}(\.[0-9]{0,2})?$/'],
             [['create_time', 'update_time'], 'safe'],
+            [['name'], 'string', 'max' => 255],
             [['contest_id', 'contest_entry_id'], 'unique', 'targetAttribute' => ['contest_id', 'contest_entry_id'], 'message' => 'The combination of Contest ID and Contest Entry ID has already been taken.']
         ];
     }

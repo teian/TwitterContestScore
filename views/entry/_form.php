@@ -18,6 +18,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'contest_id')->hiddenInput()->label(false); ?>
+
     <?= $form->field($model, 'contest_entry_id')->textInput(['maxlength' => 20]) ?>
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => 255]) ?>

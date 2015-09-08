@@ -65,13 +65,22 @@ class EntryController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($id)
     {
         $model = new Entry();
+
+        // Check if Contest ID Passed
+        if($id===null) {
+            throw new \yii\web\HttpException(404, Yii::t('alerts', 'The requested Item could not be found.'));
+        }
+
+        $model->contest_id = $id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            
+
             return $this->render('create', [
                 'model' => $model,
             ]);
