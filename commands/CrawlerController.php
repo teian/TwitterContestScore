@@ -154,7 +154,10 @@ class CrawlerController extends Controller
             }
             else
             {
-                $Contest->next_result_query = $jsonData["search_metadata"]["refresh_url"];
+                // Set new refresh URL only if we have processed new tweets
+                if(sizeof($jsonData["statuses"]) > 0) {
+                    $Contest->next_result_query = $jsonData["search_metadata"]["refresh_url"];
+                }                
             }
 
             if($Contest->save())
