@@ -68,13 +68,14 @@ class CrawlerController extends Controller
                 {
                     $GetData = $Contest->next_result_query;
                     $this->stdout("Query: ".$GetData."!\n", Console::FG_YELLOW);
-                } 
-                else 
+                }
+                else
                 {
                     $GetData = '?q=' . $Contest->trigger . '&count=100';
                     $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
                 }
 
+                // Pull Next Results
                 $TwitterData = $TwitterApi
                     ->setGetfield($GetData)
                     ->buildOauth($this->TwitterUrl, 'GET')
@@ -150,6 +151,10 @@ class CrawlerController extends Controller
             if(array_key_exists("next_results", $jsonData["search_metadata"]))
             {
                 $Contest->next_result_query = $jsonData["search_metadata"]["next_results"];
+            }
+            else
+            {
+                $Contest->next_result_query = $jsonData["search_metadata"]["refresh_url"];
             }
 
             if($Contest->save())

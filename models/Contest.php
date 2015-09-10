@@ -31,8 +31,8 @@ use Yii;
  *
  * @property Tweet $lastParsedTweet
  * @property CrawlerProfile $crawlerProfile
- * @property CrawlerData[] $crawlerDatas
- * @property Entry[] $entries 
+ * @property CrawlerData[] $crawlerData
+s * @property Entry[] $entries 
  * @property Tweet[] $tweets
  */
 class Contest extends \yii\db\ActiveRecord
@@ -72,7 +72,7 @@ class Contest extends \yii\db\ActiveRecord
             [['last_parse'], 'date', 'format' => 'php:Y-m-d H:i:s'],
             [['create_time', 'update_time'], 'safe'],
             [['custom_regex_entry', 'custom_regex_rating'], 'string'],
-            [['name', 'trigger', 'next_result_query'], 'string', 'max' => 255],
+            [['name', 'trigger', 'next_result_query', 'refresh_result_query'], 'string', 'max' => 255],
             [['active'], 'boolean'],
             [['year'], 'string', 'max' => 4]
         ];
@@ -97,6 +97,7 @@ class Contest extends \yii\db\ActiveRecord
             'custom_regex_entry' => Yii::t('app', 'Custom Regex Entry'),
             'custom_regex_rating' => Yii::t('app', 'Custom Regex Rating'),
             'next_result_query' => Yii::t('app', 'Next Query Result'),
+            'refresh_result_query' => Yii::t('app', 'Refresh Query Result'),            
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];
