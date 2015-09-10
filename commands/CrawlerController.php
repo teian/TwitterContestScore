@@ -201,6 +201,7 @@ class CrawlerController extends Controller
 
         if($rating == null)
         {
+            $this->stdout("Rating could not be parsed for Tweet ID ".$Tweet->id."\n", Console::FG_RED); 
             $Tweet->needs_validation = true;
         }
         else
@@ -208,6 +209,7 @@ class CrawlerController extends Controller
             // check if rating is inside constraints
             if($rating < $min_rating || $rating > $max_rating)
             {
+                $this->stdout("Rating outside of constraints Tweet ID ".$Tweet->id."\n", Console::FG_RED); 
                 $Tweet->rating = $max_rating;
             } 
             else
@@ -232,10 +234,6 @@ class CrawlerController extends Controller
                 if($Tweet->rating > $Entry->max_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
                 {
                     $Entry->max_rating = round($Tweet->rating, 2);
-                } 
-                else
-                {
-                    $Tweet->rating = $max_rating;
                 }
 
                 if( ($Tweet->rating < $Entry->min_rating || $Entry->min_rating == 0) 
