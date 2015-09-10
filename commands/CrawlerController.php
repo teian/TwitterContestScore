@@ -81,18 +81,26 @@ class CrawlerController extends Controller
                     ->buildOauth($this->TwitterUrl, 'GET')
                     ->performRequest();
 
-                $CrawlerData = new CrawlerData;
-                $CrawlerData->contest_id = $Contest->id;
-                $CrawlerData->data = $TwitterData;
+                $jsonData = Json::decode($TwitterData, true);
 
-                if($CrawlerData->save())
+                if(sizeof($jsonData["statuses"]) > 0)
                 {
-                    $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
-                }
-                else
-                {
-                    $this->stdout("Error Saving Crawler Data!\n", Console::BOLD);  
-                    $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
+
+                    $CrawlerData = new CrawlerData;
+                    $CrawlerData->contest_id = $Contest->id;
+                    $CrawlerData->data = $TwitterData;
+
+                    $jsonData = Json::decode($crawlerData->data, true);
+
+                    if($CrawlerData->save())
+                    {
+                        $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
+                    }
+                    else
+                    {
+                        $this->stdout("Error Saving Crawler Data!\n", Console::BOLD);  
+                        $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
+                    }
                 }
             } else {
                 $this->stdout("Skipping ".$Contest->name."!\n", Console::FG_YELLOW);
