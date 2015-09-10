@@ -77,7 +77,7 @@ class EntryController extends Controller
         $model->contest_id = $id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['contest/view', 'id' => $model->contest_id]);
         } else {
             
 
