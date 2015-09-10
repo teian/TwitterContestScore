@@ -181,7 +181,7 @@ class CrawlerController extends Controller
      */
     private function CreateTweetEntry($tweet, $contest_id, $regex)
     {
-        $min_rating = 0;
+        $min_rating = 1;
         $max_rating = 10;
 
         $TweetUser = $this->GetOrAddUser($tweet["user"]);
@@ -207,11 +207,16 @@ class CrawlerController extends Controller
         else
         {
             // check if rating is inside constraints
-            if($rating < $min_rating || $rating > $max_rating)
+            if($rating > $max_rating)
             {
                 $this->stdout("Rating outside of constraints Tweet ID ".$Tweet->id."\n", Console::FG_RED); 
                 $Tweet->rating = $max_rating;
             } 
+            else if($rating < $min_rating)
+            {
+                $this->stdout("Rating outside of constraints Tweet ID ".$Tweet->id."\n", Console::FG_RED); 
+                $Tweet->rating = $min_rating;
+            }
             else
             {
                 $Tweet->rating = $rating;
