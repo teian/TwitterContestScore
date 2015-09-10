@@ -90,8 +90,6 @@ class CrawlerController extends Controller
                     $CrawlerData->contest_id = $Contest->id;
                     $CrawlerData->data = $TwitterData;
 
-                    $jsonData = Json::decode($crawlerData->data, true);
-
                     if($CrawlerData->save())
                     {
                         $this->stdout("Saved new Crawler Data for Contest ".$Contest->name."!\n", Console::FG_GREEN);
