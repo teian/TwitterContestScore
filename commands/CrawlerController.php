@@ -66,8 +66,8 @@ class CrawlerController extends Controller
                 $GetData = ''; 
                 if($Contest->next_result_query != null) 
                 {
-                    $GetData = $Contest->next_result_query;
-                    $this->stdout("Query: ".$GetData."!\n", Console::FG_YELLOW);
+                    $GetData = urldecode($Contest->next_result_query);
+                    $this->stdout("Exec Query: ".$GetData."!\n", Console::FG_YELLOW);
                 }
                 else
                 {
