@@ -283,7 +283,6 @@ class CrawlerController extends Controller
         }
         else
         {
-            $this->stdout("No Entry parsed from!".$Tweet->id."\n", Console::FG_RED);
             return null;
         }   
     }
