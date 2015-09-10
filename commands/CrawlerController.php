@@ -199,13 +199,21 @@ class CrawlerController extends Controller
         $rating = $this->ParseRating($regex["rating"], $Tweet->text);
         $entryNr = $this->ParseEntryId($regex["entry"], $Tweet->text);
 
-        if($rating == null || $rating < $min_rating || $rating > $max_rating)
+        if($rating == null)
         {
             $Tweet->needs_validation = true;
-        } 
+        }
         else
         {
-            $Tweet->rating = $rating;
+            // check if rating is inside constraints
+            if($rating < $min_rating || $rating > $max_rating)
+            {
+                $Tweet->rating = $max_rating;
+            } 
+            else
+            {
+                $Tweet->rating = $rating;
+            }            
         }
 
         if($entryNr == null)
@@ -214,16 +222,20 @@ class CrawlerController extends Controller
         }
         else
         {
-            $Entry = Entry::findOne(['contest_id' => 1, 'contest_entry_id' => $entryNr]);
+            $Entry = Entry::findOne(['contest_id' => $contest_id, 'contest_entry_id' => $entryNr]);
             
             if($Entry != null)
             {
                 $Tweet->entry_id = $Entry->id;
-
-                // Save new Entry stats if inside constraints
+                
+                // check if we have to set a new max rating
                 if($Tweet->rating > $Entry->max_rating && $Tweet->rating >= $min_rating && $Tweet->rating <= $max_rating)
                 {
                     $Entry->max_rating = round($Tweet->rating, 2);
+                } 
+                else
+                {
+                    $Tweet->rating = $max_rating;
                 }
 
                 if( ($Tweet->rating < $Entry->min_rating || $Entry->min_rating == 0) 
@@ -271,6 +283,7 @@ class CrawlerController extends Controller
         }
         else
         {
+            $this->stdout("No Entry parsed from!".$Tweet->id."\n", Console::FG_RED);
             return null;
         }   
     }
