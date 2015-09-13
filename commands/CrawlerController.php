@@ -181,7 +181,7 @@ class CrawlerController extends Controller
             }
 
             $parsed_at = new DateTime('NOW');
-            //$crawlerData->parsed_at = $parsed_at->format('Y-m-d H:i:s');
+            $crawlerData->parsed_at = $parsed_at->format('Y-m-d H:i:s');
             //save parsed_at time
             $crawlerData->save();
         }
