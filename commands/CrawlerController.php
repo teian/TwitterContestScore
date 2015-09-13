@@ -143,11 +143,14 @@ class CrawlerController extends Controller
 
             foreach($jsonData["statuses"] as $id => $tweet)
             {
-                $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
+                // filter retweets to counter abuse
+                if($tweet["retweeted"] == false) {
+                    $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
 
-                if($Tweet != null)
-                {
-                    $Contest->last_parsed_tweet_id = $Tweet->id;                    
+                    if($Tweet != null)
+                    {
+                        $Contest->last_parsed_tweet_id = $Tweet->id;                    
+                    }
                 }
             }
 
