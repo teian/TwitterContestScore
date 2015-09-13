@@ -21,6 +21,7 @@ use Yii;
  * @property string $entry_id
  * @property string $rating
  * @property integer $needs_validation
+ * @property integer $old_vote
  * @property string $create_time
  * @property string $update_time
  *
@@ -66,7 +67,7 @@ class Tweet extends \yii\db\ActiveRecord
             [['contest_id'], 'exist', 'targetAttribute' => 'id', 'targetClass' => 'app\models\Contest'],
             [['user_id'], 'exist', 'targetAttribute' => 'id', 'targetClass' => 'app\models\TweetUser'],
             [['user_id', 'contest_id', 'entry_id'], 'integer'],
-            [['needs_validation'], 'boolean'],
+            [['needs_validation', 'old_vote'], 'boolean'],
             [['rating'], 'number'],
             [['rating'], 'default', 'value' => '0.00'],
             [['entry_id'], 'default', 'value' => null],
@@ -88,6 +89,7 @@ class Tweet extends \yii\db\ActiveRecord
             'entry_id' => Yii::t('app', 'Entry'),
             'rating' => Yii::t('app', 'Rating'),
             'needs_validation' => Yii::t('app', 'Needs Validation'),
+            'old_vote' => Yii::t('app', 'Old Vote (newer present)'),
             'create_time' => Yii::t('app', 'Create Time'),
             'update_time' => Yii::t('app', 'Update Time'),
         ];
@@ -107,6 +109,14 @@ class Tweet extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(TweetUser::className(), ['id' => 'user_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getEntry()
+    {
+        return $this->hasOne(Entry::className(), ['id' => 'entry_id']);
     }
 
     /**

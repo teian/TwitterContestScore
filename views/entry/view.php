@@ -119,7 +119,7 @@ $this->params['breadcrumbs'][] = $this->title;
             Pjax::begin(['id' => 'tweet-grid']);
             echo GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
-                    'query' => Tweet::find()->where(['entry_id' => $model->id, 'needs_validation' => 0]),
+                    'query' => Tweet::find()->where(['entry_id' => $model->id, 'needs_validation' => 0, 'old_vote' => 0]),
                 ]),
                 'columns' => [
                     [

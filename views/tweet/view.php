@@ -13,7 +13,7 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Tweet */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Tweets'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Tweet Validation'), 'url' => ['tweet/validate']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tweet-view">
@@ -38,7 +38,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'created_at',
             'text',
             'user_id',
-            'contest_id',
+            [
+                'attribute' => 'contest_id',
+                'value' => $model->contest->name
+            ],
             'entry_id',
             'rating',
             'needs_validation',

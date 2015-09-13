@@ -32,14 +32,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             'text',
-            'contest_id',
+            [
+                'attribute' => 'entry_id',
+                'value'=> function ($data) { 
+                    if($data->entry != null) {
+                        return $data->entry->contest_entry_id; 
+                    }                    
+                },
+            ],
             [
                 'attribute' => 'contest_id',
                 'value'=> function ($data) { 
                     return $data->contest->name; 
                 },
             ],
-            'rating',
+            'rating',            
             'created_at',
             ['class' => 'yii\grid\ActionColumn'],
         ],

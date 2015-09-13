@@ -38,7 +38,7 @@ class TweetController extends Controller
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view'],
+                        'actions' => ['index'],
                         'roles' => ['?'],
                     ],
                     [
@@ -58,7 +58,7 @@ class TweetController extends Controller
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Tweet::find(),
+            'query' => Tweet::find()->where(['needs_validation' => 0, 'old_vote' => 0]),
         ]);
 
         return $this->render('index', [
@@ -79,24 +79,6 @@ class TweetController extends Controller
     }
 
     /**
-     * Creates a new Tweet model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new Tweet();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
-    }
-
-    /**
      * Updates an existing Tweet model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param string $id
@@ -106,7 +88,15 @@ class TweetController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+
+            // remove old entries if any present
+            $this->ExcludeOldTweetEntry($model->contest_id, $model->user_id, $model->entry_id, $model->id);
+
+            // all good, set model to validated and rerun Entry Update
+            $model->needs_validation = 0;
+            $model->old_vote = 0;
+            $model->save();
 
             $this->UpdateEntry($model);
 
@@ -140,7 +130,7 @@ class TweetController extends Controller
     public function actionValidate()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Tweet::find()->where(['needs_validation' => 1]),
+            'query' => Tweet::find()->where(['needs_validation' => 1, 'old_vote' => 0]),
         ]);
 
         return $this->render('validate', [
@@ -165,23 +155,48 @@ class TweetController extends Controller
     }
 
     /**
+     * Creates a Tweet Object and saves it to the DB 
+     * 
+     * @param Array $tweet JSON Tweet structure
+     * @param Array $regex regular expression to parse the rating and Entry - http://regex101.com/r/cB6oU6/7
+     * @return int id of the tweet or null if an error happened
+     */
+    private function ExcludeOldTweetEntry($contest_id, $user_id, $entry_id, $tweet_id)
+    {
+        // Select old tweets of user for this entry and exlude them from the voting
+        $TweetCollection = Tweet::findAll([
+            'contest_id' => $contest_id, 
+            'entry_id' => $entry_id,
+            'user_id' => $user_id, 
+            'needs_validation' => 0, 
+            'old_vote' => 0
+        ]);
+
+        foreach($TweetCollection as $Tweet) 
+        {
+            // don't set oldvote on given tweet id 
+            if($Tweet->id != $tweet_id) {
+               $Tweet->old_vote = 1;
+               $Tweet->save();
+            }
+        }
+    }
+
+    /**
      * Updates all Entry of the Tweet with votecount and avg rating
      * 
      * @param \app\models\Tweet $Tweet Tweet Object
      */
     private function UpdateEntry($Tweet)
     {
-        $Tweet->needs_validation = 0;
-        $Tweet->save();
-
         $Entry = Entry::findOne($Tweet->entry_id);
 
         $avgQuery = new Query;
-        $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+        $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0, 'old_vote' => 0]);
         $avgRating = $avgQuery->average('rating');
 
         $votestQuery = new Query;
-        $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+        $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0, 'old_vote' => 0]);
         $votes = $votestQuery->count();
 
         $Entry->votes = $votes;

@@ -143,14 +143,12 @@ class CrawlerController extends Controller
 
             foreach($jsonData["statuses"] as $id => $tweet)
             {
-                // filter retweets to counter abuse
-                if($tweet["retweeted"] == false) {
-                    $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
+                // filter retweets to counter abuse 
+                $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
 
-                    if($Tweet != null)
-                    {
-                        $Contest->last_parsed_tweet_id = $Tweet->id;                    
-                    }
+                if($Tweet != null)
+                {
+                    $Contest->last_parsed_tweet_id = $Tweet->id;                    
                 }
             }
 
@@ -183,9 +181,38 @@ class CrawlerController extends Controller
             }
 
             $parsed_at = new DateTime('NOW');
-            $crawlerData->parsed_at = $parsed_at->format('Y-m-d H:i:s');
+            //$crawlerData->parsed_at = $parsed_at->format('Y-m-d H:i:s');
             //save parsed_at time
             $crawlerData->save();
+        }
+    }
+
+    /**
+     * Removes all found votes from the voting because a newer vote has been registered
+     * 
+     * @param int $user_id Tweet User ID
+     * @param int $entry_id Entry id to check for multiple votes
+     */
+    private function ExcludeOldTweetEntry($contest_id, $user_id, $entry_id, $tweet_id)
+    {
+        // Select old tweets of user for this entry and exlude them from the voting
+        $TweetCollection = Tweet::findAll([
+            'contest_id' => $contest_id, 
+            'entry_id' => $entry_id, 
+            'user_id' => $user_id, 
+            'needs_validation' => 0, 
+            'old_vote' => 0
+        ]);
+
+        foreach($TweetCollection as $Tweet) 
+        {
+            // don't set oldvote on given tweet id 
+            if($Tweet->id != $tweet_id) {
+               $Tweet->old_vote = 1;
+                if($Tweet->save()) {
+                    $this->stdout("Tweet with Tweet ID ".$Tweet->id." removed from Voting because of a newer Vote\n", Console::BOLD); 
+                } 
+            }
         }
     }
 
@@ -203,6 +230,7 @@ class CrawlerController extends Controller
 
         $TweetUser = $this->GetOrAddUser($tweet["user"]);
         $CreateDate = DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
+
     
         // Create new Tweet object
         $Tweet = new Tweet;
@@ -212,6 +240,11 @@ class CrawlerController extends Controller
         $Tweet->user_id = $TweetUser->id;
         $Tweet->contest_id = $contest_id;        
         $Tweet->needs_validation = false;
+
+        // possible vote manipulation!
+        if($tweet["retweeted"] == true || array_key_exists("retweeted_status", $tweet)) {
+            $Tweet->needs_validation = true;
+        }
 
         $rating = $this->ParseRating($regex["rating"], $Tweet->text);
         $entryNr = $this->ParseEntryId($regex["entry"], $Tweet->text);
@@ -267,15 +300,23 @@ class CrawlerController extends Controller
                 }
 
                 $Entry->save();
+
+                // remove old entries vom voting
+                $this->ExcludeOldTweetEntry($contest_id, $Tweet->user_id, $Entry->id, $Tweet->id);
             }
             else
             {
                 $Tweet->needs_validation = true;
             }
-        }        
+        }         
         
         if($Tweet->validate() && $Tweet->save())
         {
+            // remove old entries vom voting
+            if($Tweet->needs_validation == false) {
+                $this->ExcludeOldTweetEntry($Tweet->contest_id, $Tweet->user_id, $Tweet->entry_id, $Tweet->id);
+            }
+
             $this->stdout("Tweet ID ".$Tweet->id." for Contest ID ".$contest_id." saved!\n");
             $this->stdout("Entry: ".$Tweet->entry_id.", Rating: ".$Tweet->rating."\n");            
             return $Tweet;
@@ -364,11 +405,11 @@ class CrawlerController extends Controller
         foreach($Entries as $Entry) 
         {
             $avgQuery = new Query;
-            $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+            $avgQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0, 'old_vote' => 0]);
             $avgRating = $avgQuery->average('rating');
 
             $votestQuery = new Query;
-            $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0]);
+            $votestQuery->from(Tweet::tableName())->where(['entry_id' => $Entry->id, 'needs_validation' => 0, 'old_vote' => 0]);
             $votes = $votestQuery->count();
 
             $Entry->votes = $votes;
