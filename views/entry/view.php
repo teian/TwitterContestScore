@@ -19,8 +19,11 @@ use dosamigos\chartjs\ChartJs;
 /* @var $model app\models\Entry */
 
 $this->title = Yii::t('app', 'Entry') . " - " . $model->contest_entry_id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Entries'), 'url' => ['index']];
+
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Contests'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->contest->name, 'url' => ['contest/view', 'id' => $model->contest_id]];
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="row">
     <div class="col-lg-12">
