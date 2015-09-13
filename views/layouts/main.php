@@ -25,6 +25,9 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="<?= Yii::getAlias('@web') ?>/img/favicon.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="<?= Yii::getAlias('@web') ?>/img/favicon.png" type="image/png">
+    <link rel="apple-itouch-icon" href="<?= Yii::getAlias('@web') ?>/img/favicon.png"> 
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
