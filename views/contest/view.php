@@ -69,6 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
             }
         ?>
 
+
         <?= GridView::widget([
                 'dataProvider' => new ActiveDataProvider([
                     'query' => Entry::find()->where(['contest_id' => $model->id]),
@@ -81,8 +82,16 @@ $this->params['breadcrumbs'][] = $this->title;
                             return Html::a(Html::encode($data->contest_entry_id), ['entry/view', 'id' => $data->id]); 
                         },
                     ],
-                    'avg_rating',
-                    'min_rating',
+                    [
+                        'attribute' => 'avg_rating',
+                        'contentOptions' =>['class' => 'hidden-xs'],
+                        'headerOptions' =>['class' => 'hidden-xs'],
+                    ],
+                    [
+                        'attribute' => 'min_rating',
+                        'contentOptions' =>['class' => 'hidden-xs'],
+                        'headerOptions' =>['class' => 'hidden-xs'],
+                    ],
                     'max_rating',
                     'votes',
                     ],

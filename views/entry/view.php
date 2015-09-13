@@ -124,10 +124,20 @@ $this->params['breadcrumbs'][] = $this->title;
                         'value'=> function ($data) { 
                             return $data->user->screen_name; 
                         },
-                    ],     
+                    ],
                     'rating',
-                    'text',
-                    'created_at:datetime',
+                    [
+                        'attribute' => 'text',
+                        'contentOptions' =>['class' => 'hidden-xs'],
+                        'headerOptions' =>['class' => 'hidden-xs'],
+                    ],
+                    [
+                        'label' => Yii::t('app', 'Tweeted at'),
+                        'attribute' => 'created_at',
+                        'format' => ['datetime', 'php:d.m.Y - H:i:s'],
+                        'contentOptions' =>['class' => 'hidden-xs'],
+                        'headerOptions' =>['class' => 'hidden-xs'],
+                    ],
                 ]
             ]); 
             Pjax::end();

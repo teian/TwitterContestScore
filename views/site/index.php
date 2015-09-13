@@ -14,7 +14,7 @@ $this->title = Yii::t('app', 'Twitter Contest Score');
 <div class="site-index">
 
     <div class="jumbotron">
-        <h1><?= Yii::t('app', 'Welcome to the') ?> <i><?= Html::encode($this->title); ?></i>!</h1>
+        <h2><?= Yii::t('app', 'Welcome to the') ?> <?= Html::encode($this->title); ?>!</h2>
 
         <p class="lead"><?= Yii::t('app', 'Automated Twitter scoring.') ?></p>
     </div>

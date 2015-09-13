@@ -7,7 +7,7 @@
  */
 
 use yii\helpers\Html;
-use yii\grid\GridView;
+use yii\widgets\ListView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -32,21 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </p>
 
-    <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
-                [
-                    'attribute' => 'name',
-                    'format' => 'raw',
-                    'value'=>function ($data) { 
-                        return Html::a(Html::encode($data->name), ['contest/view', 'id' => $data->id]); 
-                    },
-                ],
-                'trigger',
-                'year',
-                'active:boolean',
-            ],
-    ]); ?>
+    <?= ListView::widget([
+        'dataProvider' => $dataProvider,
+        'itemOptions' => ['class' => 'item'],
+        'itemView' => '_view',
+    ]) ?>    
 
 </div>
