@@ -55,7 +55,7 @@ class m150102_174907_init extends Migration
         // create crawler_data table
         $this->createTable('{{%crawler_data}}', [
             'id' => Schema::TYPE_BIGPK,
-            'contest_id' => Schema::TYPE_BIGINT ." NOT NULL",
+            'contest_id' => Schema::TYPE_BIGINT ." DEFAULT NUL",
             'data' => 'longtext',
             'parsed_at' => Schema::TYPE_DATETIME . " DEFAULT NULL",
             'create_time' => Schema::TYPE_DATETIME,
@@ -138,23 +138,8 @@ class m150102_174907_init extends Migration
             'contest_id', 
             '{{%contest}}', 
             'id'
-        );
-
-        // add foreign key constraints for table contest
-        $this->addForeignKey(
-            'fk_contest_crawler_profile_id', 
-            '{{%contest}}', 
-            'crawler_profile_id', 
-            '{{%crawler_profile}}', 
-            'id'
-        );
-
-        $this->addForeignKey(
-            'fk_contest_last_parsed_tweet_id', 
-            '{{%contest}}', 
-            'last_parsed_tweet_id', 
-            '{{%tweet}}', 
-            'id'
+            'CASCADE',
+            'CASCADE'
         );
 
         // add foreign key constraints for table crawler_data
@@ -164,6 +149,8 @@ class m150102_174907_init extends Migration
             'contest_id', 
             '{{%contest}}', 
             'id'
+            'CASCADE',
+            'CASCADE'
         );
 
         // add foreign key constraints for table tweet
@@ -173,7 +160,7 @@ class m150102_174907_init extends Migration
             'contest_id', 
             '{{%contest}}', 
             'id',
-            NULL, 
+            'CASCADE',
             'CASCADE'
         );
 
@@ -184,7 +171,7 @@ class m150102_174907_init extends Migration
             'user_id', 
             '{{%tweet_user}}', 
             'id',
-            NULL, 
+            'CASCADE',
             'CASCADE'
         );
 
@@ -195,7 +182,7 @@ class m150102_174907_init extends Migration
             'entry_id', 
             '{{%entry}}', 
             'id',
-            NULL, 
+            'CASCADE',
             'CASCADE'
         );
 
