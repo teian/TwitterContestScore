@@ -82,17 +82,17 @@ $this->params['breadcrumbs'][] = $this->title;
                             return Html::a(Html::encode($data->contest_entry_id), ['entry/view', 'id' => $data->id]); 
                         },
                     ],
-                    [
-                        'attribute' => 'avg_rating',
-                        'contentOptions' =>['class' => 'hidden-xs'],
-                        'headerOptions' =>['class' => 'hidden-xs'],
-                    ],
+                    'avg_rating',
                     [
                         'attribute' => 'min_rating',
                         'contentOptions' =>['class' => 'hidden-xs'],
                         'headerOptions' =>['class' => 'hidden-xs'],
                     ],
-                    'max_rating',
+                    [
+                        'attribute' => 'max_rating',
+                        'contentOptions' =>['class' => 'hidden-xs'],
+                        'headerOptions' =>['class' => 'hidden-xs'],
+                    ],
                     'votes',
                     ],
         ]); ?>
