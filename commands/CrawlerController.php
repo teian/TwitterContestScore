@@ -66,12 +66,12 @@ class CrawlerController extends Controller
                 $GetData = ''; 
                 if($Contest->next_result_query != null) 
                 {
-                    $GetData = urldecode($Contest->next_result_query);
+                    $GetData = urldecode($Contest->next_result_query) . '&count=100';
                     $this->stdout("Exec Query: ".$GetData."!\n", Console::FG_YELLOW);
                 }
                 else
                 {
-                    $GetData = '?q=' . $Contest->trigger . '&result_type=recent&count=100';
+                    $GetData = '?q=' . $Contest->trigger . '&result_type=mixed&count=100';
                     $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
                 }
 
