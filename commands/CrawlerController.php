@@ -71,11 +71,11 @@ class CrawlerController extends Controller
                 }
                 else
                 {
-                    $GetData = '?q=' . $Contest->trigger . '&count=100';
+                    $GetData = '?q=' . $Contest->trigger . '&result_type=recent&count=100';
                     $this->stdout("First Query: ".$GetData."!\n", Console::FG_YELLOW);
                 }
 
-                // Pull Next Results
+                // pull next results
                 $TwitterData = $TwitterApi
                     ->setGetfield($GetData)
                     ->buildOauth($this->TwitterUrl, 'GET')
@@ -83,6 +83,7 @@ class CrawlerController extends Controller
 
                 $jsonData = Json::decode($TwitterData, true);
 
+                // only save data if we have new results from API
                 if(sizeof($jsonData["statuses"]) > 0)
                 {
 
@@ -100,6 +101,19 @@ class CrawlerController extends Controller
                         $this->stdout(print_r($CrawlerData->errors) . "\n", Console::BOLD);
                     }
                 }
+
+                $last_parse_date = new DateTime('NOW');
+                $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
+
+                if($Contest->save())
+                {
+                    $this->stdout("Last parse date for Contest ".$Contest->name." saved!\n", Console::FG_GREEN);
+                }
+                else
+                {
+                    $this->stdout("Error last parse date for Contest ".$Contest->name."!\n", Console::BOLD);  
+                    $this->stdout(print_r($Contest->errors) . "\n", Console::BOLD);
+                }
             } else {
                 $this->stdout("Skipping ".$Contest->name."!\n", Console::FG_YELLOW);
             }
@@ -111,6 +125,7 @@ class CrawlerController extends Controller
      */
     public function actionProcessData()
     {
+        $CurrentDate = new \DateTime('NOW');
         $crawlerDataCollection = CrawlerData::findAll(['parsed_at' => null]);
 
         $json_data = [];        
@@ -143,17 +158,18 @@ class CrawlerController extends Controller
 
             foreach($jsonData["statuses"] as $id => $tweet)
             {
-                // filter retweets to counter abuse 
-                $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
+                // Get tweet creation date
+                $TweetDate = DateTime::createFromFormat("D M d H:i:s T Y", $tweet["created_at"]);
+                // check if Tweet creation date is within restrictions!
+                if($TweetDate->format('Y-m-d') >= $Contest->parse_from && $TweetDate->format('Y-m-d') <= $Contest->parse_to) {
+                    $Tweet = $this->CreateTweetEntry($tweet, $Contest->id, $regex);
 
-                if($Tweet != null)
-                {
-                    $Contest->last_parsed_tweet_id = $Tweet->id;                    
+                    if($Tweet != null)
+                    {
+                        $Contest->last_parsed_tweet_id = $Tweet->id;                    
+                    }
                 }
             }
-
-            $last_parse_date = new DateTime('NOW');
-            $Contest->last_parse = $last_parse_date->format('Y-m-d H:i:s');
             
             if(array_key_exists("next_results", $jsonData["search_metadata"]))
             {
